@@ -7,6 +7,8 @@ void ImageAdd::Run()
 
   _RunFloat();
 
+  _RunInt();
+
   printf("\n");
 }
 

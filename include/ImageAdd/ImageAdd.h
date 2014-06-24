@@ -6,6 +6,7 @@ private:
 
   static void _RunFloat();
 
+  static void _RunInt();
 
 public:
 

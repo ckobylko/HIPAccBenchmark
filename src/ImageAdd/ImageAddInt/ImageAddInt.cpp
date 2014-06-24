@@ -1,20 +1,20 @@
 #include "stdafx.h"
-#include "../../include/ImageAdd/ImageAdd.h"
-#include "ImageAddFloatHandlers.h"
+#include "../../../include/ImageAdd/ImageAdd.h"
+#include "ImageAddIntHandlers.h"
 #include <omp.h>
 
 
-void ImageAdd::_RunFloat()
+void ImageAdd::_RunInt()
 {
   const size_t cszIters = static_cast< size_t >( 100 );
 
-  printf("\n    Running \"_RunFloat()\"\n");
+  printf("\n    Running \"_RunInt()\"\n");
 
   HandlerList   lstHandlers;
 
-  AppendHandlerList( lstHandlers, ImageAddFloat_GetScalarHandlers() );
-  AppendHandlerList( lstHandlers, ImageAddFloat_GetSSEHandlers()    );
-  AppendHandlerList( lstHandlers, ImageAddFloat_GetAVXHandlers()    );
+  AppendHandlerList( lstHandlers, ImageAddInt_GetScalarHandlers() );
+  AppendHandlerList( lstHandlers, ImageAddInt_GetSSEHandlers()    );
+  AppendHandlerList( lstHandlers, ImageAddInt_GetAVXHandlers()    );
 
   CREATE_IMAGE( InputImageType1, spInputImage1 );
   CREATE_IMAGE( InputImageType2, spInputImage2 );
