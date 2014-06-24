@@ -4,11 +4,15 @@
 #include "stdafx.h"
 
 #include "../../include/ImageAdd/ImageAdd.h"
+#include "../../include/NormalizedGradient/NormalizedGradient.h"
+
 
 int _tmain(int argc, _TCHAR* argv[])
 {
   ImageAdd::Run();
 
-	return 0;
+  NormalizedGradient::Run();
+
+  return 0;
 }
 

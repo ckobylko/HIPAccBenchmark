@@ -38,5 +38,8 @@
     <ClInclude Include="..\..\include\Benchmark\Image.h">
       <Filter>Public Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\include\Benchmark\CommonDefines.h">
+      <Filter>Public Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

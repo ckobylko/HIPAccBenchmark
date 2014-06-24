@@ -197,9 +197,6 @@
     <ClInclude Include="..\..\src\ImageAdd\targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\ImageAdd\HIPAccSources\CommonDefines.h">
-      <Filter>HIPAcc\HIPAccSources</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\ImageAdd\HIPAccSources\AddGeneric.hxx">
       <Filter>HIPAcc\HIPAccSources</Filter>
     </ClInclude>

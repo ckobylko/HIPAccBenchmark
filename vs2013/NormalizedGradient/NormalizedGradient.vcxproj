@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{58458C57-0601-4460-AB5E-8CE07C6A420D}</ProjectGuid>
+    <ProjectGuid>{BB1878CE-3FD1-4AFE-9769-5B2912028313}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>ImageAdd</RootNamespace>
+    <RootNamespace>NormalizedGradient</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -120,8 +120,6 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
-      <OpenMPSupport>true</OpenMPSupport>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -140,8 +138,6 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
-      <OpenMPSupport>true</OpenMPSupport>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -155,55 +151,115 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ccAddInt_Arrayfilter.cc">
+    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccOutputs\NormGradFloatArray_out.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="ccAddInt_AVXfilter.cc">
+    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccOutputs\NormGradFloatAVX_out.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="ccAddInt_Scalarfilter.cc">
+    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccOutputs\NormGradFloatScalar_out.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="ccAddInt_SSE2filter.cc">
+    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccOutputs\NormGradFloatSSE2_out.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="ccAddInt_SSE3filter.cc">
+    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccOutputs\NormGradFloatSSE3_out.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="ccAddInt_SSE4_1filter.cc">
+    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccOutputs\NormGradFloatSSE4_1_out.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="ccAddInt_SSE4_2filter.cc">
+    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccOutputs\NormGradFloatSSE4_2_out.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="ccAddInt_SSSE3filter.cc">
+    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccOutputs\NormGradFloatSSE_out.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddInt\AddIntArray.cpp">
+    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccOutputs\NormGradFloatSSSE3_out.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccNormGradFloat_Arrayfilter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccNormGradFloat_AVXfilter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccNormGradFloat_Scalarfilter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccNormGradFloat_SSE2filter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccNormGradFloat_SSE3filter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccNormGradFloat_SSE4_1filter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccNormGradFloat_SSE4_2filter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccNormGradFloat_SSEfilter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccNormGradFloat_SSSE3filter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <HIPAccCompiler Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradFloat\NormGradFloatArray.cpp">
       <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
       <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
       <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
@@ -213,7 +269,7 @@
       <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">array</InstructionSet>
       <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">array</InstructionSet>
     </HIPAccCompiler>
-    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddInt\AddIntAVX.cpp">
+    <HIPAccCompiler Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradFloat\NormGradFloatAVX.cpp">
       <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
       <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
       <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
@@ -223,183 +279,8 @@
       <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">avx</InstructionSet>
       <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">avx</InstructionSet>
     </HIPAccCompiler>
-    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddInt\AddIntScalar.cpp" />
-    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddInt\AddIntSSE2.cpp">
-      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
-      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
-      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
-      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
-      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sse2</InstructionSet>
-      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sse2</InstructionSet>
-      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sse2</InstructionSet>
-      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sse2</InstructionSet>
-    </HIPAccCompiler>
-    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddInt\AddIntSSE3.cpp">
-      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
-      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
-      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
-      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
-      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sse3</InstructionSet>
-      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sse3</InstructionSet>
-      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sse3</InstructionSet>
-      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sse3</InstructionSet>
-    </HIPAccCompiler>
-    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddInt\AddIntSSE4_1.cpp">
-      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
-      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
-      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
-      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
-      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sse41</InstructionSet>
-      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sse41</InstructionSet>
-      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sse41</InstructionSet>
-      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sse41</InstructionSet>
-    </HIPAccCompiler>
-    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddInt\AddIntSSE4_2.cpp">
-      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
-      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
-      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
-      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
-      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sse42</InstructionSet>
-      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sse42</InstructionSet>
-      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sse42</InstructionSet>
-      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sse42</InstructionSet>
-    </HIPAccCompiler>
-    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddInt\AddIntSSSE3.cpp">
-      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
-      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
-      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
-      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
-      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ssse3</InstructionSet>
-      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ssse3</InstructionSet>
-      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ssse3</InstructionSet>
-      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ssse3</InstructionSet>
-    </HIPAccCompiler>
-    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddIntArray_out.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddIntAVX_out.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddIntScalar_out.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddIntSSE2_out.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddIntSSE3_out.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddIntSSE4_1_out.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddIntSSE4_2_out.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddIntSSSE3_out.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="..\..\src\ImageAdd\ImageAdd.cpp" />
-    <ClCompile Include="..\..\src\ImageAdd\ImageAddFloat\ImageAddFloat.cpp">
-      <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NoListing</AssemblerOutput>
-    </ClCompile>
-    <ClCompile Include="..\..\src\ImageAdd\ImageAddFloat\ImageAddFloatHandlersAVX.cpp">
-      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AdvancedVectorExtensions</EnableEnhancedInstructionSet>
-      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AdvancedVectorExtensions</EnableEnhancedInstructionSet>
-    </ClCompile>
-    <ClCompile Include="..\..\src\ImageAdd\ImageAddFloat\ImageAddFloatHandlersScalar.cpp" />
-    <ClCompile Include="..\..\src\ImageAdd\ImageAddFloat\ImageAddFloatHandlersSSE.cpp">
-      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
-      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
-    </ClCompile>
-    <ClCompile Include="..\..\src\ImageAdd\ImageAddInt\ImageAddInt.cpp" />
-    <ClCompile Include="..\..\src\ImageAdd\ImageAddInt\ImageAddIntHandlersAVX.cpp">
-      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AdvancedVectorExtensions</EnableEnhancedInstructionSet>
-      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AdvancedVectorExtensions</EnableEnhancedInstructionSet>
-    </ClCompile>
-    <ClCompile Include="..\..\src\ImageAdd\ImageAddInt\ImageAddIntHandlersScalar.cpp" />
-    <ClCompile Include="..\..\src\ImageAdd\ImageAddInt\ImageAddIntHandlersSSE.cpp">
-      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
-      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
-    </ClCompile>
-    <ClCompile Include="ccAddFloat_Arrayfilter.cc">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="ccAddFloat_AVXfilter.cc">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="ccAddFloat_Scalarfilter.cc">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="ccAddFloat_SSE2filter.cc">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="ccAddFloat_SSE3filter.cc">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="ccAddFloat_SSE4_1filter.cc">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="ccAddFloat_SSE4_2filter.cc">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="ccAddFloat_SSEfilter.cc">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="ccAddFloat_SSSE3filter.cc">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddFloat\AddFloatSSE.cpp">
+    <HIPAccCompiler Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradFloat\NormGradFloatScalar.cpp" />
+    <HIPAccCompiler Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradFloat\NormGradFloatSSE.cpp">
       <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
       <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
       <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
@@ -409,28 +290,7 @@
       <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sse</InstructionSet>
       <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sse</InstructionSet>
     </HIPAccCompiler>
-    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddFloat\AddFloatArray.cpp">
-      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
-      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
-      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
-      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
-      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">array</InstructionSet>
-      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">array</InstructionSet>
-      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">array</InstructionSet>
-      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">array</InstructionSet>
-    </HIPAccCompiler>
-    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddFloat\AddFloatAVX.cpp">
-      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
-      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
-      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
-      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
-      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">avx</InstructionSet>
-      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">avx</InstructionSet>
-      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">avx</InstructionSet>
-      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">avx</InstructionSet>
-    </HIPAccCompiler>
-    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddFloat\AddFloatScalar.cpp" />
-    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddFloat\AddFloatSSE2.cpp">
+    <HIPAccCompiler Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradFloat\NormGradFloatSSE2.cpp">
       <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
       <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
       <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
@@ -440,7 +300,7 @@
       <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sse2</InstructionSet>
       <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sse2</InstructionSet>
     </HIPAccCompiler>
-    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddFloat\AddFloatSSE3.cpp">
+    <HIPAccCompiler Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradFloat\NormGradFloatSSE3.cpp">
       <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
       <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
       <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
@@ -450,7 +310,7 @@
       <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sse3</InstructionSet>
       <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sse3</InstructionSet>
     </HIPAccCompiler>
-    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddFloat\AddFloatSSE4_1.cpp">
+    <HIPAccCompiler Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradFloat\NormGradFloatSSE4_1.cpp">
       <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
       <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
       <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
@@ -460,7 +320,7 @@
       <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sse41</InstructionSet>
       <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sse41</InstructionSet>
     </HIPAccCompiler>
-    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddFloat\AddFloatSSE4_2.cpp">
+    <HIPAccCompiler Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradFloat\NormGradFloatSSE4_2.cpp">
       <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
       <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
       <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
@@ -470,7 +330,7 @@
       <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sse42</InstructionSet>
       <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sse42</InstructionSet>
     </HIPAccCompiler>
-    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddFloat\AddFloatSSSE3.cpp">
+    <HIPAccCompiler Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradFloat\NormGradFloatSSSE3.cpp">
       <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
       <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
       <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
@@ -480,76 +340,35 @@
       <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ssse3</InstructionSet>
       <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ssse3</InstructionSet>
     </HIPAccCompiler>
-    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddFloatArray_out.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    <ClCompile Include="..\..\src\NormalizedGradient\NormalizedGradient.cpp" />
+    <ClCompile Include="..\..\src\NormalizedGradient\NormalizedGradientFloat\NormalizedGradientFloat.cpp" />
+    <ClCompile Include="..\..\src\NormalizedGradient\NormalizedGradientFloat\NormalizedGradientFloatHandlersAVX.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AdvancedVectorExtensions</EnableEnhancedInstructionSet>
     </ClCompile>
-    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddFloatAVX_out.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    <ClCompile Include="..\..\src\NormalizedGradient\NormalizedGradientFloat\NormalizedGradientFloatHandlersScalar.cpp" />
+    <ClCompile Include="..\..\src\NormalizedGradient\NormalizedGradientFloat\NormalizedGradientFloatHandlersSSE.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
     </ClCompile>
-    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddFloatScalar_out.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddFloatSSE2_out.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddFloatSSE3_out.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddFloatSSE4_1_out.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddFloatSSE4_2_out.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddFloatSSE_out.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddFloatSSSE3_out.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="..\..\src\ImageAdd\stdafx.cpp">
+    <ClCompile Include="..\..\src\NormalizedGradient\stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\include\ImageAdd\ImageAdd.h" />
-    <ClInclude Include="..\..\src\ImageAdd\HIPAccSources\AddFloat\AddFloatDefines.h" />
-    <ClInclude Include="..\..\src\ImageAdd\HIPAccSources\AddGeneric.hxx" />
-    <ClInclude Include="..\..\src\ImageAdd\HIPAccSources\AddInt\AddIntDefines.h" />
-    <ClInclude Include="..\..\src\ImageAdd\ImageAddFloat\ImageAddFloatHandlers.h" />
-    <ClInclude Include="..\..\src\ImageAdd\ImageAddInt\ImageAddIntHandlers.h" />
-    <ClInclude Include="..\..\src\ImageAdd\stdafx.h" />
-    <ClInclude Include="..\..\src\ImageAdd\targetver.h" />
+    <ClInclude Include="..\..\include\NormalizedGradient\NormalizedGradient.h" />
+    <ClInclude Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradFloat\NormGradFloatDefines.h" />
+    <ClInclude Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradGeneric.hxx" />
+    <ClInclude Include="..\..\src\NormalizedGradient\NormalizedGradientFloat\NormalizedGradientFloatHandlers.h" />
+    <ClInclude Include="..\..\src\NormalizedGradient\stdafx.h" />
+    <ClInclude Include="..\..\src\NormalizedGradient\targetver.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
