@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="HIPAcc">
+      <UniqueIdentifier>{4dc75de4-e5ad-46d6-bf86-e7a2a91ffda9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\HIPAccSources">
+      <UniqueIdentifier>{accc32f4-ac7f-41f4-9824-fb3308acc47a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\HIPAccSources\AddFloat">
+      <UniqueIdentifier>{b0b6a769-a90a-48de-a3fb-e5e852695ad9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\HIPAccOutputs">
+      <UniqueIdentifier>{f3a82e81-bcf9-47b8-a27b-a19602e2bcf0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\Kernels">
+      <UniqueIdentifier>{76c3119e-e03b-4f3d-9ccf-95f65881f5bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\HIPAccOutputs\AddFloat">
+      <UniqueIdentifier>{2e94fca6-7ffb-430d-b186-6bdd0ded45f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\Kernels\AddFloat">
+      <UniqueIdentifier>{f96b6039-01e7-48a9-9e5a-da3fecd5dede}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Public Header Files">
+      <UniqueIdentifier>{d7a52815-ae1e-4677-8c5a-0b183763c7cf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\ImageAdd\stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddFloatArray_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\AddFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddFloatAVX_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\AddFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddFloatScalar_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\AddFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddFloatSSE_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\AddFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddFloatSSE2_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\AddFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddFloatSSE3_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\AddFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddFloatSSE4_1_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\AddFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddFloatSSE4_2_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\AddFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddFloatSSSE3_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\AddFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccAddFloat_Arrayfilter.cc">
+      <Filter>HIPAcc\Kernels\AddFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccAddFloat_AVXfilter.cc">
+      <Filter>HIPAcc\Kernels\AddFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccAddFloat_Scalarfilter.cc">
+      <Filter>HIPAcc\Kernels\AddFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccAddFloat_SSE2filter.cc">
+      <Filter>HIPAcc\Kernels\AddFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccAddFloat_SSE3filter.cc">
+      <Filter>HIPAcc\Kernels\AddFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccAddFloat_SSE4_1filter.cc">
+      <Filter>HIPAcc\Kernels\AddFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccAddFloat_SSE4_2filter.cc">
+      <Filter>HIPAcc\Kernels\AddFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccAddFloat_SSEfilter.cc">
+      <Filter>HIPAcc\Kernels\AddFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccAddFloat_SSSE3filter.cc">
+      <Filter>HIPAcc\Kernels\AddFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ImageAdd\ImageAdd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ImageAdd\ImageAddFloat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ImageAdd\ImageAddFloatHandlersAVX.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ImageAdd\ImageAddFloatHandlersScalar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ImageAdd\ImageAddFloatHandlersSSE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\ImageAdd\stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ImageAdd\targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ImageAdd\HIPAccSources\CommonDefines.h">
+      <Filter>HIPAcc\HIPAccSources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ImageAdd\HIPAccSources\AddFloatDefines.h">
+      <Filter>HIPAcc\HIPAccSources\AddFloat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ImageAdd\HIPAccSources\AddGeneric.hxx">
+      <Filter>HIPAcc\HIPAccSources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ImageAdd\ImageAdd.h">
+      <Filter>Public Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ImageAdd\ImageAddFloatHandlers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddFloatArray.cpp">
+      <Filter>HIPAcc\HIPAccSources\AddFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddFloatAVX.cpp">
+      <Filter>HIPAcc\HIPAccSources\AddFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddFloatScalar.cpp">
+      <Filter>HIPAcc\HIPAccSources\AddFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddFloatSSE.cpp">
+      <Filter>HIPAcc\HIPAccSources\AddFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddFloatSSE2.cpp">
+      <Filter>HIPAcc\HIPAccSources\AddFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddFloatSSE3.cpp">
+      <Filter>HIPAcc\HIPAccSources\AddFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddFloatSSE4_1.cpp">
+      <Filter>HIPAcc\HIPAccSources\AddFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddFloatSSE4_2.cpp">
+      <Filter>HIPAcc\HIPAccSources\AddFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddFloatSSSE3.cpp">
+      <Filter>HIPAcc\HIPAccSources\AddFloat</Filter>
+    </HIPAccCompiler>
+  </ItemGroup>
+</Project>

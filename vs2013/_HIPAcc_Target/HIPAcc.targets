@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <PropertyPageSchema
+      Include="$(MSBuildThisFileDirectory)$(MSBuildThisFileName).xml" />
+    <AvailableItemName
+      Include="HIPAccCompiler">
+      <Targets>_HIPAccCompiler</Targets>
+    </AvailableItemName>
+  </ItemGroup>
+  <UsingTask
+    TaskName="HIPAccCompiler"
+    TaskFactory="XamlTaskFactory"
+    AssemblyName="Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <Task>$(MSBuildThisFileDirectory)$(MSBuildThisFileName).xml</Task>
+  </UsingTask>
+  <Target
+    Name="_HIPAccCompiler"
+    BeforeTargets="$(HIPAccCompilerBeforeTargets)"
+    AfterTargets="$(HIPAccCompilerAfterTargets)"
+    Condition="'@(HIPAccCompiler)' != ''"
+    DependsOnTargets="$(HIPAccCompilerDependsOn);ComputeHIPAccCompilerOutput"
+    Outputs="@(HIPAccCompiler-&gt;Metadata('Outputs')-&gt;Distinct())"
+    Inputs="@(HIPAccCompiler);%(HIPAccCompiler.AdditionalDependencies);$(MSBuildProjectFile)">
+    <ItemGroup
+      Condition="'@(SelectedFiles)' != ''">
+      <HIPAccCompiler
+        Remove="@(HIPAccCompiler)"
+        Condition="'%(Identity)' != '@(SelectedFiles)'" />
+    </ItemGroup>
+    <ItemGroup>
+      <HIPAccCompiler_tlog
+        Include="%(HIPAccCompiler.Outputs)"
+        Condition="'%(HIPAccCompiler.Outputs)' != '' and '%(HIPAccCompiler.ExcludedFromBuild)' != 'true'">
+        <Source>@(HIPAccCompiler, '|')</Source>
+      </HIPAccCompiler_tlog>
+    </ItemGroup>
+    <Message
+      Importance="High"
+      Text="%(HIPAccCompiler.ExecutionDescription)" />
+    <WriteLinesToFile
+      Condition="'@(HIPAccCompiler_tlog)' != '' and '%(HIPAccCompiler_tlog.ExcludedFromBuild)' != 'true'"
+      File="$(TLogLocation)$(ProjectName).write.1u.tlog"
+      Lines="^%(HIPAccCompiler_tlog.Source);@(HIPAccCompiler_tlog-&gt;'%(Fullpath)')"
+      Encoding="Unicode" />
+    <HIPAccCompiler
+      Condition="'@(HIPAccCompiler)' != '' and '%(HIPAccCompiler.ExcludedFromBuild)' != 'true'"
+      CommandLineTemplate="%(HIPAccCompiler.CommandLineTemplate)"
+      VectorizeKernel="%(HIPAccCompiler.VectorizeKernel)"
+      SetVectorWidth="%(HIPAccCompiler.SetVectorWidth)"
+      OutputFile="%(HIPAccCompiler.OutputFile)"
+      VectorWidth="%(HIPAccCompiler.VectorWidth)"
+      UnrollVectorLoops="%(HIPAccCompiler.UnrollVectorLoops)"
+      InstructionSet="%(HIPAccCompiler.InstructionSet)"
+      AdditionalOptions="%(HIPAccCompiler.AdditionalOptions)"
+      Inputs="@(HIPAccCompiler)" />
+  </Target>
+  <PropertyGroup>
+    <ComputeLinkInputsTargets>
+            $(ComputeLinkInputsTargets);
+            ComputeHIPAccCompilerOutput;
+          </ComputeLinkInputsTargets>
+    <ComputeLibInputsTargets>
+            $(ComputeLibInputsTargets);
+            ComputeHIPAccCompilerOutput;
+          </ComputeLibInputsTargets>
+  </PropertyGroup>
+  <Target
+    Name="ComputeHIPAccCompilerOutput"
+    Condition="'@(HIPAccCompiler)' != ''">
+    <ItemGroup>
+      <HIPAccCompilerDirsToMake
+        Condition="'@(HIPAccCompiler)' != '' and '%(HIPAccCompiler.ExcludedFromBuild)' != 'true'"
+        Include="%(HIPAccCompiler.Outputs)" />
+      <Link
+        Include="%(HIPAccCompilerDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+      <Lib
+        Include="%(HIPAccCompilerDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+      <ImpLib
+        Include="%(HIPAccCompilerDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+    </ItemGroup>
+    <MakeDir
+      Directories="@(HIPAccCompilerDirsToMake-&gt;'%(RootDir)%(Directory)')" />
+  </Target>
+</Project>

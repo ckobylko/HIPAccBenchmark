@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectSchemaDefinitions xmlns="clr-namespace:Microsoft.Build.Framework.XamlTypes;assembly=Microsoft.Build.Framework" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:transformCallback="Microsoft.Cpp.Dev10.ConvertPropertyCallback">
+  <Rule
+    Name="HIPAccCompiler"
+    PageTemplate="tool"
+    DisplayName="HIPAcc compiler"
+    Order="200">
+    <Rule.DataSource>
+      <DataSource
+        Persistence="ProjectFile"
+        ItemType="HIPAccCompiler" />
+    </Rule.DataSource>
+    <Rule.Categories>
+      <Category
+        Name="General">
+        <Category.DisplayName>
+          <sys:String>General</sys:String>
+        </Category.DisplayName>
+      </Category>
+      <Category
+        Name="Command Line"
+        Subtype="CommandLine">
+        <Category.DisplayName>
+          <sys:String>Command Line</sys:String>
+        </Category.DisplayName>
+      </Category>
+    </Rule.Categories>
+    <StringListProperty
+      Name="Inputs"
+      Category="Command Line"
+      IsRequired="true"
+      Switch=" ">
+      <StringListProperty.DataSource>
+        <DataSource
+          Persistence="ProjectFile"
+          ItemType="HIPAccCompiler"
+          SourceType="Item" />
+      </StringListProperty.DataSource>
+    </StringListProperty>
+    <BoolProperty
+      Name="VectorizeKernel"
+      Subcategory="CPU back-end"
+      HelpContext="0"
+      DisplayName="Vectorize kernel"
+      Description="Run a whole function vectorization on the kernel function."
+      Switch="-v" />
+    <BoolProperty
+      Name="SetVectorWidth"
+      Subcategory="CPU back-end"
+      HelpContext="0"
+      DisplayName="Set vector width"
+      Description="Sets the requested vector width for the kernel function vectorization."
+      Switch="-v-w [VectorWidth]" />
+    <StringProperty
+      Name="OutputFile"
+      Subcategory="Common"
+      HelpContext="0"
+      DisplayName="Output file"
+      Description="Write output to &lt;file&gt;."
+      Switch="&quot;[value]&quot;" />
+    <EnumProperty
+      Name="UnrollVectorLoops"
+      Subcategory="CPU back-end"
+      HelpContext="0"
+      DisplayName="Unroll vector loops"
+      Description="Specifies, whether loops over vector array expressions shall be unrolled.">
+      <EnumValue
+        Name="Default"
+        DisplayName="Default"
+        Switch="" />
+      <EnumValue
+        Name="On"
+        DisplayName="On (-u on)"
+        Switch="-u on" />
+      <EnumValue
+        Name="Off"
+        DisplayName="Off (-u off)"
+        Switch="-u off" />
+    </EnumProperty>
+    <EnumProperty
+      Name="InstructionSet"
+      Subcategory="CPU back-end"
+      HelpContext="0"
+      DisplayName="Instruction set"
+      Description="Selects the instruction set for the generation of vectorized code.">
+      <EnumValue
+        Name="Default"
+        DisplayName="Default"
+        Switch="" />
+      <EnumValue
+        Name="array"
+        DisplayName="Array"
+        Switch="-i-s array" />
+      <EnumValue
+        Name="sse"
+        DisplayName="SSE"
+        Switch="-i-s sse" />
+      <EnumValue
+        Name="sse2"
+        DisplayName="SSE 2"
+        Switch="-i-s sse2" />
+      <EnumValue
+        Name="sse3"
+        DisplayName="SSE 3"
+        Switch="-i-s sse3" />
+      <EnumValue
+        Name="ssse3"
+        DisplayName="SSSE 3"
+        Switch="-i-s ssse3" />
+      <EnumValue
+        Name="sse41"
+        DisplayName="SSE 4.1"
+        Switch="-i-s sse4.1" />
+      <EnumValue
+        Name="sse42"
+        DisplayName="SSE 4.2"
+        Switch="-i-s sse4.2" />
+      <EnumValue
+        Name="avx"
+        DisplayName="AVX"
+        Switch="-i-s avx" />
+      <EnumValue
+        Name="avx2"
+        DisplayName="AVX 2"
+        Switch="-i-s avx2" />
+    </EnumProperty>
+    <IntProperty
+      Name="VectorWidth"
+      Subcategory="CPU back-end"
+      HelpContext="0"
+      DisplayName="Vector width"
+      Description="The requested vector width &quot;&lt;n&gt;&quot; for the kernel function vectorization (&quot;&lt;n&gt;&quot; must be positive)."
+      Switch="[value]" />
+    <StringProperty
+      Name="CommandLineTemplate"
+      DisplayName="Command Line"
+      Visible="False"
+      IncludeInCommandLine="False" />
+    <DynamicEnumProperty
+      Name="HIPAccCompilerBeforeTargets"
+      Category="General"
+      EnumProvider="Targets"
+      IncludeInCommandLine="False">
+      <DynamicEnumProperty.DisplayName>
+        <sys:String>Execute Before</sys:String>
+      </DynamicEnumProperty.DisplayName>
+      <DynamicEnumProperty.Description>
+        <sys:String>Specifies the targets for the build customization to run before.</sys:String>
+      </DynamicEnumProperty.Description>
+      <DynamicEnumProperty.ProviderSettings>
+        <NameValuePair
+          Name="Exclude"
+          Value="^HIPAccCompilerBeforeTargets|^Compute" />
+      </DynamicEnumProperty.ProviderSettings>
+      <DynamicEnumProperty.DataSource>
+        <DataSource
+          Persistence="ProjectFile"
+          HasConfigurationCondition="true" />
+      </DynamicEnumProperty.DataSource>
+    </DynamicEnumProperty>
+    <DynamicEnumProperty
+      Name="HIPAccCompilerAfterTargets"
+      Category="General"
+      EnumProvider="Targets"
+      IncludeInCommandLine="False">
+      <DynamicEnumProperty.DisplayName>
+        <sys:String>Execute After</sys:String>
+      </DynamicEnumProperty.DisplayName>
+      <DynamicEnumProperty.Description>
+        <sys:String>Specifies the targets for the build customization to run after.</sys:String>
+      </DynamicEnumProperty.Description>
+      <DynamicEnumProperty.ProviderSettings>
+        <NameValuePair
+          Name="Exclude"
+          Value="^HIPAccCompilerAfterTargets|^Compute" />
+      </DynamicEnumProperty.ProviderSettings>
+      <DynamicEnumProperty.DataSource>
+        <DataSource
+          Persistence="ProjectFile"
+          ItemType=""
+          HasConfigurationCondition="true" />
+      </DynamicEnumProperty.DataSource>
+    </DynamicEnumProperty>
+    <StringListProperty
+      Name="Outputs"
+      DisplayName="Outputs"
+      Visible="False"
+      IncludeInCommandLine="False" />
+    <StringProperty
+      Name="ExecutionDescription"
+      DisplayName="Execution Description"
+      Visible="False"
+      IncludeInCommandLine="False" />
+    <StringListProperty
+      Name="AdditionalDependencies"
+      DisplayName="Additional Dependencies"
+      IncludeInCommandLine="False"
+      Visible="false" />
+    <StringProperty
+      Subtype="AdditionalOptions"
+      Name="AdditionalOptions"
+      Category="Command Line">
+      <StringProperty.DisplayName>
+        <sys:String>Additional Options</sys:String>
+      </StringProperty.DisplayName>
+      <StringProperty.Description>
+        <sys:String>Additional Options</sys:String>
+      </StringProperty.Description>
+    </StringProperty>
+  </Rule>
+  <ItemType
+    Name="HIPAccCompiler"
+    DisplayName="HIPAcc compiler" />
+  <FileExtension
+    Name="*.hipacc"
+    ContentType="HIPAccCompiler" />
+  <ContentType
+    Name="HIPAccCompiler"
+    DisplayName="HIPAcc compiler"
+    ItemType="HIPAccCompiler" />
+</ProjectSchemaDefinitions>

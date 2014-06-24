@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup
+    Condition="'$(HIPAccCompilerBeforeTargets)' == '' and '$(HIPAccCompilerAfterTargets)' == '' and '$(ConfigurationType)' != 'Makefile'">
+    <HIPAccCompilerBeforeTargets>Midl</HIPAccCompilerBeforeTargets>
+    <HIPAccCompilerAfterTargets>CustomBuild</HIPAccCompilerAfterTargets>
+  </PropertyGroup>
+  <PropertyGroup>
+    <HIPAccCompilerDependsOn
+      Condition="'$(ConfigurationType)' != 'Makefile'">_SelectedFiles;$(HIPAccCompilerDependsOn)</HIPAccCompilerDependsOn>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <HIPAccCompiler>
+      <VectorizeKernel>false</VectorizeKernel>
+      <SetVectorWidth>false</SetVectorWidth>
+      <VectorWidth>0</VectorWidth>
+      <UnrollVectorLoops>Default</UnrollVectorLoops>
+      <InstructionSet>Default</InstructionSet>
+      <OutputFile>%(RelativeDir)../HIPAccOutputs/%(Filename)_out%(Extension)</OutputFile>
+      <CommandLineTemplate>"Z:\Projects\Hipacc_TRY-WholeFunctionVectorization\this\vs2013\compiler\Release\hipacc.exe" -emit-cpu [VectorizeKernel] [InstructionSet] [UnrollVectorLoops] [SetVectorWidth] -o [OutputFile] "%(FullPath)"</CommandLineTemplate>
+      <Outputs>[OutputFile]</Outputs>
+      <ExecutionDescription>Executing HIPAcc Compiler...</ExecutionDescription>
+    </HIPAccCompiler>
+  </ItemDefinitionGroup>
+</Project>

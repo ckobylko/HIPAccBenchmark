@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{58458C57-0601-4460-AB5E-8CE07C6A420D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ImageAdd</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="..\_HIPAcc_Target\HIPAcc.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)bin\x86\$(Configuration)\</OutDir>
+    <TargetName>$(ProjectName)_x86_D</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)bin\x86\$(Configuration)\</OutDir>
+    <TargetName>$(ProjectName)_x86</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)bin\x64\$(Configuration)\</OutDir>
+    <TargetName>$(ProjectName)_x64_D</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)bin\x64\$(Configuration)\</OutDir>
+    <TargetName>$(ProjectName)_x64</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\ImageAdd\ImageAdd.cpp" />
+    <ClCompile Include="..\..\src\ImageAdd\ImageAddFloat.cpp">
+      <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NoListing</AssemblerOutput>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ImageAdd\ImageAddFloatHandlersAVX.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ImageAdd\ImageAddFloatHandlersScalar.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotSet</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotSet</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ImageAdd\ImageAddFloatHandlersSSE.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <ClCompile Include="ccAddFloat_Arrayfilter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccAddFloat_AVXfilter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccAddFloat_Scalarfilter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccAddFloat_SSE2filter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccAddFloat_SSE3filter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccAddFloat_SSE4_1filter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccAddFloat_SSE4_2filter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccAddFloat_SSEfilter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccAddFloat_SSSE3filter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddFloatSSE.cpp">
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sse</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sse</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sse</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sse</InstructionSet>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddFloatArray.cpp">
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">array</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">array</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">array</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">array</InstructionSet>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddFloatAVX.cpp">
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">avx</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">avx</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">avx</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">avx</InstructionSet>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddFloatScalar.cpp" />
+    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddFloatSSE2.cpp">
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sse2</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sse2</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sse2</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sse2</InstructionSet>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddFloatSSE3.cpp">
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sse3</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sse3</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sse3</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sse3</InstructionSet>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddFloatSSE4_1.cpp">
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sse41</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sse41</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sse41</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sse41</InstructionSet>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddFloatSSE4_2.cpp">
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sse42</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sse42</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sse42</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sse42</InstructionSet>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddFloatSSSE3.cpp">
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ssse3</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ssse3</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ssse3</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ssse3</InstructionSet>
+    </HIPAccCompiler>
+    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddFloatArray_out.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddFloatAVX_out.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddFloatScalar_out.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddFloatSSE2_out.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddFloatSSE3_out.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddFloatSSE4_1_out.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddFloatSSE4_2_out.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddFloatSSE_out.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddFloatSSSE3_out.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ImageAdd\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\ImageAdd\ImageAdd.h" />
+    <ClInclude Include="..\..\src\ImageAdd\HIPAccSources\AddFloatDefines.h" />
+    <ClInclude Include="..\..\src\ImageAdd\HIPAccSources\AddGeneric.hxx" />
+    <ClInclude Include="..\..\src\ImageAdd\HIPAccSources\CommonDefines.h" />
+    <ClInclude Include="..\..\src\ImageAdd\ImageAddFloatHandlers.h" />
+    <ClInclude Include="..\..\src\ImageAdd\stdafx.h" />
+    <ClInclude Include="..\..\src\ImageAdd\targetver.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\_HIPAcc_Target\HIPAcc.targets" />
+  </ImportGroup>
+</Project>
