@@ -16,10 +16,10 @@
       <VectorWidth>0</VectorWidth>
       <UnrollVectorLoops>Default</UnrollVectorLoops>
       <InstructionSet>Default</InstructionSet>
-      <OutputFile>%(RelativeDir)../HIPAccOutputs/%(Filename)_out%(Extension)</OutputFile>
+      <OutputFile>$(ProjectDir)../../src/$(ProjectName)/HIPAccOutputs/%(Filename)_out%(Extension)</OutputFile>
       <CommandLineTemplate>"Z:\Projects\Hipacc_TRY-WholeFunctionVectorization\this\vs2013\compiler\Release\hipacc.exe" -emit-cpu [VectorizeKernel] [InstructionSet] [UnrollVectorLoops] [SetVectorWidth] -o [OutputFile] "%(FullPath)"</CommandLineTemplate>
       <Outputs>[OutputFile]</Outputs>
-      <ExecutionDescription>Executing HIPAcc Compiler...</ExecutionDescription>
+      <ExecutionDescription>Executing HIPAcc Compiler on &quot;%(Filename)%(Extension)&quot;...</ExecutionDescription>
     </HIPAccCompiler>
   </ItemDefinitionGroup>
 </Project>
