@@ -38,30 +38,23 @@ public: \
         InputPixelType_1 TCurVal = Input(iY, iX); \
         if (TCurVal > TRefVal) \
         { \
-          bMaximum = false; \
-          if (! bMinimum) \
-          { \
-            bBreak = true; \
-            break; \
-          } \
+          bMaximum  = false; \
+          bBreak    = (! bMinimum); \
         } \
         else if (TCurVal < TRefVal) \
         { \
-          bMinimum = false; \
-          if (! bMaximum) \
-          { \
-            bBreak = true; \
-            break; \
-          } \
+          bMinimum  = false; \
+          bBreak    = (! bMaximum); \
         } \
+        if (bBreak)  break; \
       } \
 \
       if (bBreak)  break; \
     } \
 \
-    OutputPixelType TOutVal =    0; \
-    if (bMaximum)   TOutVal += 128; \
-    if (bMinimum)   TOutVal +=  64; \
+    OutputPixelType TOutVal =    0;  \
+    if (bMaximum)   TOutVal += 128U; \
+    if (bMinimum)   TOutVal +=  64U; \
 \
     output() = TOutVal;\
   } \
