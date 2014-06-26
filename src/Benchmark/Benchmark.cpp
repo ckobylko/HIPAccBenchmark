@@ -5,6 +5,7 @@
 
 #include "../../include/ImageAdd/ImageAdd.h"
 #include "../../include/NormalizedGradient/NormalizedGradient.h"
+#include "../../include/MinMaxDetector/MinMaxDetector.h"
 
 
 int _tmain(int argc, _TCHAR* argv[])
@@ -12,6 +13,8 @@ int _tmain(int argc, _TCHAR* argv[])
   ImageAdd::Run();
 
   NormalizedGradient::Run();
+
+  MinMaxDetector::Run();
 
   return 0;
 }

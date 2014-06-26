@@ -6,12 +6,15 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Benchmark", "Benchmark\Benchmark.vcxproj", "{94A6618F-2402-4B7D-B73C-DFC9953D6812}"
 	ProjectSection(ProjectDependencies) = postProject
 		{58458C57-0601-4460-AB5E-8CE07C6A420D} = {58458C57-0601-4460-AB5E-8CE07C6A420D}
+		{4AE1626F-194F-4C4C-8367-ABBB1E3D2F5F} = {4AE1626F-194F-4C4C-8367-ABBB1E3D2F5F}
 		{BB1878CE-3FD1-4AFE-9769-5B2912028313} = {BB1878CE-3FD1-4AFE-9769-5B2912028313}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ImageAdd", "ImageAdd\ImageAdd.vcxproj", "{58458C57-0601-4460-AB5E-8CE07C6A420D}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NormalizedGradient", "NormalizedGradient\NormalizedGradient.vcxproj", "{BB1878CE-3FD1-4AFE-9769-5B2912028313}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MinMaxDetector", "MinMaxDetector\MinMaxDetector.vcxproj", "{4AE1626F-194F-4C4C-8367-ABBB1E3D2F5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +48,14 @@ Global
 		{BB1878CE-3FD1-4AFE-9769-5B2912028313}.Release|Win32.Build.0 = Release|Win32
 		{BB1878CE-3FD1-4AFE-9769-5B2912028313}.Release|x64.ActiveCfg = Release|x64
 		{BB1878CE-3FD1-4AFE-9769-5B2912028313}.Release|x64.Build.0 = Release|x64
+		{4AE1626F-194F-4C4C-8367-ABBB1E3D2F5F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4AE1626F-194F-4C4C-8367-ABBB1E3D2F5F}.Debug|Win32.Build.0 = Debug|Win32
+		{4AE1626F-194F-4C4C-8367-ABBB1E3D2F5F}.Debug|x64.ActiveCfg = Debug|x64
+		{4AE1626F-194F-4C4C-8367-ABBB1E3D2F5F}.Debug|x64.Build.0 = Debug|x64
+		{4AE1626F-194F-4C4C-8367-ABBB1E3D2F5F}.Release|Win32.ActiveCfg = Release|Win32
+		{4AE1626F-194F-4C4C-8367-ABBB1E3D2F5F}.Release|Win32.Build.0 = Release|Win32
+		{4AE1626F-194F-4C4C-8367-ABBB1E3D2F5F}.Release|x64.ActiveCfg = Release|x64
+		{4AE1626F-194F-4C4C-8367-ABBB1E3D2F5F}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
