@@ -15,6 +15,8 @@ void TopologicalErosion::Run(unsigned int uiKernelSize)
 
   printf( "\n  Running \"TopologicalErosion\" - Kernel-size= %d:\n", uiKernelSize );
 
+  _RunFloat( uiKernelSize );
+
   printf("\n");
 }
 

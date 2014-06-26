@@ -12,6 +12,30 @@
     <Filter Include="Public Header Files">
       <UniqueIdentifier>{68aaac7e-302f-4486-8691-73ccf68b9415}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\TopologicalErosionFloat">
+      <UniqueIdentifier>{c72d46df-513b-417d-81be-8034b1d1e6d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc">
+      <UniqueIdentifier>{3139e66e-ec00-413d-8390-bc70b203b2bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\HIPAccOutputs">
+      <UniqueIdentifier>{6c089525-65bb-4536-bce1-0fead7fd13dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\HIPAccSources">
+      <UniqueIdentifier>{dc288210-fbe9-4286-8874-4f3a41f349d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\Kernels">
+      <UniqueIdentifier>{e5ee0270-c96a-4b1c-a124-6330b64f9059}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\HIPAccOutputs\TopErosionFloat">
+      <UniqueIdentifier>{c69207ce-de7b-46bc-a741-0010205f0d11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\HIPAccSources\TopErosionFloat">
+      <UniqueIdentifier>{367c64a0-20ea-4b8b-819e-789f99cf4a78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\Kernels\TopErosionFloat">
+      <UniqueIdentifier>{b7752c94-1fe3-46c1-a38c-28c1df78ef8e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -26,6 +50,15 @@
     <ClInclude Include="..\..\src\TopologicalErosion\targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\TopologicalErosion\HIPAccSources\TopErosionGeneric.hxx">
+      <Filter>HIPAcc\HIPAccSources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\TopologicalErosion\HIPAccSources\TopErosionFloat\TopErosionFloatDefines.h">
+      <Filter>HIPAcc\HIPAccSources\TopErosionFloat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\TopologicalErosion\TopologicalErosionFloat\TopologicalErosionFloatHandlers.h">
+      <Filter>Source Files\TopologicalErosionFloat</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\TopologicalErosion\stdafx.cpp">
@@ -34,5 +67,91 @@
     <ClCompile Include="..\..\src\TopologicalErosion\TopologicalErosion.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\TopologicalErosion\TopologicalErosionFloat\TopologicalErosionFloat.cpp">
+      <Filter>Source Files\TopologicalErosionFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TopologicalErosion\TopologicalErosionFloat\TopologicalErosionFloatHandlersAVX.cpp">
+      <Filter>Source Files\TopologicalErosionFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TopologicalErosion\TopologicalErosionFloat\TopologicalErosionFloatHandlersScalar.cpp">
+      <Filter>Source Files\TopologicalErosionFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TopologicalErosion\TopologicalErosionFloat\TopologicalErosionFloatHandlersSSE.cpp">
+      <Filter>Source Files\TopologicalErosionFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TopologicalErosion\HIPAccOutputs\TopErosionFloatArray_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\TopErosionFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TopologicalErosion\HIPAccOutputs\TopErosionFloatAVX_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\TopErosionFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TopologicalErosion\HIPAccOutputs\TopErosionFloatScalar_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\TopErosionFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TopologicalErosion\HIPAccOutputs\TopErosionFloatSSE2_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\TopErosionFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TopologicalErosion\HIPAccOutputs\TopErosionFloatSSE3_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\TopErosionFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TopologicalErosion\HIPAccOutputs\TopErosionFloatSSE4_1_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\TopErosionFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TopologicalErosion\HIPAccOutputs\TopErosionFloatSSE4_2_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\TopErosionFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TopologicalErosion\HIPAccOutputs\TopErosionFloatSSSE3_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\TopErosionFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccTopErosionFloat_Arrayfilter.cc">
+      <Filter>HIPAcc\Kernels\TopErosionFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccTopErosionFloat_AVXfilter.cc">
+      <Filter>HIPAcc\Kernels\TopErosionFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccTopErosionFloat_Scalarfilter.cc">
+      <Filter>HIPAcc\Kernels\TopErosionFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccTopErosionFloat_SSE2filter.cc">
+      <Filter>HIPAcc\Kernels\TopErosionFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccTopErosionFloat_SSE3filter.cc">
+      <Filter>HIPAcc\Kernels\TopErosionFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccTopErosionFloat_SSE4_1filter.cc">
+      <Filter>HIPAcc\Kernels\TopErosionFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccTopErosionFloat_SSE4_2filter.cc">
+      <Filter>HIPAcc\Kernels\TopErosionFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccTopErosionFloat_SSSE3filter.cc">
+      <Filter>HIPAcc\Kernels\TopErosionFloat</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <HIPAccCompiler Include="..\..\src\TopologicalErosion\HIPAccSources\TopErosionFloat\TopErosionFloatArray.cpp">
+      <Filter>HIPAcc\HIPAccSources\TopErosionFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\TopologicalErosion\HIPAccSources\TopErosionFloat\TopErosionFloatAVX.cpp">
+      <Filter>HIPAcc\HIPAccSources\TopErosionFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\TopologicalErosion\HIPAccSources\TopErosionFloat\TopErosionFloatScalar.cpp">
+      <Filter>HIPAcc\HIPAccSources\TopErosionFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\TopologicalErosion\HIPAccSources\TopErosionFloat\TopErosionFloatSSE2.cpp">
+      <Filter>HIPAcc\HIPAccSources\TopErosionFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\TopologicalErosion\HIPAccSources\TopErosionFloat\TopErosionFloatSSE3.cpp">
+      <Filter>HIPAcc\HIPAccSources\TopErosionFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\TopologicalErosion\HIPAccSources\TopErosionFloat\TopErosionFloatSSE4_1.cpp">
+      <Filter>HIPAcc\HIPAccSources\TopErosionFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\TopologicalErosion\HIPAccSources\TopErosionFloat\TopErosionFloatSSE4_2.cpp">
+      <Filter>HIPAcc\HIPAccSources\TopErosionFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\TopologicalErosion\HIPAccSources\TopErosionFloat\TopErosionFloatSSSE3.cpp">
+      <Filter>HIPAcc\HIPAccSources\TopErosionFloat</Filter>
+    </HIPAccCompiler>
   </ItemGroup>
 </Project>
