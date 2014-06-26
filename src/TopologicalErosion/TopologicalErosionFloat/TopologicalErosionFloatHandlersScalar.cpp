@@ -30,7 +30,7 @@ private:
         {
           for (int iX = -ciAnchor; iX <= ciAnchor; ++iX)
           {
-            TOutVal = std::min( TOutVal, aaInput[iRow + iY][iCol + iX] );
+            TOutVal = min( TOutVal, aaInput[iRow + iY][iCol + iX] );
           }
         }
 
