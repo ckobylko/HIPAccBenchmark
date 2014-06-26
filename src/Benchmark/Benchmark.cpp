@@ -6,6 +6,7 @@
 #include "../../include/ImageAdd/ImageAdd.h"
 #include "../../include/NormalizedGradient/NormalizedGradient.h"
 #include "../../include/MinMaxDetector/MinMaxDetector.h"
+#include "../../include/TopologicalErosion/TopologicalErosion.h"
 #include <stdexcept>
 
 
@@ -20,6 +21,11 @@ int _tmain(int argc, _TCHAR* argv[])
     for (unsigned int uiKernelSize = 3; uiKernelSize <= 9; uiKernelSize += 2)
     {
       MinMaxDetector::Run( uiKernelSize );
+    }
+
+    for (unsigned int uiKernelSize = 3; uiKernelSize <= 9; uiKernelSize += 2)
+    {
+      TopologicalErosion::Run(uiKernelSize);
     }
   }
   catch (std::exception &e)

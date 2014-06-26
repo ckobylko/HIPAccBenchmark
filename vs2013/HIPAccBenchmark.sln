@@ -16,6 +16,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NormalizedGradient", "Norma
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MinMaxDetector", "MinMaxDetector\MinMaxDetector.vcxproj", "{4AE1626F-194F-4C4C-8367-ABBB1E3D2F5F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TopologicalErosion", "TopologicalErosion\TopologicalErosion.vcxproj", "{3BE8B05D-5B8A-4B75-B803-CEDFE8A5F64B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -56,6 +58,14 @@ Global
 		{4AE1626F-194F-4C4C-8367-ABBB1E3D2F5F}.Release|Win32.Build.0 = Release|Win32
 		{4AE1626F-194F-4C4C-8367-ABBB1E3D2F5F}.Release|x64.ActiveCfg = Release|x64
 		{4AE1626F-194F-4C4C-8367-ABBB1E3D2F5F}.Release|x64.Build.0 = Release|x64
+		{3BE8B05D-5B8A-4B75-B803-CEDFE8A5F64B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3BE8B05D-5B8A-4B75-B803-CEDFE8A5F64B}.Debug|Win32.Build.0 = Debug|Win32
+		{3BE8B05D-5B8A-4B75-B803-CEDFE8A5F64B}.Debug|x64.ActiveCfg = Debug|x64
+		{3BE8B05D-5B8A-4B75-B803-CEDFE8A5F64B}.Debug|x64.Build.0 = Debug|x64
+		{3BE8B05D-5B8A-4B75-B803-CEDFE8A5F64B}.Release|Win32.ActiveCfg = Release|Win32
+		{3BE8B05D-5B8A-4B75-B803-CEDFE8A5F64B}.Release|Win32.Build.0 = Release|Win32
+		{3BE8B05D-5B8A-4B75-B803-CEDFE8A5F64B}.Release|x64.ActiveCfg = Release|x64
+		{3BE8B05D-5B8A-4B75-B803-CEDFE8A5F64B}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
