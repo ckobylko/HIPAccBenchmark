@@ -9,10 +9,6 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="Public Header Files">
       <UniqueIdentifier>{63245c38-041b-494b-adb7-1ce22a92d80d}</UniqueIdentifier>
     </Filter>
@@ -62,30 +58,6 @@
     </ClCompile>
     <ClCompile Include="..\..\src\NormalizedGradient\NormalizedGradientFloat\NormalizedGradientFloatHandlersSSE.cpp">
       <Filter>Source Files\NormalizedGradientFloat</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradFloat\NormGradFloatArray.cpp">
-      <Filter>HIPAcc\HIPAccSources\NormGradFloat</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradFloat\NormGradFloatAVX.cpp">
-      <Filter>HIPAcc\HIPAccSources\NormGradFloat</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradFloat\NormGradFloatScalar.cpp">
-      <Filter>HIPAcc\HIPAccSources\NormGradFloat</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradFloat\NormGradFloatSSE.cpp">
-      <Filter>HIPAcc\HIPAccSources\NormGradFloat</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradFloat\NormGradFloatSSE2.cpp">
-      <Filter>HIPAcc\HIPAccSources\NormGradFloat</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradFloat\NormGradFloatSSE3.cpp">
-      <Filter>HIPAcc\HIPAccSources\NormGradFloat</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradFloat\NormGradFloatSSE4_1.cpp">
-      <Filter>HIPAcc\HIPAccSources\NormGradFloat</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradFloat\NormGradFloatSSE4_2.cpp">
-      <Filter>HIPAcc\HIPAccSources\NormGradFloat</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\NormalizedGradient\HIPAccOutputs\NormGradFloatArray_out.cpp">
       <Filter>HIPAcc\HIPAccOutputs\NormGradFloat</Filter>
@@ -164,6 +136,30 @@
   </ItemGroup>
   <ItemGroup>
     <HIPAccCompiler Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradFloat\NormGradFloatSSSE3.cpp">
+      <Filter>HIPAcc\HIPAccSources\NormGradFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradFloat\NormGradFloatArray.cpp">
+      <Filter>HIPAcc\HIPAccSources\NormGradFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradFloat\NormGradFloatAVX.cpp">
+      <Filter>HIPAcc\HIPAccSources\NormGradFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradFloat\NormGradFloatScalar.cpp">
+      <Filter>HIPAcc\HIPAccSources\NormGradFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradFloat\NormGradFloatSSE.cpp">
+      <Filter>HIPAcc\HIPAccSources\NormGradFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradFloat\NormGradFloatSSE2.cpp">
+      <Filter>HIPAcc\HIPAccSources\NormGradFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradFloat\NormGradFloatSSE3.cpp">
+      <Filter>HIPAcc\HIPAccSources\NormGradFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradFloat\NormGradFloatSSE4_1.cpp">
+      <Filter>HIPAcc\HIPAccSources\NormGradFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradFloat\NormGradFloatSSE4_2.cpp">
       <Filter>HIPAcc\HIPAccSources\NormGradFloat</Filter>
     </HIPAccCompiler>
   </ItemGroup>
