@@ -12,6 +12,30 @@
     <Filter Include="Public Header Files">
       <UniqueIdentifier>{23726966-4eb6-47b1-abbc-960cc4f362b6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="HIPAcc">
+      <UniqueIdentifier>{5ba638d9-07ba-4f62-a557-c6cf7d0f37a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\HIPAccOutputs">
+      <UniqueIdentifier>{68e3a651-409b-4697-b198-79f8efbaef9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\HIPAccSources">
+      <UniqueIdentifier>{e8351d20-bd85-4e15-b752-5a287ff31624}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\Kernels">
+      <UniqueIdentifier>{d9c17afe-db3f-4ff8-a7d6-0760d57d09d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\Kernels\MinMaxFloat">
+      <UniqueIdentifier>{d6c18a78-a131-45a7-af58-e88fcf5e5223}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\HIPAccSources\MinMaxFloat">
+      <UniqueIdentifier>{90f5309a-d067-4619-bc03-8d9ac4232094}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\HIPAccOutputs\MinMaxFloat">
+      <UniqueIdentifier>{4b360642-c8c0-4738-875b-bbaa59ded039}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MinMaxDetectorFloat">
+      <UniqueIdentifier>{b39b8ee2-3384-45db-b18b-9e88f0919642}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -26,6 +50,15 @@
     <ClInclude Include="..\..\src\MinMaxDetector\targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\MinMaxDetector\MinMaxDetectorFloat\MinMaxDetectorFloatHandlers.h">
+      <Filter>Source Files\MinMaxDetectorFloat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxGeneric.hxx">
+      <Filter>HIPAcc\HIPAccSources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxFloat\MinMaxFloatDefines.h">
+      <Filter>HIPAcc\HIPAccSources\MinMaxFloat</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\MinMaxDetector\MinMaxDetector.cpp">
@@ -34,5 +67,91 @@
     <ClCompile Include="..\..\src\MinMaxDetector\stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\MinMaxDetectorFloat\MinMaxDetectorFloat.cpp">
+      <Filter>Source Files\MinMaxDetectorFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\MinMaxDetectorFloat\MinMaxDetectorFloatHandlersAVX.cpp">
+      <Filter>Source Files\MinMaxDetectorFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\MinMaxDetectorFloat\MinMaxDetectorFloatHandlersScalar.cpp">
+      <Filter>Source Files\MinMaxDetectorFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\MinMaxDetectorFloat\MinMaxDetectorFloatHandlersSSE.cpp">
+      <Filter>Source Files\MinMaxDetectorFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccMinMaxFloat_Arrayfilter.cc">
+      <Filter>HIPAcc\Kernels\MinMaxFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccMinMaxFloat_AVXfilter.cc">
+      <Filter>HIPAcc\Kernels\MinMaxFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccMinMaxFloat_Scalarfilter.cc">
+      <Filter>HIPAcc\Kernels\MinMaxFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccMinMaxFloat_SSE2filter.cc">
+      <Filter>HIPAcc\Kernels\MinMaxFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccMinMaxFloat_SSE3filter.cc">
+      <Filter>HIPAcc\Kernels\MinMaxFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccMinMaxFloat_SSE4_1filter.cc">
+      <Filter>HIPAcc\Kernels\MinMaxFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccMinMaxFloat_SSE4_2filter.cc">
+      <Filter>HIPAcc\Kernels\MinMaxFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccMinMaxFloat_SSSE3filter.cc">
+      <Filter>HIPAcc\Kernels\MinMaxFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxFloatArray_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\MinMaxFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxFloatAVX_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\MinMaxFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxFloatScalar_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\MinMaxFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxFloatSSE2_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\MinMaxFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxFloatSSE3_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\MinMaxFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxFloatSSE4_1_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\MinMaxFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxFloatSSE4_2_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\MinMaxFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxFloatSSSE3_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\MinMaxFloat</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <HIPAccCompiler Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxFloat\MinMaxFloatArray.cpp">
+      <Filter>HIPAcc\HIPAccSources\MinMaxFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxFloat\MinMaxFloatAVX.cpp">
+      <Filter>HIPAcc\HIPAccSources\MinMaxFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxFloat\MinMaxFloatScalar.cpp">
+      <Filter>HIPAcc\HIPAccSources\MinMaxFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxFloat\MinMaxFloatSSE2.cpp">
+      <Filter>HIPAcc\HIPAccSources\MinMaxFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxFloat\MinMaxFloatSSE3.cpp">
+      <Filter>HIPAcc\HIPAccSources\MinMaxFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxFloat\MinMaxFloatSSE4_1.cpp">
+      <Filter>HIPAcc\HIPAccSources\MinMaxFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxFloat\MinMaxFloatSSE4_2.cpp">
+      <Filter>HIPAcc\HIPAccSources\MinMaxFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxFloat\MinMaxFloatSSSE3.cpp">
+      <Filter>HIPAcc\HIPAccSources\MinMaxFloat</Filter>
+    </HIPAccCompiler>
   </ItemGroup>
 </Project>

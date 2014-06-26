@@ -52,6 +52,7 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
+    <Import Project="..\_HIPAcc_Target\HIPAcc.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -147,11 +148,195 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\MinMaxDetector\MinMaxDetector.h" />
+    <ClInclude Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxFloat\MinMaxFloatDefines.h" />
+    <ClInclude Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxGeneric.hxx" />
+    <ClInclude Include="..\..\src\MinMaxDetector\MinMaxDetectorFloat\MinMaxDetectorFloatHandlers.h" />
     <ClInclude Include="..\..\src\MinMaxDetector\stdafx.h" />
     <ClInclude Include="..\..\src\MinMaxDetector\targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxFloatArray_out.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxFloatAVX_out.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxFloatScalar_out.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxFloatSSE2_out.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxFloatSSE3_out.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxFloatSSE4_1_out.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxFloatSSE4_2_out.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxFloatSSSE3_out.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccMinMaxFloat_Arrayfilter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccMinMaxFloat_AVXfilter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccMinMaxFloat_Scalarfilter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccMinMaxFloat_SSE2filter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccMinMaxFloat_SSE3filter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccMinMaxFloat_SSE4_1filter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccMinMaxFloat_SSE4_2filter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccMinMaxFloat_SSSE3filter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <HIPAccCompiler Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxFloat\MinMaxFloatArray.cpp">
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">array</InstructionSet>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">array</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">array</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">array</InstructionSet>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxFloat\MinMaxFloatAVX.cpp">
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">avx</InstructionSet>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">avx</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">avx</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">avx</InstructionSet>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxFloat\MinMaxFloatScalar.cpp" />
+    <HIPAccCompiler Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxFloat\MinMaxFloatSSE2.cpp">
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sse2</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sse2</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sse2</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sse2</InstructionSet>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxFloat\MinMaxFloatSSE3.cpp">
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sse3</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sse3</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sse3</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sse3</InstructionSet>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxFloat\MinMaxFloatSSE4_1.cpp">
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sse41</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sse41</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sse41</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sse41</InstructionSet>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxFloat\MinMaxFloatSSE4_2.cpp">
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sse42</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sse42</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sse42</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sse42</InstructionSet>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxFloat\MinMaxFloatSSSE3.cpp">
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ssse3</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ssse3</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ssse3</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ssse3</InstructionSet>
+    </HIPAccCompiler>
     <ClCompile Include="..\..\src\MinMaxDetector\MinMaxDetector.cpp" />
+    <ClCompile Include="..\..\src\MinMaxDetector\MinMaxDetectorFloat\MinMaxDetectorFloat.cpp" />
+    <ClCompile Include="..\..\src\MinMaxDetector\MinMaxDetectorFloat\MinMaxDetectorFloatHandlersAVX.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\MinMaxDetectorFloat\MinMaxDetectorFloatHandlersScalar.cpp" />
+    <ClCompile Include="..\..\src\MinMaxDetector\MinMaxDetectorFloat\MinMaxDetectorFloatHandlersSSE.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
     <ClCompile Include="..\..\src\MinMaxDetector\stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -161,5 +346,6 @@
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\_HIPAcc_Target\HIPAcc.targets" />
   </ImportGroup>
 </Project>
