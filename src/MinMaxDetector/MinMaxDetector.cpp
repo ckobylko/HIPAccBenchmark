@@ -1,11 +1,21 @@
 #include "stdafx.h"
 #include "../../include/MinMaxDetector/MinMaxDetector.h"
+#include <stdexcept>
 
-void MinMaxDetector::Run()
+void MinMaxDetector::Run(unsigned int uiKernelSize)
 {
-  printf("\n  Running \"MinMaxDetector\":\n");
+  if (uiKernelSize < 3)
+  {
+    throw std::runtime_error( "The kernel size must be greater than or equal to 3!" );
+  }
+  else if ((uiKernelSize & 1) == 0)
+  {
+    throw std::runtime_error("The kernel size must be odd!");
+  }
 
-  _RunFloat();
+  printf( "\n  Running \"MinMaxDetector\" - Kernel-size= %d:\n", uiKernelSize );
+
+  _RunFloat(uiKernelSize);
 
   printf("\n");
 }

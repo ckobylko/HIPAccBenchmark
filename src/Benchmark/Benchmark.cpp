@@ -6,15 +6,26 @@
 #include "../../include/ImageAdd/ImageAdd.h"
 #include "../../include/NormalizedGradient/NormalizedGradient.h"
 #include "../../include/MinMaxDetector/MinMaxDetector.h"
+#include <stdexcept>
 
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-  ImageAdd::Run();
+  try
+  {
+    ImageAdd::Run();
 
-  NormalizedGradient::Run();
+    NormalizedGradient::Run();
 
-  MinMaxDetector::Run();
+    for (unsigned int uiKernelSize = 3; uiKernelSize <= 9; uiKernelSize += 2)
+    {
+      MinMaxDetector::Run( uiKernelSize );
+    }
+  }
+  catch (std::exception &e)
+  {
+    printf( "\n\nERROR: %s\n\n", e.what() );
+  }
 
   return 0;
 }

@@ -4,9 +4,12 @@
 namespace Scalar  {
 #include "ccAddFloat_Scalarfilter.cc"
 }
+
+#ifndef IGNORE_ARRAY_EXPORT
 namespace Array   {
 #include "ccAddFloat_Arrayfilter.cc"
 }
+#endif
 
 
 class ImageAddFloatHandler_ScalarRef final : public ImageAddFloatHandler
@@ -49,8 +52,10 @@ public:
   }
 };
 
-MAKE_HANDLER(Array);
 
+#ifndef IGNORE_ARRAY_EXPORT
+MAKE_HANDLER(Array);
+#endif
 
 
 HandlerList ImageAddFloat_GetScalarHandlers()
@@ -59,7 +64,10 @@ HandlerList ImageAddFloat_GetScalarHandlers()
 
   lstHandlers.push_back( ImageAddFloatHandler::Create< ImageAddFloatHandler_ScalarRef >() );
   lstHandlers.push_back( ImageAddFloatHandler::Create< ImageAddFloatHandler_Scalar    >() );
-  lstHandlers.push_back( ImageAddFloatHandler::Create< ImageAddFloatHandler_Array     >() );
+
+#ifndef IGNORE_ARRAY_EXPORT
+  lstHandlers.push_back(ImageAddFloatHandler::Create< ImageAddFloatHandler_Array     >());
+#endif
 
   return std::move( lstHandlers );
 }

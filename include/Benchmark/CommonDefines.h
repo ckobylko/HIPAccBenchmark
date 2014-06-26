@@ -12,3 +12,5 @@
   HIPACC_SET_INPUT_PIXEL_TYPE_2(__type) \
   HIPACC_SET_OUTPUT_PIXEL_TYPE(__type)
 
+
+#define IGNORE_ARRAY_EXPORT   // TODO: Uncomment this if the "array" exporter shall not be included in the benchmark

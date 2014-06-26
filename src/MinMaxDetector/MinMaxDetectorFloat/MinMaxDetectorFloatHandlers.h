@@ -47,7 +47,7 @@ public: \
     const int ciStrideInput  = InputImageType::GetWidth();\
     const int ciStrideOutput = OutputImageType::GetWidth();\
     \
-    ##__IS_Name##::ccMinMaxFloat_##__IS_Name##filterKernel( spOutputImage->Data, spInputImage->Data, ciStrideInput, ciAnchor, ciStrideOutput, \
+    ##__IS_Name##::ccMinMaxFloat_##__IS_Name##filterKernel( spOutputImage->Data, spInputImage->Data, ciStrideInput, ciAnchor, ciAnchor, ciAnchor, ciStrideOutput, \
                                                             OutputImageType::GetWidth() - ciAnchor * 2, OutputImageType::GetHeight() - ciAnchor * 2, \
                                                             ciAnchor, ciAnchor ); \
   }\

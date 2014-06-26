@@ -87,7 +87,7 @@ int main(int argc, const char **argv) \
   Output = pOutputData; \
 \
   /* Create and execute filter */ \
-  hipacc::Accessor< InputPixelType_1 > accInput(Input); \
+  hipacc::Accessor< InputPixelType_1 > accInput( Input, ciImageWidth - ciAnchor * 2, ciImageHeight - ciAnchor * 2, ciAnchor, ciAnchor ); \
   KERNEL_NAME filter(Iter, accInput, ciAnchor); \
   filter.execute(); \
 \

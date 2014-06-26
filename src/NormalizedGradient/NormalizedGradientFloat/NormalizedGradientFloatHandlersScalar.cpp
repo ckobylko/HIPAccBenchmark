@@ -5,9 +5,12 @@
 namespace Scalar  {
 #include "ccNormGradFloat_Scalarfilter.cc"
 }
+
+#ifndef IGNORE_ARRAY_EXPORT
 namespace Array   {
 #include "ccNormGradFloat_Arrayfilter.cc"
 }
+#endif
 
 
 class NormalizedGradientFloatHandler_ScalarRef final : public NormalizedGradientFloatHandler
@@ -57,7 +60,10 @@ public:
   }
 };
 
+
+#ifndef IGNORE_ARRAY_EXPORT
 MAKE_HANDLER(Array);
+#endif
 
 
 
@@ -67,7 +73,10 @@ HandlerList NormalizedGradientFloat_GetScalarHandlers()
 
   lstHandlers.push_back( NormalizedGradientFloatHandler::Create< NormalizedGradientFloatHandler_ScalarRef >() );
   lstHandlers.push_back( NormalizedGradientFloatHandler::Create< NormalizedGradientFloatHandler_Scalar    >() );
-  lstHandlers.push_back( NormalizedGradientFloatHandler::Create< NormalizedGradientFloatHandler_Array     >() );
+
+#ifndef IGNORE_ARRAY_EXPORT
+  lstHandlers.push_back(NormalizedGradientFloatHandler::Create< NormalizedGradientFloatHandler_Array     >());
+#endif
 
   return std::move( lstHandlers );
 }

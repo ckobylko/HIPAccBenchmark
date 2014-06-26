@@ -4,9 +4,12 @@
 namespace Scalar  {
 #include "ccMinMaxFloat_Scalarfilter.cc"
 }
+
+#ifndef IGNORE_ARRAY_EXPORT
 namespace Array   {
 #include "ccMinMaxFloat_Arrayfilter.cc"
 }
+#endif
 
 
 class MinMaxDetectorFloatHandler_ScalarRef final : public MinMaxDetectorFloatHandler
@@ -80,12 +83,16 @@ public:
     const int ciAnchor        = static_cast< int >( uiKernelSize >> 1 );
     const int ciStrideOutput  = OutputImageType::GetWidth();
   
-    Scalar::ccMinMaxFloat_ScalarfilterKernel( spOutputImage->Data, spInputImage->Data, ciAnchor, ciStrideOutput, OutputImageType::GetWidth() - ciAnchor * 2,
-                                              OutputImageType::GetHeight() - ciAnchor * 2, ciAnchor, ciAnchor );
+    Scalar::ccMinMaxFloat_ScalarfilterKernel( spOutputImage->Data, spInputImage->Data, ciAnchor, ciAnchor, ciAnchor, ciStrideOutput,
+                                              OutputImageType::GetWidth() - ciAnchor * 2, OutputImageType::GetHeight() - ciAnchor * 2,
+                                              ciAnchor, ciAnchor );
   }
 };
 
+
+#ifndef IGNORE_ARRAY_EXPORT
 MAKE_HANDLER(Array);
+#endif
 
 
 
@@ -95,7 +102,10 @@ HandlerList MinMaxDetectorFloat_GetScalarHandlers()
 
   lstHandlers.push_back( MinMaxDetectorFloatHandler::Create< MinMaxDetectorFloatHandler_ScalarRef >() );
   lstHandlers.push_back( MinMaxDetectorFloatHandler::Create< MinMaxDetectorFloatHandler_Scalar    >() );
-  lstHandlers.push_back( MinMaxDetectorFloatHandler::Create< MinMaxDetectorFloatHandler_Array     >() );
+
+#ifndef IGNORE_ARRAY_EXPORT
+  lstHandlers.push_back(MinMaxDetectorFloatHandler::Create< MinMaxDetectorFloatHandler_Array     >());
+#endif
 
   return std::move( lstHandlers );
 }

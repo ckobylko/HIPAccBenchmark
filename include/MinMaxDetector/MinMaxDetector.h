@@ -4,10 +4,10 @@ class MinMaxDetector
 {
 private:
 
-  static void _RunFloat();
+  static void _RunFloat(unsigned int uiKernelSize);
 
 public:
 
-  static void Run();
+  static void Run(unsigned int uiKernelSize);
 };
 

@@ -4,10 +4,9 @@
 #include <omp.h>
 
 
-void MinMaxDetector::_RunFloat()
+void MinMaxDetector::_RunFloat(unsigned int uiKernelSize)
 {
   const size_t        cszIters      = static_cast< size_t >( 100 );
-  const unsigned int  cuiKernelSize = 3;
 
   printf("\n    Running \"_RunFloat()\"  -  Image-Size = %4d x %4d\n", ciImageWidth, ciImageHeight);
 
@@ -28,7 +27,7 @@ void MinMaxDetector::_RunFloat()
 
     for (size_t szIter = static_cast<size_t>(0); szIter < cszIters; ++szIter)
     {
-      itHandler->Launch( spOutputImage, spInputImage, cuiKernelSize );
+      itHandler->Launch( spOutputImage, spInputImage, uiKernelSize );
     }
 
     dTime = omp_get_wtime() - dTime;
