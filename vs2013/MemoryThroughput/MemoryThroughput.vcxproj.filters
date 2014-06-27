@@ -23,6 +23,18 @@
     <ClCompile Include="..\..\src\MemoryThroughput\stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\MemoryThroughput\TestRead.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MemoryThroughput\TestWrite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MemoryThroughput\AVX_Routines.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MemoryThroughput\SSE_Routines.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\MemoryThroughput\stdafx.h">
@@ -33,6 +45,12 @@
     </ClInclude>
     <ClInclude Include="..\..\include\MemoryThroughput\MemoryThroughput.h">
       <Filter>Public Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\MemoryThroughput\TestRead.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\MemoryThroughput\TestWrite.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
