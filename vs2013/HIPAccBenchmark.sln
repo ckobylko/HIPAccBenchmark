@@ -18,6 +18,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MinMaxDetector", "MinMaxDet
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TopologicalErosion", "TopologicalErosion\TopologicalErosion.vcxproj", "{3BE8B05D-5B8A-4B75-B803-CEDFE8A5F64B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MemoryThroughput", "MemoryThroughput\MemoryThroughput.vcxproj", "{C782A89B-9878-4BF9-A718-DC66604FDAD0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -66,6 +68,14 @@ Global
 		{3BE8B05D-5B8A-4B75-B803-CEDFE8A5F64B}.Release|Win32.Build.0 = Release|Win32
 		{3BE8B05D-5B8A-4B75-B803-CEDFE8A5F64B}.Release|x64.ActiveCfg = Release|x64
 		{3BE8B05D-5B8A-4B75-B803-CEDFE8A5F64B}.Release|x64.Build.0 = Release|x64
+		{C782A89B-9878-4BF9-A718-DC66604FDAD0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C782A89B-9878-4BF9-A718-DC66604FDAD0}.Debug|Win32.Build.0 = Debug|Win32
+		{C782A89B-9878-4BF9-A718-DC66604FDAD0}.Debug|x64.ActiveCfg = Debug|x64
+		{C782A89B-9878-4BF9-A718-DC66604FDAD0}.Debug|x64.Build.0 = Debug|x64
+		{C782A89B-9878-4BF9-A718-DC66604FDAD0}.Release|Win32.ActiveCfg = Release|Win32
+		{C782A89B-9878-4BF9-A718-DC66604FDAD0}.Release|Win32.Build.0 = Release|Win32
+		{C782A89B-9878-4BF9-A718-DC66604FDAD0}.Release|x64.ActiveCfg = Release|x64
+		{C782A89B-9878-4BF9-A718-DC66604FDAD0}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
