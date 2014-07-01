@@ -7,6 +7,7 @@
 #include "../../include/ImageAdd/ImageAdd.h"
 #include "../../include/NormalizedGradient/NormalizedGradient.h"
 #include "../../include/BubbleSortMedian/BubbleSortMedian.h"
+#include "../../include/BubbleSortMedianOptimized/BubbleSortMedianOptimized.h"
 #include "../../include/Convolution/Convolution.h"
 #include "../../include/MinMaxDetector/MinMaxDetector.h"
 #include "../../include/TopologicalErosion/TopologicalErosion.h"
@@ -33,6 +34,11 @@ int _tmain(int argc, _TCHAR* argv[])
     for (unsigned int uiKernelSize = 3; uiKernelSize <= 9; uiKernelSize += 2)
     {
       BubbleSortMedian::Run(uiKernelSize);
+    }
+
+    for (unsigned int uiKernelSize = 3; uiKernelSize <= 9; uiKernelSize += 2)
+    {
+      BubbleSortMedianOptimized::Run(uiKernelSize);
     }
 
     for (unsigned int uiKernelSize = 3; uiKernelSize <= 9; uiKernelSize += 2)
