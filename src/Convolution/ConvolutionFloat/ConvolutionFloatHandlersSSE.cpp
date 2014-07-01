@@ -25,7 +25,7 @@ MAKE_HANDLER(SSE4_1);
 MAKE_HANDLER(SSE4_2);
 
 
-HandlerList TopologicalErosionFloat_GetSSEHandlers()
+HandlerList ConvolutionFloat_GetSSEHandlers()
 {
   HandlerList lstHandlers;
 

@@ -75,7 +75,7 @@ MAKE_HANDLER(Array);
 
 
 
-HandlerList TopologicalErosionFloat_GetScalarHandlers()
+HandlerList ConvolutionFloat_GetScalarHandlers()
 {
   HandlerList lstHandlers;
 

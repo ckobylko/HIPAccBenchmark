@@ -8,7 +8,7 @@ namespace AVX {
 MAKE_HANDLER(AVX);
 
 
-HandlerList TopologicalErosionFloat_GetAVXHandlers()
+HandlerList ConvolutionFloat_GetAVXHandlers()
 {
   HandlerList lstHandlers;
 
