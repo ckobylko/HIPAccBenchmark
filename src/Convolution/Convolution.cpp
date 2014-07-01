@@ -15,6 +15,8 @@ void Convolution::Run(unsigned int uiKernelSize)
 
   printf( "\n  Running \"Convolution\" - Kernel-size= %d:\n", uiKernelSize );
 
+  _RunFloat( uiKernelSize );
+
   printf("\n");
 }
 

@@ -12,6 +12,30 @@
     <Filter Include="Public Header Files">
       <UniqueIdentifier>{461e6543-ee12-4d51-a3cc-6474cae6d7f3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\ConvolutionFloat">
+      <UniqueIdentifier>{cd9feb35-a8c5-4f49-a584-a158ad085f94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc">
+      <UniqueIdentifier>{7d6221ef-d90b-430a-8dd1-74e255bdd1e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\HIPAccOutputs">
+      <UniqueIdentifier>{36efbc5b-cb50-4c6f-a8a3-3dcff3079f71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\HIPAccSources">
+      <UniqueIdentifier>{b2b67779-deaa-42ac-866e-f182932245ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\Kernels">
+      <UniqueIdentifier>{aef5603b-43b3-4ba9-9985-ffd489647186}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\Kernels\ConvFloat">
+      <UniqueIdentifier>{a7701b15-8c92-4bd0-8cf9-2c7733be5459}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\HIPAccSources\ConvFloat">
+      <UniqueIdentifier>{bda8d18c-9f2d-4fd1-ae0b-48fe5cdd9e4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\HIPAccOutputs\ConvFloat">
+      <UniqueIdentifier>{2c9bc30e-6d95-4a0c-8f15-8bce115d62c8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -26,6 +50,15 @@
     <ClInclude Include="..\..\src\Convolution\targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\Convolution\ConvolutionFloat\ConvolutionFloatHandlers.h">
+      <Filter>Source Files\ConvolutionFloat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Convolution\HIPAccSources\ConvGeneric.hxx">
+      <Filter>HIPAcc\HIPAccSources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Convolution\HIPAccSources\ConvFloat\ConvFloatDefines.h">
+      <Filter>HIPAcc\HIPAccSources\ConvFloat</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\Convolution\Convolution.cpp">
@@ -34,5 +67,91 @@
     <ClCompile Include="..\..\src\Convolution\stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Convolution\ConvolutionFloat\ConvolutionFloat.cpp">
+      <Filter>Source Files\ConvolutionFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Convolution\ConvolutionFloat\ConvolutionFloatHandlersAVX.cpp">
+      <Filter>Source Files\ConvolutionFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Convolution\ConvolutionFloat\ConvolutionFloatHandlersScalar.cpp">
+      <Filter>Source Files\ConvolutionFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Convolution\ConvolutionFloat\ConvolutionFloatHandlersSSE.cpp">
+      <Filter>Source Files\ConvolutionFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Convolution\HIPAccOutputs\ConvFloatArray_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\ConvFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Convolution\HIPAccOutputs\ConvFloatAVX_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\ConvFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Convolution\HIPAccOutputs\ConvFloatScalar_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\ConvFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Convolution\HIPAccOutputs\ConvFloatSSE2_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\ConvFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Convolution\HIPAccOutputs\ConvFloatSSE3_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\ConvFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Convolution\HIPAccOutputs\ConvFloatSSE4_1_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\ConvFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Convolution\HIPAccOutputs\ConvFloatSSE4_2_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\ConvFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Convolution\HIPAccOutputs\ConvFloatSSSE3_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\ConvFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccConvFloat_Arrayfilter.cc">
+      <Filter>HIPAcc\Kernels\ConvFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccConvFloat_AVXfilter.cc">
+      <Filter>HIPAcc\Kernels\ConvFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccConvFloat_Scalarfilter.cc">
+      <Filter>HIPAcc\Kernels\ConvFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccConvFloat_SSE2filter.cc">
+      <Filter>HIPAcc\Kernels\ConvFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccConvFloat_SSE3filter.cc">
+      <Filter>HIPAcc\Kernels\ConvFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccConvFloat_SSE4_1filter.cc">
+      <Filter>HIPAcc\Kernels\ConvFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccConvFloat_SSE4_2filter.cc">
+      <Filter>HIPAcc\Kernels\ConvFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccConvFloat_SSSE3filter.cc">
+      <Filter>HIPAcc\Kernels\ConvFloat</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <HIPAccCompiler Include="..\..\src\Convolution\HIPAccSources\ConvFloat\ConvFloatArray.cpp">
+      <Filter>HIPAcc\HIPAccSources\ConvFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\Convolution\HIPAccSources\ConvFloat\ConvFloatAVX.cpp">
+      <Filter>HIPAcc\HIPAccSources\ConvFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\Convolution\HIPAccSources\ConvFloat\ConvFloatScalar.cpp">
+      <Filter>HIPAcc\HIPAccSources\ConvFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\Convolution\HIPAccSources\ConvFloat\ConvFloatSSE2.cpp">
+      <Filter>HIPAcc\HIPAccSources\ConvFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\Convolution\HIPAccSources\ConvFloat\ConvFloatSSE3.cpp">
+      <Filter>HIPAcc\HIPAccSources\ConvFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\Convolution\HIPAccSources\ConvFloat\ConvFloatSSE4_1.cpp">
+      <Filter>HIPAcc\HIPAccSources\ConvFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\Convolution\HIPAccSources\ConvFloat\ConvFloatSSE4_2.cpp">
+      <Filter>HIPAcc\HIPAccSources\ConvFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\Convolution\HIPAccSources\ConvFloat\ConvFloatSSSE3.cpp">
+      <Filter>HIPAcc\HIPAccSources\ConvFloat</Filter>
+    </HIPAccCompiler>
   </ItemGroup>
 </Project>
