@@ -12,6 +12,30 @@
     <Filter Include="Public Header Files">
       <UniqueIdentifier>{407056d6-9498-409d-9950-020ff58c48ee}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\BubbleSortMedianOptimizedFloat">
+      <UniqueIdentifier>{7a375e9a-fbbb-43a1-9df3-9b3bc730fd4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc">
+      <UniqueIdentifier>{2ec5ad91-c7d7-4247-a8f9-ebe4c0d2143f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\HIPAccOutputs">
+      <UniqueIdentifier>{08e6e7d1-8a00-40fa-9b95-07c06e22733c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\HIPAccSources">
+      <UniqueIdentifier>{f1d8f1ec-5c33-457c-bdce-cfc0e3f87a6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\Kernels">
+      <UniqueIdentifier>{b692cbad-994a-4478-8ebf-a711fcdd4787}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\HIPAccOutputs\BubbleSortOptFloat">
+      <UniqueIdentifier>{a3418883-7fa0-4e26-915d-a846df635048}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\HIPAccSources\BubbleSortOptFloat">
+      <UniqueIdentifier>{93742fe6-60cd-4709-8e27-ce331a155927}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\Kernels\BubbleSortOptFloat">
+      <UniqueIdentifier>{62db0a3f-dd63-49d9-849f-1ded9c322b0a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -22,6 +46,66 @@
     </ClCompile>
     <ClCompile Include="..\..\src\BubbleSortMedianOptimized\stdafx.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\BubbleSortMedianOptimized\BubbleSortMedianOptimizedFloat\BubbleSortMedianOptimizedFloat.cpp">
+      <Filter>Source Files\BubbleSortMedianOptimizedFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\BubbleSortMedianOptimized\BubbleSortMedianOptimizedFloat\BubbleSortMedianOptimizedFloatHandlersAVX.cpp">
+      <Filter>Source Files\BubbleSortMedianOptimizedFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\BubbleSortMedianOptimized\BubbleSortMedianOptimizedFloat\BubbleSortMedianOptimizedFloatHandlersScalar.cpp">
+      <Filter>Source Files\BubbleSortMedianOptimizedFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\BubbleSortMedianOptimized\BubbleSortMedianOptimizedFloat\BubbleSortMedianOptimizedFloatHandlersSSE.cpp">
+      <Filter>Source Files\BubbleSortMedianOptimizedFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\BubbleSortMedianOptimized\HIPAccOutputs\BubbleSortOptFloatArray_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\BubbleSortOptFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\BubbleSortMedianOptimized\HIPAccOutputs\BubbleSortOptFloatAVX_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\BubbleSortOptFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\BubbleSortMedianOptimized\HIPAccOutputs\BubbleSortOptFloatScalar_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\BubbleSortOptFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\BubbleSortMedianOptimized\HIPAccOutputs\BubbleSortOptFloatSSE2_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\BubbleSortOptFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\BubbleSortMedianOptimized\HIPAccOutputs\BubbleSortOptFloatSSE3_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\BubbleSortOptFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\BubbleSortMedianOptimized\HIPAccOutputs\BubbleSortOptFloatSSE4_1_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\BubbleSortOptFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\BubbleSortMedianOptimized\HIPAccOutputs\BubbleSortOptFloatSSE4_2_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\BubbleSortOptFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\BubbleSortMedianOptimized\HIPAccOutputs\BubbleSortOptFloatSSSE3_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\BubbleSortOptFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccBubbleSortOptFloat_Arrayfilter.cc">
+      <Filter>HIPAcc\Kernels\BubbleSortOptFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccBubbleSortOptFloat_AVXfilter.cc">
+      <Filter>HIPAcc\Kernels\BubbleSortOptFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccBubbleSortOptFloat_Scalarfilter.cc">
+      <Filter>HIPAcc\Kernels\BubbleSortOptFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccBubbleSortOptFloat_SSE2filter.cc">
+      <Filter>HIPAcc\Kernels\BubbleSortOptFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccBubbleSortOptFloat_SSE3filter.cc">
+      <Filter>HIPAcc\Kernels\BubbleSortOptFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccBubbleSortOptFloat_SSE4_1filter.cc">
+      <Filter>HIPAcc\Kernels\BubbleSortOptFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccBubbleSortOptFloat_SSE4_2filter.cc">
+      <Filter>HIPAcc\Kernels\BubbleSortOptFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="ccBubbleSortOptFloat_SSSE3filter.cc">
+      <Filter>HIPAcc\Kernels\BubbleSortOptFloat</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -34,5 +118,40 @@
     <ClInclude Include="..\..\include\BubbleSortMedianOptimized\BubbleSortMedianOptimized.h">
       <Filter>Public Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\BubbleSortMedianOptimized\BubbleSortMedianOptimizedFloat\BubbleSortMedianOptimizedFloatHandlers.h">
+      <Filter>Source Files\BubbleSortMedianOptimizedFloat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\BubbleSortMedianOptimized\HIPAccSources\BubbleSortOptFloat\BubbleSortOptFloatDefines.h">
+      <Filter>HIPAcc\HIPAccSources\BubbleSortOptFloat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\BubbleSortMedianOptimized\HIPAccSources\BubbleSortOptGeneric.hxx">
+      <Filter>HIPAcc\HIPAccSources</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <HIPAccCompiler Include="..\..\src\BubbleSortMedianOptimized\HIPAccSources\BubbleSortOptFloat\BubbleSortOptFloatArray.cpp">
+      <Filter>HIPAcc\HIPAccSources\BubbleSortOptFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\BubbleSortMedianOptimized\HIPAccSources\BubbleSortOptFloat\BubbleSortOptFloatAVX.cpp">
+      <Filter>HIPAcc\HIPAccSources\BubbleSortOptFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\BubbleSortMedianOptimized\HIPAccSources\BubbleSortOptFloat\BubbleSortOptFloatScalar.cpp">
+      <Filter>HIPAcc\HIPAccSources\BubbleSortOptFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\BubbleSortMedianOptimized\HIPAccSources\BubbleSortOptFloat\BubbleSortOptFloatSSE2.cpp">
+      <Filter>HIPAcc\HIPAccSources\BubbleSortOptFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\BubbleSortMedianOptimized\HIPAccSources\BubbleSortOptFloat\BubbleSortOptFloatSSE3.cpp">
+      <Filter>HIPAcc\HIPAccSources\BubbleSortOptFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\BubbleSortMedianOptimized\HIPAccSources\BubbleSortOptFloat\BubbleSortOptFloatSSE4_1.cpp">
+      <Filter>HIPAcc\HIPAccSources\BubbleSortOptFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\BubbleSortMedianOptimized\HIPAccSources\BubbleSortOptFloat\BubbleSortOptFloatSSE4_2.cpp">
+      <Filter>HIPAcc\HIPAccSources\BubbleSortOptFloat</Filter>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\BubbleSortMedianOptimized\HIPAccSources\BubbleSortOptFloat\BubbleSortOptFloatSSSE3.cpp">
+      <Filter>HIPAcc\HIPAccSources\BubbleSortOptFloat</Filter>
+    </HIPAccCompiler>
   </ItemGroup>
 </Project>

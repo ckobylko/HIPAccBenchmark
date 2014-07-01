@@ -148,6 +148,187 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\BubbleSortMedianOptimized\BubbleSortMedianOptimized.cpp" />
+    <ClCompile Include="..\..\src\BubbleSortMedianOptimized\BubbleSortMedianOptimizedFloat\BubbleSortMedianOptimizedFloat.cpp" />
+    <ClCompile Include="..\..\src\BubbleSortMedianOptimized\BubbleSortMedianOptimizedFloat\BubbleSortMedianOptimizedFloatHandlersAVX.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <ClCompile Include="..\..\src\BubbleSortMedianOptimized\BubbleSortMedianOptimizedFloat\BubbleSortMedianOptimizedFloatHandlersScalar.cpp" />
+    <ClCompile Include="..\..\src\BubbleSortMedianOptimized\BubbleSortMedianOptimizedFloat\BubbleSortMedianOptimizedFloatHandlersSSE.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <ClCompile Include="..\..\src\BubbleSortMedianOptimized\HIPAccOutputs\BubbleSortOptFloatArray_out.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\BubbleSortMedianOptimized\HIPAccOutputs\BubbleSortOptFloatAVX_out.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\BubbleSortMedianOptimized\HIPAccOutputs\BubbleSortOptFloatScalar_out.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\BubbleSortMedianOptimized\HIPAccOutputs\BubbleSortOptFloatSSE2_out.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\BubbleSortMedianOptimized\HIPAccOutputs\BubbleSortOptFloatSSE3_out.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\BubbleSortMedianOptimized\HIPAccOutputs\BubbleSortOptFloatSSE4_1_out.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\BubbleSortMedianOptimized\HIPAccOutputs\BubbleSortOptFloatSSE4_2_out.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\BubbleSortMedianOptimized\HIPAccOutputs\BubbleSortOptFloatSSSE3_out.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccBubbleSortOptFloat_Arrayfilter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccBubbleSortOptFloat_AVXfilter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccBubbleSortOptFloat_Scalarfilter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccBubbleSortOptFloat_SSE2filter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccBubbleSortOptFloat_SSE3filter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccBubbleSortOptFloat_SSE4_1filter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccBubbleSortOptFloat_SSE4_2filter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccBubbleSortOptFloat_SSSE3filter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <HIPAccCompiler Include="..\..\src\BubbleSortMedianOptimized\HIPAccSources\BubbleSortOptFloat\BubbleSortOptFloatArray.cpp">
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">array</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">array</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">array</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">array</InstructionSet>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\BubbleSortMedianOptimized\HIPAccSources\BubbleSortOptFloat\BubbleSortOptFloatAVX.cpp">
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">avx</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">avx</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">avx</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">avx</InstructionSet>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\BubbleSortMedianOptimized\HIPAccSources\BubbleSortOptFloat\BubbleSortOptFloatScalar.cpp" />
+    <HIPAccCompiler Include="..\..\src\BubbleSortMedianOptimized\HIPAccSources\BubbleSortOptFloat\BubbleSortOptFloatSSE2.cpp">
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sse2</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sse2</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sse2</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sse2</InstructionSet>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\BubbleSortMedianOptimized\HIPAccSources\BubbleSortOptFloat\BubbleSortOptFloatSSE3.cpp">
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sse3</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sse3</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sse3</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sse3</InstructionSet>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\BubbleSortMedianOptimized\HIPAccSources\BubbleSortOptFloat\BubbleSortOptFloatSSE4_1.cpp">
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sse41</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sse41</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sse41</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sse41</InstructionSet>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\BubbleSortMedianOptimized\HIPAccSources\BubbleSortOptFloat\BubbleSortOptFloatSSE4_2.cpp">
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sse42</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sse42</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sse42</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sse42</InstructionSet>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\BubbleSortMedianOptimized\HIPAccSources\BubbleSortOptFloat\BubbleSortOptFloatSSSE3.cpp">
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ssse3</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ssse3</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ssse3</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ssse3</InstructionSet>
+    </HIPAccCompiler>
     <ClCompile Include="..\..\src\BubbleSortMedianOptimized\stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -157,6 +338,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\BubbleSortMedianOptimized\BubbleSortMedianOptimized.h" />
+    <ClInclude Include="..\..\src\BubbleSortMedianOptimized\BubbleSortMedianOptimizedFloat\BubbleSortMedianOptimizedFloatHandlers.h" />
+    <ClInclude Include="..\..\src\BubbleSortMedianOptimized\HIPAccSources\BubbleSortOptFloat\BubbleSortOptFloatDefines.h" />
+    <ClInclude Include="..\..\src\BubbleSortMedianOptimized\HIPAccSources\BubbleSortOptGeneric.hxx" />
     <ClInclude Include="..\..\src\BubbleSortMedianOptimized\stdafx.h" />
     <ClInclude Include="..\..\src\BubbleSortMedianOptimized\targetver.h" />
   </ItemGroup>

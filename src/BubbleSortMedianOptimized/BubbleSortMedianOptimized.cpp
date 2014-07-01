@@ -15,6 +15,8 @@ void BubbleSortMedianOptimized::Run(unsigned int uiKernelSize)
 
   printf( "\n  Running \"BubbleSortMedianOptimized\" - Kernel-size= %d:\n", uiKernelSize );
 
+  _RunFloat( uiKernelSize );
+
   printf("\n");
 }
 
