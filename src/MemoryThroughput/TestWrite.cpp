@@ -30,8 +30,6 @@ double TestWrite::_RunUInt8_Scalar(unsigned char *pucData, bool bParallel)
     }
     else
     {
-      const __m128i cmmWriteValue = _mm_setzero_si128();
-
       for (int iY = 0; iY < ciHeight; ++iY)
       {
         unsigned char *pucLine = pucData + (iY * ciWidth);

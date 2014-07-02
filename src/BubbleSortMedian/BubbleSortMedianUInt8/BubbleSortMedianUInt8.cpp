@@ -6,7 +6,7 @@
 
 void BubbleSortMedian::_RunUInt8(unsigned int uiKernelSize)
 {
-  const size_t        cszIters      = static_cast< size_t >( 100 );
+  const size_t        cszIters      = static_cast< size_t >( (uiKernelSize <= 5) ? 100 : 10 );
 
   printf("\n    Running \"_RunUInt8()\"  -  Image-Size = %4d x %4d\n", ciImageWidth, ciImageHeight);
 
