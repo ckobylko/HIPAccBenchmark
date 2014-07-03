@@ -150,7 +150,9 @@
     <ClInclude Include="..\..\include\MinMaxDetector\MinMaxDetector.h" />
     <ClInclude Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxFloat\MinMaxFloatDefines.h" />
     <ClInclude Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxGeneric.hxx" />
+    <ClInclude Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxUInt8\MinMaxUInt8Defines.h" />
     <ClInclude Include="..\..\src\MinMaxDetector\MinMaxDetectorFloat\MinMaxDetectorFloatHandlers.h" />
+    <ClInclude Include="..\..\src\MinMaxDetector\MinMaxDetectorUInt8\MinMaxDetectorUInt8Handlers.h" />
     <ClInclude Include="..\..\src\MinMaxDetector\stdafx.h" />
     <ClInclude Include="..\..\src\MinMaxDetector\targetver.h" />
   </ItemGroup>
@@ -202,6 +204,187 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccMinMaxUInt8_Arrayfilter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccMinMaxUInt8_AVXfilter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccMinMaxUInt8_Scalarfilter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccMinMaxUInt8_SSE2filter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccMinMaxUInt8_SSE3filter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccMinMaxUInt8_SSE4_1filter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccMinMaxUInt8_SSE4_2filter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ccMinMaxUInt8_SSSE3filter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <HIPAccCompiler Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxUInt8\MinMaxUInt8Array.cpp">
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">array</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">array</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">array</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">array</InstructionSet>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxUInt8\MinMaxUInt8AVX.cpp">
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">avx</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">avx</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">avx</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">avx</InstructionSet>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxUInt8\MinMaxUInt8Scalar.cpp" />
+    <HIPAccCompiler Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxUInt8\MinMaxUInt8SSE2.cpp">
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sse2</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sse2</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sse2</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sse2</InstructionSet>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxUInt8\MinMaxUInt8SSE3.cpp">
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sse3</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sse3</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sse3</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sse3</InstructionSet>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxUInt8\MinMaxUInt8SSE4_1.cpp">
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sse41</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sse41</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sse41</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sse41</InstructionSet>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxUInt8\MinMaxUInt8SSE4_2.cpp">
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sse42</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">sse42</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sse42</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sse42</InstructionSet>
+    </HIPAccCompiler>
+    <HIPAccCompiler Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxUInt8\MinMaxUInt8SSSE3.cpp">
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</VectorizeKernel>
+      <VectorizeKernel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</VectorizeKernel>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ssse3</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ssse3</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ssse3</InstructionSet>
+      <InstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ssse3</InstructionSet>
+    </HIPAccCompiler>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxUInt8Array_out.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxUInt8AVX_out.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxUInt8Scalar_out.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxUInt8SSE2_out.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxUInt8SSE3_out.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxUInt8SSE4_1_out.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxUInt8SSE4_2_out.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxUInt8SSSE3_out.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\MinMaxDetectorUInt8\MinMaxDetectorUInt8.cpp" />
+    <ClCompile Include="..\..\src\MinMaxDetector\MinMaxDetectorUInt8\MinMaxDetectorUInt8HandlersAVX.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\MinMaxDetectorUInt8\MinMaxDetectorUInt8HandlersScalar.cpp" />
+    <ClCompile Include="..\..\src\MinMaxDetector\MinMaxDetectorUInt8\MinMaxDetectorUInt8HandlersSSE.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
     </ClCompile>
     <ClCompile Include="ccMinMaxFloat_Arrayfilter.cc">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>

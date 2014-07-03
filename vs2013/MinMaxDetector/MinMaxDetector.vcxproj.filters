@@ -36,6 +36,18 @@
     <Filter Include="Source Files\MinMaxDetectorFloat">
       <UniqueIdentifier>{b39b8ee2-3384-45db-b18b-9e88f0919642}</UniqueIdentifier>
     </Filter>
+    <Filter Include="HIPAcc\Kernels\MinMaxUInt8">
+      <UniqueIdentifier>{6ee1bab7-f452-4295-b31a-9ec7691ca101}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\HIPAccSources\MinMaxUInt8">
+      <UniqueIdentifier>{5bac18e7-caeb-4d9e-8f84-d24d6dbb39f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\HIPAccOutputs\MinMaxUInt8">
+      <UniqueIdentifier>{16562948-de31-405f-863e-2a8589ae7b20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MinMaxDetectorUInt8">
+      <UniqueIdentifier>{4a103e08-99a6-451b-a358-bbb94f41a0e4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -58,6 +70,12 @@
     </ClInclude>
     <ClInclude Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxFloat\MinMaxFloatDefines.h">
       <Filter>HIPAcc\HIPAccSources\MinMaxFloat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\MinMaxDetector\MinMaxDetectorUInt8\MinMaxDetectorUInt8Handlers.h">
+      <Filter>Source Files\MinMaxDetectorUInt8</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxUInt8\MinMaxUInt8Defines.h">
+      <Filter>HIPAcc\HIPAccSources\MinMaxUInt8</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -126,6 +144,90 @@
     </ClCompile>
     <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxFloatSSSE3_out.cpp">
       <Filter>HIPAcc\HIPAccOutputs\MinMaxFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\MinMaxDetectorUInt8\MinMaxDetectorUInt8.cpp">
+      <Filter>Source Files\MinMaxDetectorUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\MinMaxDetectorUInt8\MinMaxDetectorUInt8HandlersAVX.cpp">
+      <Filter>Source Files\MinMaxDetectorUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\MinMaxDetectorUInt8\MinMaxDetectorUInt8HandlersScalar.cpp">
+      <Filter>Source Files\MinMaxDetectorUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\MinMaxDetectorUInt8\MinMaxDetectorUInt8HandlersSSE.cpp">
+      <Filter>Source Files\MinMaxDetectorUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxUInt8\MinMaxUInt8Array.cpp">
+      <Filter>HIPAcc\HIPAccSources\MinMaxUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxUInt8\MinMaxUInt8AVX.cpp">
+      <Filter>HIPAcc\HIPAccSources\MinMaxUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxUInt8\MinMaxUInt8Scalar.cpp">
+      <Filter>HIPAcc\HIPAccSources\MinMaxUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxUInt8\MinMaxUInt8SSE2.cpp">
+      <Filter>HIPAcc\HIPAccSources\MinMaxUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxUInt8\MinMaxUInt8SSE3.cpp">
+      <Filter>HIPAcc\HIPAccSources\MinMaxUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxUInt8\MinMaxUInt8SSE4_1.cpp">
+      <Filter>HIPAcc\HIPAccSources\MinMaxUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxUInt8\MinMaxUInt8SSE4_2.cpp">
+      <Filter>HIPAcc\HIPAccSources\MinMaxUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxUInt8\MinMaxUInt8SSSE3.cpp">
+      <Filter>HIPAcc\HIPAccSources\MinMaxUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxUInt8Array_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\MinMaxUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxUInt8AVX_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\MinMaxUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxUInt8Scalar_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\MinMaxUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxUInt8SSE2_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\MinMaxUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxUInt8SSE3_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\MinMaxUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxUInt8SSE4_1_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\MinMaxUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxUInt8SSE4_2_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\MinMaxUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxUInt8SSSE3_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\MinMaxUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="ccMinMaxUInt8_Arrayfilter.cc">
+      <Filter>HIPAcc\Kernels\MinMaxUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="ccMinMaxUInt8_AVXfilter.cc">
+      <Filter>HIPAcc\Kernels\MinMaxUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="ccMinMaxUInt8_Scalarfilter.cc">
+      <Filter>HIPAcc\Kernels\MinMaxUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="ccMinMaxUInt8_SSE2filter.cc">
+      <Filter>HIPAcc\Kernels\MinMaxUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="ccMinMaxUInt8_SSE3filter.cc">
+      <Filter>HIPAcc\Kernels\MinMaxUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="ccMinMaxUInt8_SSE4_1filter.cc">
+      <Filter>HIPAcc\Kernels\MinMaxUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="ccMinMaxUInt8_SSE4_2filter.cc">
+      <Filter>HIPAcc\Kernels\MinMaxUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="ccMinMaxUInt8_SSSE3filter.cc">
+      <Filter>HIPAcc\Kernels\MinMaxUInt8</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
