@@ -36,6 +36,18 @@
     <Filter Include="HIPAcc\HIPAccOutputs\ConvFloat">
       <UniqueIdentifier>{2c9bc30e-6d95-4a0c-8f15-8bce115d62c8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\ConvolutionUInt8">
+      <UniqueIdentifier>{e3adac09-ea56-420a-9bb4-dbdff78ca9f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\Kernels\ConvUInt8">
+      <UniqueIdentifier>{de92dfcf-af21-4053-9239-9e1600e0cb92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\HIPAccSources\ConvUInt8">
+      <UniqueIdentifier>{fe10ed12-c712-4dfc-8f55-0046eb627264}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\HIPAccOutputs\ConvUInt8">
+      <UniqueIdentifier>{4f2f1bb3-64ac-4478-aba8-95bb5f471e87}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -58,6 +70,12 @@
     </ClInclude>
     <ClInclude Include="..\..\src\Convolution\HIPAccSources\ConvFloat\ConvFloatDefines.h">
       <Filter>HIPAcc\HIPAccSources\ConvFloat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Convolution\ConvolutionUInt8\ConvolutionUInt8Handlers.h">
+      <Filter>Source Files\ConvolutionUInt8</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Convolution\HIPAccSources\ConvUInt8\ConvUInt8Defines.h">
+      <Filter>HIPAcc\HIPAccSources\ConvUInt8</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -126,6 +144,90 @@
     </ClCompile>
     <ClCompile Include="ccConvFloat_SSSE3filter.cc">
       <Filter>HIPAcc\Kernels\ConvFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Convolution\ConvolutionUInt8\ConvolutionUInt8.cpp">
+      <Filter>Source Files\ConvolutionUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Convolution\ConvolutionUInt8\ConvolutionUInt8HandlersAVX.cpp">
+      <Filter>Source Files\ConvolutionUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Convolution\ConvolutionUInt8\ConvolutionUInt8HandlersScalar.cpp">
+      <Filter>Source Files\ConvolutionUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Convolution\ConvolutionUInt8\ConvolutionUInt8HandlersSSE.cpp">
+      <Filter>Source Files\ConvolutionUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Convolution\HIPAccSources\ConvUInt8\ConvUInt8Array.cpp">
+      <Filter>HIPAcc\HIPAccSources\ConvUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Convolution\HIPAccSources\ConvUInt8\ConvUInt8AVX.cpp">
+      <Filter>HIPAcc\HIPAccSources\ConvUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Convolution\HIPAccSources\ConvUInt8\ConvUInt8Scalar.cpp">
+      <Filter>HIPAcc\HIPAccSources\ConvUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Convolution\HIPAccSources\ConvUInt8\ConvUInt8SSE2.cpp">
+      <Filter>HIPAcc\HIPAccSources\ConvUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Convolution\HIPAccSources\ConvUInt8\ConvUInt8SSE3.cpp">
+      <Filter>HIPAcc\HIPAccSources\ConvUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Convolution\HIPAccSources\ConvUInt8\ConvUInt8SSE4_1.cpp">
+      <Filter>HIPAcc\HIPAccSources\ConvUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Convolution\HIPAccSources\ConvUInt8\ConvUInt8SSE4_2.cpp">
+      <Filter>HIPAcc\HIPAccSources\ConvUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Convolution\HIPAccSources\ConvUInt8\ConvUInt8SSSE3.cpp">
+      <Filter>HIPAcc\HIPAccSources\ConvUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Convolution\HIPAccOutputs\ConvUInt8Array_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\ConvUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Convolution\HIPAccOutputs\ConvUInt8AVX_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\ConvUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Convolution\HIPAccOutputs\ConvUInt8Scalar_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\ConvUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Convolution\HIPAccOutputs\ConvUInt8SSE2_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\ConvUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Convolution\HIPAccOutputs\ConvUInt8SSE3_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\ConvUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Convolution\HIPAccOutputs\ConvUInt8SSE4_1_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\ConvUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Convolution\HIPAccOutputs\ConvUInt8SSE4_2_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\ConvUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Convolution\HIPAccOutputs\ConvUInt8SSSE3_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\ConvUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="ccConvUInt8_Arrayfilter.cc">
+      <Filter>HIPAcc\Kernels\ConvUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="ccConvUInt8_AVXfilter.cc">
+      <Filter>HIPAcc\Kernels\ConvUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="ccConvUInt8_Scalarfilter.cc">
+      <Filter>HIPAcc\Kernels\ConvUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="ccConvUInt8_SSE2filter.cc">
+      <Filter>HIPAcc\Kernels\ConvUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="ccConvUInt8_SSE3filter.cc">
+      <Filter>HIPAcc\Kernels\ConvUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="ccConvUInt8_SSE4_1filter.cc">
+      <Filter>HIPAcc\Kernels\ConvUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="ccConvUInt8_SSE4_2filter.cc">
+      <Filter>HIPAcc\Kernels\ConvUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="ccConvUInt8_SSSE3filter.cc">
+      <Filter>HIPAcc\Kernels\ConvUInt8</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
