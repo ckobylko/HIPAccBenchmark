@@ -27,10 +27,10 @@ private:
         float fVal1 = static_cast< float >( aaInput1[ iY ][ iX ] );
         float fVal2 = static_cast< float >( aaInput2[ iY ][ iX ] );
 
-        float fInvNorm = 1.f / ( std::sqrt(fVal1 * fVal1 + fVal2 * fVal2) + static_cast<float>(1.0e-12) );
+        float fNorm = std::sqrt(fVal1 * fVal1 + fVal2 * fVal2) + static_cast<float>(1.0e-12);
 
-        aaOutput1[ iY ][ iX ] = static_cast< OutputPixelType >( fVal1 * fInvNorm );
-        aaOutput2[ iY ][ iX ] = static_cast< OutputPixelType >( fVal2 * fInvNorm );
+        aaOutput1[ iY ][ iX ] = static_cast< OutputPixelType >( fVal1 / fNorm );
+        aaOutput2[ iY ][ iX ] = static_cast< OutputPixelType >( fVal2 / fNorm );
       }
     }
   }

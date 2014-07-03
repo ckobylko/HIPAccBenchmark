@@ -29,7 +29,7 @@ public: \
     { \
       for (int iX = -anchor; iX <= anchor; ++iX) \
       { \
-        InputPixelType_1 TCurVal = Input(iY, iX); \
+        InputPixelType_1 TCurVal = Input(iX, iY); \
         TOutVal = min( TOutVal, TCurVal ); \
       } \
     } \

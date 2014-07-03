@@ -31,10 +31,10 @@ public:\
 }\
   \
   void kernel() {\
-    OutputPixelType TVal1 = Input1(0, 0); \
-    OutputPixelType TVal2 = Input2(0, 0); \
+    float TVal1 = (float) Input1(0, 0); \
+    float TVal2 = (float) Input2(0, 0); \
     \
-    float fNorm = std::sqrt( static_cast<float>( TVal1 * TVal1  +  TVal2 * TVal2 ) ) + static_cast<float>(1.0e-12); \
+    float fNorm = std::sqrt( TVal1 * TVal1  +  TVal2 * TVal2 ) + static_cast<float>(1.0e-12); \
     \
     output()  = static_cast< OutputPixelType >( TVal1 / fNorm );\
     Output2() = static_cast< OutputPixelType >( TVal2 / fNorm );\
