@@ -7,6 +7,8 @@ void NormalizedGradient::Run()
 
   _RunFloat();
 
+  _RunUInt8();
+
   printf("\n");
 }
 

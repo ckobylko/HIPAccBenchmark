@@ -36,6 +36,18 @@
     <Filter Include="HIPAcc\Kernels\NormGradFloat">
       <UniqueIdentifier>{5be80dab-0917-44e3-8096-2cc897bada05}</UniqueIdentifier>
     </Filter>
+    <Filter Include="HIPAcc\Kernels\NormGradUInt8">
+      <UniqueIdentifier>{98e3de7b-b38d-41f1-9f5f-8a5ca030aa8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\HIPAccSources\NormGradUInt8">
+      <UniqueIdentifier>{77fcd621-5a30-4362-8003-5750ced18158}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\HIPAccOutputs\NormGradUInt8">
+      <UniqueIdentifier>{4d91d3a6-deaf-4000-8d08-c013bb6b477c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\NormalizedGradientUInt8">
+      <UniqueIdentifier>{eeaa509a-63ef-4a4d-8a0a-96c55fc8cb35}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -113,6 +125,90 @@
     <ClCompile Include="ccNormGradFloat_SSSE3filter.cc">
       <Filter>HIPAcc\Kernels\NormGradFloat</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\NormalizedGradient\NormalizedGradientUInt8\NormalizedGradientUInt8.cpp">
+      <Filter>Source Files\NormalizedGradientUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\NormalizedGradient\NormalizedGradientUInt8\NormalizedGradientUInt8HandlersAVX.cpp">
+      <Filter>Source Files\NormalizedGradientUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\NormalizedGradient\NormalizedGradientUInt8\NormalizedGradientUInt8HandlersScalar.cpp">
+      <Filter>Source Files\NormalizedGradientUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\NormalizedGradient\NormalizedGradientUInt8\NormalizedGradientUInt8HandlersSSE.cpp">
+      <Filter>Source Files\NormalizedGradientUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradUInt8\NormGradUInt8Array.cpp">
+      <Filter>HIPAcc\HIPAccSources\NormGradUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradUInt8\NormGradUInt8AVX.cpp">
+      <Filter>HIPAcc\HIPAccSources\NormGradUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradUInt8\NormGradUInt8Scalar.cpp">
+      <Filter>HIPAcc\HIPAccSources\NormGradUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradUInt8\NormGradUInt8SSE2.cpp">
+      <Filter>HIPAcc\HIPAccSources\NormGradUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradUInt8\NormGradUInt8SSE3.cpp">
+      <Filter>HIPAcc\HIPAccSources\NormGradUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradUInt8\NormGradUInt8SSE4_1.cpp">
+      <Filter>HIPAcc\HIPAccSources\NormGradUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradUInt8\NormGradUInt8SSE4_2.cpp">
+      <Filter>HIPAcc\HIPAccSources\NormGradUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradUInt8\NormGradUInt8SSSE3.cpp">
+      <Filter>HIPAcc\HIPAccSources\NormGradUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccOutputs\NormGradUInt8Array_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\NormGradUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccOutputs\NormGradUInt8AVX_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\NormGradUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccOutputs\NormGradUInt8Scalar_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\NormGradUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccOutputs\NormGradUInt8SSE2_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\NormGradUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccOutputs\NormGradUInt8SSE3_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\NormGradUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccOutputs\NormGradUInt8SSE4_1_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\NormGradUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccOutputs\NormGradUInt8SSE4_2_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\NormGradUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccOutputs\NormGradUInt8SSSE3_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\NormGradUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="ccNormGradUInt8_Arrayfilter.cc">
+      <Filter>HIPAcc\Kernels\NormGradUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="ccNormGradUInt8_AVXfilter.cc">
+      <Filter>HIPAcc\Kernels\NormGradUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="ccNormGradUInt8_Scalarfilter.cc">
+      <Filter>HIPAcc\Kernels\NormGradUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="ccNormGradUInt8_SSE2filter.cc">
+      <Filter>HIPAcc\Kernels\NormGradUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="ccNormGradUInt8_SSE3filter.cc">
+      <Filter>HIPAcc\Kernels\NormGradUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="ccNormGradUInt8_SSE4_1filter.cc">
+      <Filter>HIPAcc\Kernels\NormGradUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="ccNormGradUInt8_SSE4_2filter.cc">
+      <Filter>HIPAcc\Kernels\NormGradUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="ccNormGradUInt8_SSSE3filter.cc">
+      <Filter>HIPAcc\Kernels\NormGradUInt8</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\NormalizedGradient\stdafx.h">
@@ -132,6 +228,12 @@
     </ClInclude>
     <ClInclude Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradFloat\NormGradFloatDefines.h">
       <Filter>HIPAcc\HIPAccSources\NormGradFloat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\NormalizedGradient\NormalizedGradientUInt8\NormalizedGradientUInt8Handlers.h">
+      <Filter>Source Files\NormalizedGradientUInt8</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradUInt8\NormGradUInt8Defines.h">
+      <Filter>HIPAcc\HIPAccSources\NormGradUInt8</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
