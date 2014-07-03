@@ -36,6 +36,18 @@
     <Filter Include="HIPAcc\Kernels\TopErosionFloat">
       <UniqueIdentifier>{b7752c94-1fe3-46c1-a38c-28c1df78ef8e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\TopologicalErosionUInt8">
+      <UniqueIdentifier>{873b8c3d-bf48-403e-b355-f56b4adfdd8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\HIPAccOutputs\TopErosionUInt8">
+      <UniqueIdentifier>{d9f73b51-fe8c-41d4-ba6b-1ed291a00a25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\Kernels\TopErosionUInt8">
+      <UniqueIdentifier>{3ecc9fcb-5e01-4bc0-abe6-d24b2aa3ae92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HIPAcc\HIPAccSources\TopErosionUInt8">
+      <UniqueIdentifier>{681c005c-8b0d-4988-a688-dcb5792e706d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -58,6 +70,12 @@
     </ClInclude>
     <ClInclude Include="..\..\src\TopologicalErosion\TopologicalErosionFloat\TopologicalErosionFloatHandlers.h">
       <Filter>Source Files\TopologicalErosionFloat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\TopologicalErosion\TopologicalErosionUInt8\TopologicalErosionUInt8Handlers.h">
+      <Filter>Source Files\TopologicalErosionUInt8</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\TopologicalErosion\HIPAccSources\TopErosionUInt8\TopErosionUInt8Defines.h">
+      <Filter>HIPAcc\HIPAccSources\TopErosionUInt8</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -126,6 +144,90 @@
     </ClCompile>
     <ClCompile Include="ccTopErosionFloat_SSSE3filter.cc">
       <Filter>HIPAcc\Kernels\TopErosionFloat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TopologicalErosion\TopologicalErosionUInt8\TopologicalErosionUInt8.cpp">
+      <Filter>Source Files\TopologicalErosionUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TopologicalErosion\TopologicalErosionUInt8\TopologicalErosionUInt8HandlersAVX.cpp">
+      <Filter>Source Files\TopologicalErosionUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TopologicalErosion\TopologicalErosionUInt8\TopologicalErosionUInt8HandlersScalar.cpp">
+      <Filter>Source Files\TopologicalErosionUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TopologicalErosion\TopologicalErosionUInt8\TopologicalErosionUInt8HandlersSSE.cpp">
+      <Filter>Source Files\TopologicalErosionUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TopologicalErosion\HIPAccSources\TopErosionUInt8\TopErosionUInt8Array.cpp">
+      <Filter>HIPAcc\HIPAccSources\TopErosionUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TopologicalErosion\HIPAccSources\TopErosionUInt8\TopErosionUInt8AVX.cpp">
+      <Filter>HIPAcc\HIPAccSources\TopErosionUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TopologicalErosion\HIPAccSources\TopErosionUInt8\TopErosionUInt8Scalar.cpp">
+      <Filter>HIPAcc\HIPAccSources\TopErosionUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TopologicalErosion\HIPAccSources\TopErosionUInt8\TopErosionUInt8SSE2.cpp">
+      <Filter>HIPAcc\HIPAccSources\TopErosionUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TopologicalErosion\HIPAccSources\TopErosionUInt8\TopErosionUInt8SSE3.cpp">
+      <Filter>HIPAcc\HIPAccSources\TopErosionUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TopologicalErosion\HIPAccSources\TopErosionUInt8\TopErosionUInt8SSE4_1.cpp">
+      <Filter>HIPAcc\HIPAccSources\TopErosionUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TopologicalErosion\HIPAccSources\TopErosionUInt8\TopErosionUInt8SSE4_2.cpp">
+      <Filter>HIPAcc\HIPAccSources\TopErosionUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TopologicalErosion\HIPAccSources\TopErosionUInt8\TopErosionUInt8SSSE3.cpp">
+      <Filter>HIPAcc\HIPAccSources\TopErosionUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TopologicalErosion\HIPAccOutputs\TopErosionUInt8Array_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\TopErosionUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TopologicalErosion\HIPAccOutputs\TopErosionUInt8AVX_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\TopErosionUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TopologicalErosion\HIPAccOutputs\TopErosionUInt8Scalar_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\TopErosionUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TopologicalErosion\HIPAccOutputs\TopErosionUInt8SSE2_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\TopErosionUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TopologicalErosion\HIPAccOutputs\TopErosionUInt8SSE3_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\TopErosionUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TopologicalErosion\HIPAccOutputs\TopErosionUInt8SSE4_1_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\TopErosionUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TopologicalErosion\HIPAccOutputs\TopErosionUInt8SSE4_2_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\TopErosionUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TopologicalErosion\HIPAccOutputs\TopErosionUInt8SSSE3_out.cpp">
+      <Filter>HIPAcc\HIPAccOutputs\TopErosionUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="ccTopErosionUInt8_Arrayfilter.cc">
+      <Filter>HIPAcc\Kernels\TopErosionUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="ccTopErosionUInt8_AVXfilter.cc">
+      <Filter>HIPAcc\Kernels\TopErosionUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="ccTopErosionUInt8_Scalarfilter.cc">
+      <Filter>HIPAcc\Kernels\TopErosionUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="ccTopErosionUInt8_SSE2filter.cc">
+      <Filter>HIPAcc\Kernels\TopErosionUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="ccTopErosionUInt8_SSE3filter.cc">
+      <Filter>HIPAcc\Kernels\TopErosionUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="ccTopErosionUInt8_SSE4_1filter.cc">
+      <Filter>HIPAcc\Kernels\TopErosionUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="ccTopErosionUInt8_SSE4_2filter.cc">
+      <Filter>HIPAcc\Kernels\TopErosionUInt8</Filter>
+    </ClCompile>
+    <ClCompile Include="ccTopErosionUInt8_SSSE3filter.cc">
+      <Filter>HIPAcc\Kernels\TopErosionUInt8</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
