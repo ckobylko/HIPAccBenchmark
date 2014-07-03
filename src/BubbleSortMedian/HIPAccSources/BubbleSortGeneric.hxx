@@ -23,7 +23,7 @@ public: \
 \
   void kernel() \
   { \
-    InputPixelType_1 aSortingBuffer[256]; \
+    InputPixelType_1 aSortingBuffer[100]; \
     int iDataSize = 0; \
 \
     /* Load the kernel into the sorting buffer */ \
@@ -31,7 +31,7 @@ public: \
     { \
       for (int iX = -anchor; iX <= anchor; ++iX) \
       { \
-        aSortingBuffer[ iDataSize ] = Input(iY, iX); \
+        aSortingBuffer[ iDataSize ] = Input(iX, iY); \
         ++iDataSize; \
       } \
     } \

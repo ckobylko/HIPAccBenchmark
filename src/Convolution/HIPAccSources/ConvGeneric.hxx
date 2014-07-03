@@ -31,7 +31,7 @@ public: \
     { \
       for (int iX = -anchor; iX <= anchor; ++iX) \
       { \
-        InputPixelType_1 TCurVal   = Input(iY, iX); \
+        InputPixelType_1 TCurVal   = Input(iX, iY); \
         fAccumulator              += static_cast< float >( TCurVal ) * cfCoeff; \
       } \
     } \
