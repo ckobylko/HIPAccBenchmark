@@ -35,7 +35,7 @@ public: \
         /* Skip reference pixel */ \
         if ((iY == 0) && (iX == 0))     continue; \
 \
-        InputPixelType_1 TCurVal = Input(iY, iX); \
+        InputPixelType_1 TCurVal = Input(iX, iY); \
         if (TCurVal > TRefVal) \
         { \
           bMaximum  = false; \
@@ -52,9 +52,12 @@ public: \
       if (bBreak)  break; \
     } \
 \
-    OutputPixelType TOutVal =    0;  \
-    if (bMaximum)   TOutVal += 128U; \
-    if (bMinimum)   TOutVal +=  64U; \
+    const OutputPixelType cTMaxMarker = 128U; \
+    const OutputPixelType cTMinMarker =  64U; \
+\
+    OutputPixelType TOutVal =    0; \
+    if (bMaximum)   TOutVal += cTMaxMarker; \
+    if (bMinimum)   TOutVal += cTMinMarker; \
 \
     output() = TOutVal;\
   } \
