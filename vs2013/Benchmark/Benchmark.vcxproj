@@ -99,6 +99,9 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy "$(SolutionDir)..\TestData\Lenna.raw" "$(TargetDir)" /Q /Y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -113,6 +116,9 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy "$(SolutionDir)..\TestData\Lenna.raw" "$(TargetDir)" /Q /Y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -131,6 +137,9 @@
       <OptimizeReferences>true</OptimizeReferences>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy "$(SolutionDir)..\TestData\Lenna.raw" "$(TargetDir)" /Q /Y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -149,12 +158,16 @@
       <OptimizeReferences>true</OptimizeReferences>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy "$(SolutionDir)..\TestData\Lenna.raw" "$(TargetDir)" /Q /Y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\Benchmark\Benchmark.cpp" />
+    <ClCompile Include="..\..\src\Benchmark\ImageIO.cpp" />
     <ClCompile Include="..\..\src\Benchmark\stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -165,6 +178,7 @@
   <ItemGroup>
     <ClInclude Include="..\..\include\Benchmark\CommonDefines.h" />
     <ClInclude Include="..\..\include\Benchmark\Image.h" />
+    <ClInclude Include="..\..\include\Benchmark\ImageIO.h" />
     <ClInclude Include="..\..\src\Benchmark\stdafx.h" />
     <ClInclude Include="..\..\src\Benchmark\targetver.h" />
   </ItemGroup>
