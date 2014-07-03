@@ -9,6 +9,8 @@ void ImageAdd::Run()
 
   _RunInt();
 
+  _RunUInt8();
+
   printf("\n");
 }
 

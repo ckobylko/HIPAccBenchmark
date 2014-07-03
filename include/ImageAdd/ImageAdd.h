@@ -8,6 +8,8 @@ private:
 
   static void _RunInt();
 
+  static void _RunUInt8();
+
 public:
 
   static void Run();
