@@ -28,7 +28,8 @@ void ImageAdd::_RunUInt8()
 
     for (size_t szIter = static_cast<size_t>(0); szIter < cszIters; ++szIter)
     {
-      itHandler->Launch(spOutputImage, spInputImage1, spInputImage2);
+      _mm256_zeroall();
+      itHandler->Launch( spOutputImage, spInputImage1, spInputImage2 );
     }
 
     dTime = omp_get_wtime() - dTime;

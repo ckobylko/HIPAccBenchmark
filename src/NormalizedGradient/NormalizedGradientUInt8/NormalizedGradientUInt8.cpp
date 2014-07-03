@@ -29,6 +29,7 @@ void NormalizedGradient::_RunUInt8()
 
     for (size_t szIter = static_cast<size_t>(0); szIter < cszIters; ++szIter)
     {
+      _mm256_zeroall();
       itHandler->Launch( spOutputImage1, spOutputImage2, spInputImage1, spInputImage2 );
     }
 

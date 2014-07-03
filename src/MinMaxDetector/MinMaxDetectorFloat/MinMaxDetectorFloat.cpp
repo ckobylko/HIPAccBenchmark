@@ -14,7 +14,7 @@ void MinMaxDetector::_RunFloat(unsigned int uiKernelSize)
 
   AppendHandlerList( lstHandlers, MinMaxDetectorFloat_GetScalarHandlers() );
   AppendHandlerList( lstHandlers, MinMaxDetectorFloat_GetSSEHandlers()    );
-  AppendHandlerList( lstHandlers, MinMaxDetectorFloat_GetAVXHandlers()     );
+  AppendHandlerList( lstHandlers, MinMaxDetectorFloat_GetAVXHandlers()    );
 
   CREATE_IMAGE( InputImageType,  spInputImage  );
   CREATE_IMAGE( OutputImageType, spOutputImage );
@@ -27,6 +27,7 @@ void MinMaxDetector::_RunFloat(unsigned int uiKernelSize)
 
     for (size_t szIter = static_cast<size_t>(0); szIter < cszIters; ++szIter)
     {
+      _mm256_zeroall();
       itHandler->Launch( spOutputImage, spInputImage, uiKernelSize );
     }
 

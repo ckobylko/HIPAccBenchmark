@@ -27,6 +27,7 @@ void BubbleSortMedianOptimized::_RunUInt8(unsigned int uiKernelSize)
 
     for (size_t szIter = static_cast<size_t>(0); szIter < cszIters; ++szIter)
     {
+      _mm256_zeroall();
       itHandler->Launch( spOutputImage, spInputImage, uiKernelSize );
     }
 
