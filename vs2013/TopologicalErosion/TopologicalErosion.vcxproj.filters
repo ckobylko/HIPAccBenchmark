@@ -77,6 +77,9 @@
     <ClInclude Include="..\..\src\TopologicalErosion\HIPAccSources\TopErosionUInt8\TopErosionUInt8Defines.h">
       <Filter>HIPAcc\HIPAccSources\TopErosionUInt8</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\TopologicalErosion\TopologicalErosionDefines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\TopologicalErosion\stdafx.cpp">

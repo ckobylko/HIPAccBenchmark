@@ -153,6 +153,7 @@
     <ClInclude Include="..\..\src\TopologicalErosion\HIPAccSources\TopErosionUInt8\TopErosionUInt8Defines.h" />
     <ClInclude Include="..\..\src\TopologicalErosion\stdafx.h" />
     <ClInclude Include="..\..\src\TopologicalErosion\targetver.h" />
+    <ClInclude Include="..\..\src\TopologicalErosion\TopologicalErosionDefines.h" />
     <ClInclude Include="..\..\src\TopologicalErosion\TopologicalErosionFloat\TopologicalErosionFloatHandlers.h" />
     <ClInclude Include="..\..\src\TopologicalErosion\TopologicalErosionUInt8\TopologicalErosionUInt8Handlers.h" />
   </ItemGroup>

@@ -77,6 +77,9 @@
     <ClInclude Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxUInt8\MinMaxUInt8Defines.h">
       <Filter>HIPAcc\HIPAccSources\MinMaxUInt8</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\MinMaxDetector\MinMaxDetectorDefines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\MinMaxDetector\MinMaxDetector.cpp">
