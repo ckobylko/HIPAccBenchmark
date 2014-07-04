@@ -15,7 +15,7 @@
 
 #define IGNORE_ARRAY_EXPORT           // TODO: Uncomment this if the "array" exporter shall not be included in the benchmark
 #define CONFIG_USE_COMMON_IMAGE_SIZE  // TODO: Uncomment this for a globally set image size
-#define CONFIG_CHECK_OUTPUT           // TODO: Uncomment this for a consistency check of the output images (they will be stored, too)
+//#define CONFIG_CHECK_OUTPUT           // TODO: Uncomment this for a consistency check of the output images (they will be stored, too)
 
 
 

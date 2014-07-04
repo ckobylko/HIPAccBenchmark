@@ -211,6 +211,9 @@
     <ClInclude Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradUInt8\NormGradUInt8Defines.h">
       <Filter>HIPAcc\HIPAccSources\NormGradUInt8</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\NormalizedGradient\NormalizedGradientDefines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <HIPAccCompiler Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradFloat\NormGradFloatSSSE3.cpp">

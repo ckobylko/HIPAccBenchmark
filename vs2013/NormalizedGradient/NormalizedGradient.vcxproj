@@ -548,6 +548,7 @@
     <ClInclude Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradFloat\NormGradFloatDefines.h" />
     <ClInclude Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradGeneric.hxx" />
     <ClInclude Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradUInt8\NormGradUInt8Defines.h" />
+    <ClInclude Include="..\..\src\NormalizedGradient\NormalizedGradientDefines.h" />
     <ClInclude Include="..\..\src\NormalizedGradient\NormalizedGradientFloat\NormalizedGradientFloatHandlers.h" />
     <ClInclude Include="..\..\src\NormalizedGradient\NormalizedGradientUInt8\NormalizedGradientUInt8Handlers.h" />
     <ClInclude Include="..\..\src\NormalizedGradient\stdafx.h" />
