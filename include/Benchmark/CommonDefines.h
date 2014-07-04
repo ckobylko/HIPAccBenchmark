@@ -18,8 +18,16 @@
 #define CONFIG_CHECK_OUTPUT           // TODO: Uncomment this for a consistency check of the output images (they will be stored, too)
 
 
+
 #ifdef CONFIG_USE_COMMON_IMAGE_SIZE
+
+#ifdef CONFIG_CHECK_OUTPUT
 HIPACC_SET_IMAGE_WIDTH ( 512 );
 HIPACC_SET_IMAGE_HEIGHT( 512 );
-#endif
+#else
+HIPACC_SET_IMAGE_WIDTH ( 4096 );
+HIPACC_SET_IMAGE_HEIGHT( 4096 );
+#endif // CONFIG_CHECK_OUTPUT
+
+#endif // CONFIG_USE_COMMON_IMAGE_SIZE
 
