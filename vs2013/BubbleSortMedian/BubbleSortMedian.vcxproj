@@ -148,6 +148,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\BubbleSortMedian\BubbleSortMedian.h" />
+    <ClInclude Include="..\..\src\BubbleSortMedian\BubbleSortMedianDefines.h" />
     <ClInclude Include="..\..\src\BubbleSortMedian\BubbleSortMedianFloat\BubbleSortMedianFloatHandlers.h" />
     <ClInclude Include="..\..\src\BubbleSortMedian\BubbleSortMedianUInt8\BubbleSortMedianUInt8Handlers.h" />
     <ClInclude Include="..\..\src\BubbleSortMedian\HIPAccSources\BubbleSortFloat\BubbleSortFloatDefines.h" />

@@ -77,6 +77,9 @@
     <ClInclude Include="..\..\src\Convolution\HIPAccSources\ConvUInt8\ConvUInt8Defines.h">
       <Filter>HIPAcc\HIPAccSources\ConvUInt8</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\Convolution\ConvolutionDefines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\Convolution\Convolution.cpp">

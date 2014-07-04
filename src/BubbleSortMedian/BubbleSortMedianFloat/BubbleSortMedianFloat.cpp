@@ -1,7 +1,6 @@
 #include "stdafx.h"
-#include "../../include/BubbleSortMedian/BubbleSortMedian.h"
+#include "../BubbleSortMedianDefines.h"
 #include "BubbleSortMedianFloatHandlers.h"
-#include <omp.h>
 
 
 void BubbleSortMedian::_RunFloat(unsigned int uiKernelSize)
@@ -18,6 +17,8 @@ void BubbleSortMedian::_RunFloat(unsigned int uiKernelSize)
 
   CREATE_IMAGE( InputImageType,  spInputImage  );
   CREATE_IMAGE( OutputImageType, spOutputImage );
+
+  ImageIO::LoadTestImage( *spInputImage );
 
   for (auto itHandler : lstHandlers)
   {
@@ -36,6 +37,14 @@ void BubbleSortMedian::_RunFloat(unsigned int uiKernelSize)
 
     printf( "%10.6f ms", dTime );
   }
+
+
+#ifdef CONFIG_CHECK_OUTPUT
+
+  BUBBLE_SORT_MEDIAN_CHECK_OUTPUT( Float );
+
+#endif
+
 
   printf("\n");
 }

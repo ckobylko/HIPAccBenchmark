@@ -1,7 +1,6 @@
 #include "stdafx.h"
-#include "../../include/Convolution/Convolution.h"
+#include "../ConvolutionDefines.h"
 #include "ConvolutionFloatHandlers.h"
-#include <omp.h>
 
 
 void Convolution::_RunFloat(unsigned int uiKernelSize)
@@ -18,6 +17,8 @@ void Convolution::_RunFloat(unsigned int uiKernelSize)
 
   CREATE_IMAGE( InputImageType,  spInputImage  );
   CREATE_IMAGE( OutputImageType, spOutputImage );
+
+  ImageIO::LoadTestImage( *spInputImage );
 
   for (auto itHandler : lstHandlers)
   {
@@ -36,6 +37,14 @@ void Convolution::_RunFloat(unsigned int uiKernelSize)
 
     printf( "%10.6f ms", dTime );
   }
+
+
+#ifdef CONFIG_CHECK_OUTPUT
+
+  CONVOLUTION_CHECK_OUTPUT( Float );
+
+#endif
+
 
   printf("\n");
 }

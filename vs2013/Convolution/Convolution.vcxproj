@@ -148,6 +148,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\Convolution\Convolution.h" />
+    <ClInclude Include="..\..\src\Convolution\ConvolutionDefines.h" />
     <ClInclude Include="..\..\src\Convolution\ConvolutionFloat\ConvolutionFloatHandlers.h" />
     <ClInclude Include="..\..\src\Convolution\ConvolutionUInt8\ConvolutionUInt8Handlers.h" />
     <ClInclude Include="..\..\src\Convolution\HIPAccSources\ConvFloat\ConvFloatDefines.h" />

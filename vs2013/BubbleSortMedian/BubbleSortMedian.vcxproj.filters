@@ -77,6 +77,9 @@
     <ClInclude Include="..\..\src\BubbleSortMedian\HIPAccSources\BubbleSortUInt8\BubbleSortUInt8Defines.h">
       <Filter>HIPAcc\HIPAccSources\BubbleSortUInt8</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\BubbleSortMedian\BubbleSortMedianDefines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\BubbleSortMedian\BubbleSortMedian.cpp">

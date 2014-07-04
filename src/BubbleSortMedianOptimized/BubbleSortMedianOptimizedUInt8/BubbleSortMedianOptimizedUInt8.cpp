@@ -1,7 +1,6 @@
 #include "stdafx.h"
-#include "../../include/BubbleSortMedianOptimized/BubbleSortMedianOptimized.h"
+#include "../BubbleSortMedianOptimizedDefines.h"
 #include "BubbleSortMedianOptimizedUInt8Handlers.h"
-#include <omp.h>
 
 
 void BubbleSortMedianOptimized::_RunUInt8(unsigned int uiKernelSize)
@@ -18,6 +17,8 @@ void BubbleSortMedianOptimized::_RunUInt8(unsigned int uiKernelSize)
 
   CREATE_IMAGE( InputImageType,  spInputImage  );
   CREATE_IMAGE( OutputImageType, spOutputImage );
+
+  ImageIO::LoadTestImage( *spInputImage );
 
   for (auto itHandler : lstHandlers)
   {
@@ -36,6 +37,14 @@ void BubbleSortMedianOptimized::_RunUInt8(unsigned int uiKernelSize)
 
     printf( "%10.6f ms", dTime );
   }
+
+
+#ifdef CONFIG_CHECK_OUTPUT
+
+  BUBBLE_SORT_MEDIAN_OPTIMIZED_CHECK_OUTPUT( UInt8 );
+
+#endif
+
 
   printf("\n");
 }
