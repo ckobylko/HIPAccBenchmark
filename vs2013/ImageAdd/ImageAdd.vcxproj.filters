@@ -293,6 +293,9 @@
     <ClInclude Include="..\..\src\ImageAdd\HIPAccSources\AddUInt8\AddUInt8Defines.h">
       <Filter>HIPAcc\HIPAccSources\AddUInt8</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\ImageAdd\ImageAddDefines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddInt\AddIntArray.cpp">

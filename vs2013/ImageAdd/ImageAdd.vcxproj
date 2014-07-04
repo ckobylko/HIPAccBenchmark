@@ -736,6 +736,7 @@
     <ClInclude Include="..\..\src\ImageAdd\HIPAccSources\AddGeneric.hxx" />
     <ClInclude Include="..\..\src\ImageAdd\HIPAccSources\AddInt\AddIntDefines.h" />
     <ClInclude Include="..\..\src\ImageAdd\HIPAccSources\AddUInt8\AddUInt8Defines.h" />
+    <ClInclude Include="..\..\src\ImageAdd\ImageAddDefines.h" />
     <ClInclude Include="..\..\src\ImageAdd\ImageAddFloat\ImageAddFloatHandlers.h" />
     <ClInclude Include="..\..\src\ImageAdd\ImageAddInt\ImageAddIntHandlers.h" />
     <ClInclude Include="..\..\src\ImageAdd\ImageAddUInt8\ImageAddUInt8Handlers.h" />

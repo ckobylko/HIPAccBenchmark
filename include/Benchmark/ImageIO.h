@@ -21,8 +21,8 @@ public:
   template < typename ImageType >
   inline static void LoadTestImage(ImageType &rImage)
   {
-    static_assert( (ImageType::Width  & TEST_IMAGE_WIDTH ) == 0, "The image width must be dividible by the test image width!" );
-    static_assert( (ImageType::Height & TEST_IMAGE_HEIGHT) == 0, "The image height must be dividible by the test image height!" );
+    static_assert( (ImageType::Width  % TEST_IMAGE_WIDTH ) == 0, "The image width must be dividible by the test image width!" );
+    static_assert( (ImageType::Height % TEST_IMAGE_HEIGHT) == 0, "The image height must be dividible by the test image height!" );
 
     MAKE_IMAGE_TYPE( BufferImageType, unsigned char, TEST_IMAGE_WIDTH, TEST_IMAGE_HEIGHT );
 

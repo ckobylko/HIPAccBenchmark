@@ -1,7 +1,6 @@
 #include "stdafx.h"
-#include "../../../include/ImageAdd/ImageAdd.h"
+#include "../ImageAddDefines.h"
 #include "ImageAddIntHandlers.h"
-#include <omp.h>
 
 
 void ImageAdd::_RunInt()
@@ -20,6 +19,9 @@ void ImageAdd::_RunInt()
   CREATE_IMAGE( InputImageType2, spInputImage2 );
   CREATE_IMAGE( OutputImageType, spOutputImage );
 
+  ImageIO::LoadTestImage( *spInputImage1 );
+  ImageIO::LoadTestImage( *spInputImage2 );
+
   for (auto itHandler : lstHandlers)
   {
     printf( "\n      Launch handler \"%10s\"  ->  ", itHandler->GetName().c_str() );
@@ -37,6 +39,14 @@ void ImageAdd::_RunInt()
 
     printf( "%10.6f ms", dTime );
   }
+
+
+#ifdef CONFIG_CHECK_OUTPUT
+
+  IMAGE_ADD_CHECK_OUTPUT( Int );
+
+#endif
+
 
   printf("\n");
 }
