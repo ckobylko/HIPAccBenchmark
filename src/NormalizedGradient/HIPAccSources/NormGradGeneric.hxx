@@ -25,9 +25,9 @@ public:\
   KERNEL_NAME( IterationSpace<OutputPixelType> &iter, Accessor<OutputPixelType> &output2, \
                Accessor<InputPixelType_1> &input1,    Accessor<InputPixelType_2> &input2 ) : Kernel(iter), Input1(input1), Input2(input2), Output2(output2)\
   {\
-    addAccessor( &Input1 );\
-    addAccessor( &Input2 );\
-    addAccessor( &Output2 );\
+    add_accessor( &Input1 );\
+    add_accessor( &Input2 );\
+    add_accessor( &Output2 );\
 }\
   \
   void kernel() {\
@@ -73,8 +73,8 @@ int main(int argc, const char **argv)\
   filter.execute();\
   \
   /* get results*/\
-  pOutputData1 = Output1.getData();\
-  pOutputData2 = Output2.getData();\
+  pOutputData1 = Output1.data();\
+  pOutputData2 = Output2.data();\
   \
   /* memory cleanup*/\
   free( pInputData1 );\

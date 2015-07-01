@@ -18,7 +18,7 @@ public: \
   KERNEL_NAME(hipacc::IterationSpace<OutputPixelType> &Iter, hipacc::Accessor<InputPixelType_1> &InputImg, const int ciAnchor) : \
                   Kernel(Iter), Input(InputImg), anchor(ciAnchor) \
   { \
-    addAccessor(&Input); \
+    add_accessor(&Input); \
   } \
 \
   void kernel() \
@@ -65,7 +65,7 @@ int main(int argc, const char **argv) \
   filter.execute(); \
 \
   /* get results*/ \
-  pOutputData = Output.getData(); \
+  pOutputData = Output.data(); \
 \
   /* memory clean-up*/ \
   free(pInputData); \
