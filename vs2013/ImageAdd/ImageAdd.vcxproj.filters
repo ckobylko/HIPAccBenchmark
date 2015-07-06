@@ -9,10 +9,6 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="HIPAcc">
       <UniqueIdentifier>{4dc75de4-e5ad-46d6-bf86-e7a2a91ffda9}</UniqueIdentifier>
     </Filter>
@@ -72,9 +68,6 @@
     <ClCompile Include="..\..\src\ImageAdd\stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddFloatArray_out.cpp">
-      <Filter>HIPAcc\HIPAccOutputs\AddFloat</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddFloatAVX_out.cpp">
       <Filter>HIPAcc\HIPAccOutputs\AddFloat</Filter>
     </ClCompile>
@@ -98,9 +91,6 @@
     </ClCompile>
     <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddFloatSSSE3_out.cpp">
       <Filter>HIPAcc\HIPAccOutputs\AddFloat</Filter>
-    </ClCompile>
-    <ClCompile Include="ccAddFloat_Arrayfilter.cc">
-      <Filter>HIPAcc\Kernels\AddFloat</Filter>
     </ClCompile>
     <ClCompile Include="ccAddFloat_AVXfilter.cc">
       <Filter>HIPAcc\Kernels\AddFloat</Filter>
@@ -141,9 +131,6 @@
     <ClCompile Include="..\..\src\ImageAdd\ImageAddInt\ImageAddIntHandlersSSE.cpp">
       <Filter>Source Files\ImageAddInt</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddIntArray_out.cpp">
-      <Filter>HIPAcc\HIPAccOutputs\AddInt</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddIntAVX_out.cpp">
       <Filter>HIPAcc\HIPAccOutputs\AddInt</Filter>
     </ClCompile>
@@ -164,9 +151,6 @@
     </ClCompile>
     <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddIntSSSE3_out.cpp">
       <Filter>HIPAcc\HIPAccOutputs\AddInt</Filter>
-    </ClCompile>
-    <ClCompile Include="ccAddInt_Arrayfilter.cc">
-      <Filter>HIPAcc\Kernels\AddInt</Filter>
     </ClCompile>
     <ClCompile Include="ccAddInt_AVXfilter.cc">
       <Filter>HIPAcc\Kernels\AddInt</Filter>
@@ -213,9 +197,6 @@
     <ClCompile Include="..\..\src\ImageAdd\ImageAddUInt8\ImageAddUInt8HandlersSSE.cpp">
       <Filter>Source Files\ImageAddUInt8</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddUInt8Array_out.cpp">
-      <Filter>HIPAcc\HIPAccOutputs\AddUInt8</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddUInt8AVX_out.cpp">
       <Filter>HIPAcc\HIPAccOutputs\AddUInt8</Filter>
     </ClCompile>
@@ -236,9 +217,6 @@
     </ClCompile>
     <ClCompile Include="..\..\src\ImageAdd\HIPAccOutputs\AddUInt8SSSE3_out.cpp">
       <Filter>HIPAcc\HIPAccOutputs\AddUInt8</Filter>
-    </ClCompile>
-    <ClCompile Include="ccAddUInt8_Arrayfilter.cc">
-      <Filter>HIPAcc\Kernels\AddUInt8</Filter>
     </ClCompile>
     <ClCompile Include="ccAddUInt8_AVXfilter.cc">
       <Filter>HIPAcc\Kernels\AddUInt8</Filter>
@@ -298,9 +276,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddInt\AddIntArray.cpp">
-      <Filter>HIPAcc\HIPAccSources\AddInt</Filter>
-    </HIPAccCompiler>
     <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddInt\AddIntAVX.cpp">
       <Filter>HIPAcc\HIPAccSources\AddInt</Filter>
     </HIPAccCompiler>
@@ -321,9 +296,6 @@
     </HIPAccCompiler>
     <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddInt\AddIntSSSE3.cpp">
       <Filter>HIPAcc\HIPAccSources\AddInt</Filter>
-    </HIPAccCompiler>
-    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddFloat\AddFloatArray.cpp">
-      <Filter>HIPAcc\HIPAccSources\AddFloat</Filter>
     </HIPAccCompiler>
     <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddFloat\AddFloatAVX.cpp">
       <Filter>HIPAcc\HIPAccSources\AddFloat</Filter>
@@ -350,9 +322,6 @@
       <Filter>HIPAcc\HIPAccSources\AddFloat</Filter>
     </HIPAccCompiler>
     <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddUInt8\AddUInt8SSSE3.cpp">
-      <Filter>HIPAcc\HIPAccSources\AddUInt8</Filter>
-    </HIPAccCompiler>
-    <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddUInt8\AddUInt8Array.cpp">
       <Filter>HIPAcc\HIPAccSources\AddUInt8</Filter>
     </HIPAccCompiler>
     <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddUInt8\AddUInt8AVX.cpp">

@@ -100,9 +100,6 @@
     <ClCompile Include="..\..\src\MinMaxDetector\MinMaxDetectorFloat\MinMaxDetectorFloatHandlersSSE.cpp">
       <Filter>Source Files\MinMaxDetectorFloat</Filter>
     </ClCompile>
-    <ClCompile Include="ccMinMaxFloat_Arrayfilter.cc">
-      <Filter>HIPAcc\Kernels\MinMaxFloat</Filter>
-    </ClCompile>
     <ClCompile Include="ccMinMaxFloat_AVXfilter.cc">
       <Filter>HIPAcc\Kernels\MinMaxFloat</Filter>
     </ClCompile>
@@ -123,9 +120,6 @@
     </ClCompile>
     <ClCompile Include="ccMinMaxFloat_SSSE3filter.cc">
       <Filter>HIPAcc\Kernels\MinMaxFloat</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxFloatArray_out.cpp">
-      <Filter>HIPAcc\HIPAccOutputs\MinMaxFloat</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxFloatAVX_out.cpp">
       <Filter>HIPAcc\HIPAccOutputs\MinMaxFloat</Filter>
@@ -160,9 +154,6 @@
     <ClCompile Include="..\..\src\MinMaxDetector\MinMaxDetectorUInt8\MinMaxDetectorUInt8HandlersSSE.cpp">
       <Filter>Source Files\MinMaxDetectorUInt8</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxUInt8Array_out.cpp">
-      <Filter>HIPAcc\HIPAccOutputs\MinMaxUInt8</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxUInt8AVX_out.cpp">
       <Filter>HIPAcc\HIPAccOutputs\MinMaxUInt8</Filter>
     </ClCompile>
@@ -183,9 +174,6 @@
     </ClCompile>
     <ClCompile Include="..\..\src\MinMaxDetector\HIPAccOutputs\MinMaxUInt8SSSE3_out.cpp">
       <Filter>HIPAcc\HIPAccOutputs\MinMaxUInt8</Filter>
-    </ClCompile>
-    <ClCompile Include="ccMinMaxUInt8_Arrayfilter.cc">
-      <Filter>HIPAcc\Kernels\MinMaxUInt8</Filter>
     </ClCompile>
     <ClCompile Include="ccMinMaxUInt8_AVXfilter.cc">
       <Filter>HIPAcc\Kernels\MinMaxUInt8</Filter>
@@ -210,9 +198,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <HIPAccCompiler Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxFloat\MinMaxFloatArray.cpp">
-      <Filter>HIPAcc\HIPAccSources\MinMaxFloat</Filter>
-    </HIPAccCompiler>
     <HIPAccCompiler Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxFloat\MinMaxFloatAVX.cpp">
       <Filter>HIPAcc\HIPAccSources\MinMaxFloat</Filter>
     </HIPAccCompiler>
@@ -238,9 +223,6 @@
       <Filter>HIPAcc\HIPAccSources\MinMaxUInt8</Filter>
     </HIPAccCompiler>
     <HIPAccCompiler Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxUInt8\MinMaxUInt8SSSE3.cpp">
-      <Filter>HIPAcc\HIPAccSources\MinMaxUInt8</Filter>
-    </HIPAccCompiler>
-    <HIPAccCompiler Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxUInt8\MinMaxUInt8Array.cpp">
       <Filter>HIPAcc\HIPAccSources\MinMaxUInt8</Filter>
     </HIPAccCompiler>
     <HIPAccCompiler Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxUInt8\MinMaxUInt8AVX.cpp">

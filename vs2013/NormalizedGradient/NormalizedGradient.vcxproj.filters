@@ -71,9 +71,6 @@
     <ClCompile Include="..\..\src\NormalizedGradient\NormalizedGradientFloat\NormalizedGradientFloatHandlersSSE.cpp">
       <Filter>Source Files\NormalizedGradientFloat</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccOutputs\NormGradFloatArray_out.cpp">
-      <Filter>HIPAcc\HIPAccOutputs\NormGradFloat</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\NormalizedGradient\HIPAccOutputs\NormGradFloatAVX_out.cpp">
       <Filter>HIPAcc\HIPAccOutputs\NormGradFloat</Filter>
     </ClCompile>
@@ -97,9 +94,6 @@
     </ClCompile>
     <ClCompile Include="..\..\src\NormalizedGradient\HIPAccOutputs\NormGradFloatSSSE3_out.cpp">
       <Filter>HIPAcc\HIPAccOutputs\NormGradFloat</Filter>
-    </ClCompile>
-    <ClCompile Include="ccNormGradFloat_Arrayfilter.cc">
-      <Filter>HIPAcc\Kernels\NormGradFloat</Filter>
     </ClCompile>
     <ClCompile Include="ccNormGradFloat_AVXfilter.cc">
       <Filter>HIPAcc\Kernels\NormGradFloat</Filter>
@@ -137,9 +131,6 @@
     <ClCompile Include="..\..\src\NormalizedGradient\NormalizedGradientUInt8\NormalizedGradientUInt8HandlersSSE.cpp">
       <Filter>Source Files\NormalizedGradientUInt8</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\NormalizedGradient\HIPAccOutputs\NormGradUInt8Array_out.cpp">
-      <Filter>HIPAcc\HIPAccOutputs\NormGradUInt8</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\NormalizedGradient\HIPAccOutputs\NormGradUInt8AVX_out.cpp">
       <Filter>HIPAcc\HIPAccOutputs\NormGradUInt8</Filter>
     </ClCompile>
@@ -160,9 +151,6 @@
     </ClCompile>
     <ClCompile Include="..\..\src\NormalizedGradient\HIPAccOutputs\NormGradUInt8SSSE3_out.cpp">
       <Filter>HIPAcc\HIPAccOutputs\NormGradUInt8</Filter>
-    </ClCompile>
-    <ClCompile Include="ccNormGradUInt8_Arrayfilter.cc">
-      <Filter>HIPAcc\Kernels\NormGradUInt8</Filter>
     </ClCompile>
     <ClCompile Include="ccNormGradUInt8_AVXfilter.cc">
       <Filter>HIPAcc\Kernels\NormGradUInt8</Filter>
@@ -219,9 +207,6 @@
     <HIPAccCompiler Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradFloat\NormGradFloatSSSE3.cpp">
       <Filter>HIPAcc\HIPAccSources\NormGradFloat</Filter>
     </HIPAccCompiler>
-    <HIPAccCompiler Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradFloat\NormGradFloatArray.cpp">
-      <Filter>HIPAcc\HIPAccSources\NormGradFloat</Filter>
-    </HIPAccCompiler>
     <HIPAccCompiler Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradFloat\NormGradFloatAVX.cpp">
       <Filter>HIPAcc\HIPAccSources\NormGradFloat</Filter>
     </HIPAccCompiler>
@@ -242,9 +227,6 @@
     </HIPAccCompiler>
     <HIPAccCompiler Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradFloat\NormGradFloatSSE4_2.cpp">
       <Filter>HIPAcc\HIPAccSources\NormGradFloat</Filter>
-    </HIPAccCompiler>
-    <HIPAccCompiler Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradUInt8\NormGradUInt8Array.cpp">
-      <Filter>HIPAcc\HIPAccSources\NormGradUInt8</Filter>
     </HIPAccCompiler>
     <HIPAccCompiler Include="..\..\src\NormalizedGradient\HIPAccSources\NormGradUInt8\NormGradUInt8AVX.cpp">
       <Filter>HIPAcc\HIPAccSources\NormGradUInt8</Filter>

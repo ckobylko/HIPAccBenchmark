@@ -100,9 +100,6 @@
     <ClCompile Include="..\..\src\BubbleSortMedian\BubbleSortMedianFloat\BubbleSortMedianFloatHandlersSSE.cpp">
       <Filter>Source Files\BubbleSortMedianFloat</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\BubbleSortMedian\HIPAccOutputs\BubbleSortFloatArray_out.cpp">
-      <Filter>HIPAcc\HIPAccOutputs\BubbleSortFloat</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\BubbleSortMedian\HIPAccOutputs\BubbleSortFloatAVX_out.cpp">
       <Filter>HIPAcc\HIPAccOutputs\BubbleSortFloat</Filter>
     </ClCompile>
@@ -123,9 +120,6 @@
     </ClCompile>
     <ClCompile Include="..\..\src\BubbleSortMedian\HIPAccOutputs\BubbleSortFloatSSSE3_out.cpp">
       <Filter>HIPAcc\HIPAccOutputs\BubbleSortFloat</Filter>
-    </ClCompile>
-    <ClCompile Include="ccBubbleSortFloat_Arrayfilter.cc">
-      <Filter>HIPAcc\Kernels\BubbleSortFloat</Filter>
     </ClCompile>
     <ClCompile Include="ccBubbleSortFloat_AVXfilter.cc">
       <Filter>HIPAcc\Kernels\BubbleSortFloat</Filter>
@@ -160,9 +154,6 @@
     <ClCompile Include="..\..\src\BubbleSortMedian\BubbleSortMedianUInt8\BubbleSortMedianUInt8HandlersSSE.cpp">
       <Filter>Source Files\BubbleSortMedianUInt8</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\BubbleSortMedian\HIPAccOutputs\BubbleSortUInt8Array_out.cpp">
-      <Filter>HIPAcc\HIPAccOutputs\BubbleSortUInt8</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\BubbleSortMedian\HIPAccOutputs\BubbleSortUInt8AVX_out.cpp">
       <Filter>HIPAcc\HIPAccOutputs\BubbleSortUInt8</Filter>
     </ClCompile>
@@ -183,9 +174,6 @@
     </ClCompile>
     <ClCompile Include="..\..\src\BubbleSortMedian\HIPAccOutputs\BubbleSortUInt8SSSE3_out.cpp">
       <Filter>HIPAcc\HIPAccOutputs\BubbleSortUInt8</Filter>
-    </ClCompile>
-    <ClCompile Include="ccBubbleSortUInt8_Arrayfilter.cc">
-      <Filter>HIPAcc\Kernels\BubbleSortUInt8</Filter>
     </ClCompile>
     <ClCompile Include="ccBubbleSortUInt8_AVXfilter.cc">
       <Filter>HIPAcc\Kernels\BubbleSortUInt8</Filter>
@@ -210,9 +198,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <HIPAccCompiler Include="..\..\src\BubbleSortMedian\HIPAccSources\BubbleSortFloat\BubbleSortFloatArray.cpp">
-      <Filter>HIPAcc\HIPAccSources\BubbleSortFloat</Filter>
-    </HIPAccCompiler>
     <HIPAccCompiler Include="..\..\src\BubbleSortMedian\HIPAccSources\BubbleSortFloat\BubbleSortFloatAVX.cpp">
       <Filter>HIPAcc\HIPAccSources\BubbleSortFloat</Filter>
     </HIPAccCompiler>
@@ -233,9 +218,6 @@
     </HIPAccCompiler>
     <HIPAccCompiler Include="..\..\src\BubbleSortMedian\HIPAccSources\BubbleSortFloat\BubbleSortFloatSSSE3.cpp">
       <Filter>HIPAcc\HIPAccSources\BubbleSortFloat</Filter>
-    </HIPAccCompiler>
-    <HIPAccCompiler Include="..\..\src\BubbleSortMedian\HIPAccSources\BubbleSortUInt8\BubbleSortUInt8Array.cpp">
-      <Filter>HIPAcc\HIPAccSources\BubbleSortUInt8</Filter>
     </HIPAccCompiler>
     <HIPAccCompiler Include="..\..\src\BubbleSortMedian\HIPAccSources\BubbleSortUInt8\BubbleSortUInt8AVX.cpp">
       <Filter>HIPAcc\HIPAccSources\BubbleSortUInt8</Filter>
