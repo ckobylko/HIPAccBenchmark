@@ -3,6 +3,7 @@
 
 #include "../../../include/Benchmark/Image.h"
 #include "../HIPAccSources/MinMaxUInt8/MinMaxUInt8Defines.h"
+#include "../MinMaxDetectorHandlerDefines.h"
 #include <list>
 #include <memory>
 #include <string>
@@ -47,9 +48,7 @@ public: \
     const int ciStrideInput  = InputImageType::GetWidth();\
     const int ciStrideOutput = OutputImageType::GetWidth();\
     \
-    ##__IS_Name##::ccMinMaxUInt8_##__IS_Name##filterKernel( spOutputImage->Data, spInputImage->Data, ciStrideInput, ciAnchor, ciAnchor, ciAnchor, ciStrideOutput, \
-                                                            OutputImageType::GetWidth() - ciAnchor * 2, OutputImageType::GetHeight() - ciAnchor * 2, \
-                                                            ciAnchor, ciAnchor ); \
+    LAUNCH_HANDLER_VECTORIZED( ##__IS_Name##::ccMinMaxUInt8_##__IS_Name##filterKernel, spOutputImage, spInputImage, ciStrideOutput, ciStrideInput, ciAnchor ); \
   }\
 };
 

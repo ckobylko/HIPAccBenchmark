@@ -477,6 +477,7 @@
     <ClInclude Include="..\..\include\BubbleSortMedianOptimized\BubbleSortMedianOptimized.h" />
     <ClInclude Include="..\..\src\BubbleSortMedianOptimized\BubbleSortMedianOptimizedDefines.h" />
     <ClInclude Include="..\..\src\BubbleSortMedianOptimized\BubbleSortMedianOptimizedFloat\BubbleSortMedianOptimizedFloatHandlers.h" />
+    <ClInclude Include="..\..\src\BubbleSortMedianOptimized\BubbleSortMedianOptimizedHandlerDefines.h" />
     <ClInclude Include="..\..\src\BubbleSortMedianOptimized\BubbleSortMedianOptimizedUInt8\BubbleSortMedianOptimizedUInt8Handlers.h" />
     <ClInclude Include="..\..\src\BubbleSortMedianOptimized\HIPAccSources\BubbleSortOptFloat\BubbleSortOptFloatDefines.h" />
     <ClInclude Include="..\..\src\BubbleSortMedianOptimized\HIPAccSources\BubbleSortOptGeneric.hxx" />

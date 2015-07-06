@@ -3,6 +3,7 @@
 
 #include "../../../include/Benchmark/Image.h"
 #include "../HIPAccSources/NormGradFloat/NormGradFloatDefines.h"
+#include "../NormalizedGradientHandlerDefines.h"
 #include <list>
 #include <memory>
 #include <string>
@@ -48,10 +49,8 @@ public: \
     const int ciStrideInput2 = InputImageType2::GetWidth();\
     const int ciStrideOutput = OutputImageType::GetWidth();\
     \
-    ##__IS_Name##::ccNormGradFloat_##__IS_Name##filterKernel( spOutputImage1->Data, spOutputImage2->Data, spInputImage1->Data,  ciStrideInput1, \
-                                                              spInputImage2->Data,  ciStrideInput2,       ciStrideOutput,       OutputImageType::GetWidth(), \
-                                                              OutputImageType::GetHeight() ); \
-}\
+    LAUNCH_HANDLER_VECTORIZED( ##__IS_Name##::ccNormGradFloat_##__IS_Name##filterKernel, spOutputImage1, spOutputImage2, spInputImage1, spInputImage2, ciStrideOutput, ciStrideInput1, ciStrideInput2 ); \
+  }\
 };
 
 

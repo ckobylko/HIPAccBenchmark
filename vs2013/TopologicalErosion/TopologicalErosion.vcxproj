@@ -155,6 +155,7 @@
     <ClInclude Include="..\..\src\TopologicalErosion\targetver.h" />
     <ClInclude Include="..\..\src\TopologicalErosion\TopologicalErosionDefines.h" />
     <ClInclude Include="..\..\src\TopologicalErosion\TopologicalErosionFloat\TopologicalErosionFloatHandlers.h" />
+    <ClInclude Include="..\..\src\TopologicalErosion\TopologicalErosionHandlerDefines.h" />
     <ClInclude Include="..\..\src\TopologicalErosion\TopologicalErosionUInt8\TopologicalErosionUInt8Handlers.h" />
   </ItemGroup>
   <ItemGroup>

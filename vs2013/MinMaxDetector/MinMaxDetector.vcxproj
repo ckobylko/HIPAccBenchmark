@@ -153,6 +153,7 @@
     <ClInclude Include="..\..\src\MinMaxDetector\HIPAccSources\MinMaxUInt8\MinMaxUInt8Defines.h" />
     <ClInclude Include="..\..\src\MinMaxDetector\MinMaxDetectorDefines.h" />
     <ClInclude Include="..\..\src\MinMaxDetector\MinMaxDetectorFloat\MinMaxDetectorFloatHandlers.h" />
+    <ClInclude Include="..\..\src\MinMaxDetector\MinMaxDetectorHandlerDefines.h" />
     <ClInclude Include="..\..\src\MinMaxDetector\MinMaxDetectorUInt8\MinMaxDetectorUInt8Handlers.h" />
     <ClInclude Include="..\..\src\MinMaxDetector\stdafx.h" />
     <ClInclude Include="..\..\src\MinMaxDetector\targetver.h" />

@@ -3,6 +3,7 @@
 
 #include "../../../include/Benchmark/Image.h"
 #include "../HIPAccSources/AddUInt8/AddUInt8Defines.h"
+#include "../ImageAddHandlerDefines.h"
 #include <list>
 #include <memory>
 #include <string>
@@ -48,8 +49,7 @@ public: \
     const int ciStrideInput2 = InputImageType2::GetWidth();\
     const int ciStrideOutput = OutputImageType::GetWidth();\
     \
-    ##__IS_Name##::ccAddUInt8_##__IS_Name##filterKernel( spOutputImage->Data, spInputImage1->Data, ciStrideInput1, spInputImage2->Data, ciStrideInput2, ciStrideOutput, \
-                                                         OutputImageType::GetWidth(), OutputImageType::GetHeight() ); \
+    LAUNCH_HANDLER_VECTORIZED( ##__IS_Name##::ccAddUInt8_##__IS_Name##filterKernel, spOutputImage, spInputImage1, spInputImage2, ciStrideOutput, ciStrideInput1, ciStrideInput2 ); \
   }\
 };
 

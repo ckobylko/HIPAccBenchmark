@@ -80,6 +80,9 @@
     <ClInclude Include="..\..\src\MinMaxDetector\MinMaxDetectorDefines.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\MinMaxDetector\MinMaxDetectorHandlerDefines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\MinMaxDetector\MinMaxDetector.cpp">

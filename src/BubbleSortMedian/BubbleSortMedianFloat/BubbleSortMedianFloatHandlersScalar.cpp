@@ -79,9 +79,7 @@ public:
     const int ciAnchor        = static_cast< int >( uiKernelSize >> 1 );
     const int ciStrideOutput  = OutputImageType::GetWidth();
   
-    Scalar::ccBubbleSortFloat_ScalarfilterKernel( spOutputImage->Data, spInputImage->Data, ciAnchor, ciAnchor, ciAnchor, ciStrideOutput,
-                                                  OutputImageType::GetWidth() - ciAnchor * 2, OutputImageType::GetHeight() - ciAnchor * 2,
-                                                  ciAnchor, ciAnchor );
+    LAUNCH_HANDLER_SCALAR( Scalar::ccBubbleSortFloat_ScalarfilterKernel, spOutputImage, spInputImage, ciStrideOutput, ciAnchor );
   }
 };
 

@@ -54,9 +54,8 @@ public:
   virtual void Launch(OutputImageTypePtr spOutputImage1, OutputImageTypePtr spOutputImage2, InputImageType1Ptr spInputImage1, InputImageType2Ptr spInputImage2) final override
   {
     const int ciStrideOutput = OutputImageType::GetWidth();
-  
-    Scalar::ccNormGradUInt8_ScalarfilterKernel( spOutputImage1->Data, spOutputImage2->Data, spInputImage1->Data, spInputImage2->Data,
-                                                ciStrideOutput, OutputImageType::GetWidth(), OutputImageType::GetHeight() );
+
+    LAUNCH_HANDLER_SCALAR( Scalar::ccNormGradUInt8_ScalarfilterKernel, spOutputImage1, spOutputImage2, spInputImage1, spInputImage2, ciStrideOutput );
   }
 };
 

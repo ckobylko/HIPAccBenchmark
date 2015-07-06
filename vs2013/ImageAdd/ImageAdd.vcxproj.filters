@@ -274,6 +274,9 @@
     <ClInclude Include="..\..\src\ImageAdd\ImageAddDefines.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\ImageAdd\ImageAddHandlerDefines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <HIPAccCompiler Include="..\..\src\ImageAdd\HIPAccSources\AddInt\AddIntAVX.cpp">

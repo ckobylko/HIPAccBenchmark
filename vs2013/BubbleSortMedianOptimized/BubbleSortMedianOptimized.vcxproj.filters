@@ -196,6 +196,9 @@
     <ClInclude Include="..\..\src\BubbleSortMedianOptimized\BubbleSortMedianOptimizedDefines.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\BubbleSortMedianOptimized\BubbleSortMedianOptimizedHandlerDefines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <HIPAccCompiler Include="..\..\src\BubbleSortMedianOptimized\HIPAccSources\BubbleSortOptFloat\BubbleSortOptFloatAVX.cpp">
