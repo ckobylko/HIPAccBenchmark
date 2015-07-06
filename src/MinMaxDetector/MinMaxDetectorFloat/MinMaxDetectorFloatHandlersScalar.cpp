@@ -5,12 +5,6 @@ namespace Scalar  {
 #include "ccMinMaxFloat_Scalarfilter.cc"
 }
 
-#ifndef IGNORE_ARRAY_EXPORT
-namespace Array   {
-#include "ccMinMaxFloat_Arrayfilter.cc"
-}
-#endif
-
 
 class MinMaxDetectorFloatHandler_ScalarRef final : public MinMaxDetectorFloatHandler
 {
@@ -88,22 +82,12 @@ public:
 };
 
 
-#ifndef IGNORE_ARRAY_EXPORT
-MAKE_HANDLER(Array);
-#endif
-
-
-
 HandlerList MinMaxDetectorFloat_GetScalarHandlers()
 {
   HandlerList lstHandlers;
 
   lstHandlers.push_back( MinMaxDetectorFloatHandler::Create< MinMaxDetectorFloatHandler_ScalarRef >() );
   lstHandlers.push_back( MinMaxDetectorFloatHandler::Create< MinMaxDetectorFloatHandler_Scalar    >() );
-
-#ifndef IGNORE_ARRAY_EXPORT
-  lstHandlers.push_back(MinMaxDetectorFloatHandler::Create< MinMaxDetectorFloatHandler_Array     >());
-#endif
 
   return std::move( lstHandlers );
 }

@@ -6,12 +6,6 @@ namespace Scalar  {
 #include "ccConvFloat_Scalarfilter.cc"
 }
 
-#ifndef IGNORE_ARRAY_EXPORT
-namespace Array   {
-#include "ccConvFloat_Arrayfilter.cc"
-}
-#endif
-
 
 class ConvolutionFloatHandler_ScalarRef final : public ConvolutionFloatHandler
 {
@@ -68,22 +62,12 @@ public:
 };
 
 
-#ifndef IGNORE_ARRAY_EXPORT
-MAKE_HANDLER(Array);
-#endif
-
-
-
 HandlerList ConvolutionFloat_GetScalarHandlers()
 {
   HandlerList lstHandlers;
 
   lstHandlers.push_back( ConvolutionFloatHandler::Create< ConvolutionFloatHandler_ScalarRef >() );
   lstHandlers.push_back( ConvolutionFloatHandler::Create< ConvolutionFloatHandler_Scalar    >() );
-
-#ifndef IGNORE_ARRAY_EXPORT
-  lstHandlers.push_back( ConvolutionFloatHandler::Create< ConvolutionFloatHandler     >() );
-#endif
 
   return std::move( lstHandlers );
 }

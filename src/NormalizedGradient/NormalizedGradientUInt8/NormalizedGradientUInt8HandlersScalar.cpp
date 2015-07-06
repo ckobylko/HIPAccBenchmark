@@ -6,12 +6,6 @@ namespace Scalar  {
 #include "ccNormGradUInt8_Scalarfilter.cc"
 }
 
-#ifndef IGNORE_ARRAY_EXPORT
-namespace Array   {
-#include "ccNormGradUInt8_Arrayfilter.cc"
-}
-#endif
-
 
 class NormalizedGradientUInt8Handler_ScalarRef final : public NormalizedGradientUInt8Handler
 {
@@ -60,22 +54,12 @@ public:
 };
 
 
-#ifndef IGNORE_ARRAY_EXPORT
-MAKE_HANDLER(Array);
-#endif
-
-
-
 HandlerList NormalizedGradientUInt8_GetScalarHandlers()
 {
   HandlerList lstHandlers;
 
   lstHandlers.push_back( NormalizedGradientUInt8Handler::Create< NormalizedGradientUInt8Handler_ScalarRef >() );
   lstHandlers.push_back( NormalizedGradientUInt8Handler::Create< NormalizedGradientUInt8Handler_Scalar    >() );
-
-#ifndef IGNORE_ARRAY_EXPORT
-  lstHandlers.push_back( NormalizedGradientUInt8Handler::Create< NormalizedGradientUInt8Handler_Array     >() );
-#endif
 
   return std::move( lstHandlers );
 }

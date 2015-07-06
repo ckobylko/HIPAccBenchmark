@@ -5,12 +5,6 @@ namespace Scalar  {
 #include "ccMinMaxUInt8_Scalarfilter.cc"
 }
 
-#ifndef IGNORE_ARRAY_EXPORT
-namespace Array   {
-#include "ccMinMaxUInt8_Arrayfilter.cc"
-}
-#endif
-
 
 class MinMaxDetectorUInt8Handler_ScalarRef final : public MinMaxDetectorUInt8Handler
 {
@@ -88,22 +82,12 @@ public:
 };
 
 
-#ifndef IGNORE_ARRAY_EXPORT
-MAKE_HANDLER(Array);
-#endif
-
-
-
 HandlerList MinMaxDetectorUInt8_GetScalarHandlers()
 {
   HandlerList lstHandlers;
 
   lstHandlers.push_back( MinMaxDetectorUInt8Handler::Create< MinMaxDetectorUInt8Handler_ScalarRef >() );
   lstHandlers.push_back( MinMaxDetectorUInt8Handler::Create< MinMaxDetectorUInt8Handler_Scalar    >() );
-
-#ifndef IGNORE_ARRAY_EXPORT
-  lstHandlers.push_back( MinMaxDetectorUInt8Handler::Create< MinMaxDetectorUInt8Handler_Array     >() );
-#endif
 
   return std::move( lstHandlers );
 }

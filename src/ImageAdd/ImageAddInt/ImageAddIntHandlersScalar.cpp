@@ -5,12 +5,6 @@ namespace Scalar  {
 #include "ccAddInt_Scalarfilter.cc"
 }
 
-#ifndef IGNORE_ARRAY_EXPORT
-namespace Array   {
-#include "ccAddInt_Arrayfilter.cc"
-}
-#endif
-
 
 class ImageAddIntHandler_ScalarRef final : public ImageAddIntHandler
 {
@@ -53,21 +47,12 @@ public:
 };
 
 
-#ifndef IGNORE_ARRAY_EXPORT
-MAKE_HANDLER(Array);
-#endif
-
-
 HandlerList ImageAddInt_GetScalarHandlers()
 {
   HandlerList lstHandlers;
 
   lstHandlers.push_back( ImageAddIntHandler::Create< ImageAddIntHandler_ScalarRef >() );
   lstHandlers.push_back( ImageAddIntHandler::Create< ImageAddIntHandler_Scalar    >() );
-
-#ifndef IGNORE_ARRAY_EXPORT
-  lstHandlers.push_back(ImageAddIntHandler::Create< ImageAddIntHandler_Array     >());
-#endif
 
   return std::move( lstHandlers );
 }

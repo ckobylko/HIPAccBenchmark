@@ -5,12 +5,6 @@ namespace Scalar  {
 #include "ccAddFloat_Scalarfilter.cc"
 }
 
-#ifndef IGNORE_ARRAY_EXPORT
-namespace Array   {
-#include "ccAddFloat_Arrayfilter.cc"
-}
-#endif
-
 
 class ImageAddFloatHandler_ScalarRef final : public ImageAddFloatHandler
 {
@@ -53,21 +47,12 @@ public:
 };
 
 
-#ifndef IGNORE_ARRAY_EXPORT
-MAKE_HANDLER(Array);
-#endif
-
-
 HandlerList ImageAddFloat_GetScalarHandlers()
 {
   HandlerList lstHandlers;
 
   lstHandlers.push_back( ImageAddFloatHandler::Create< ImageAddFloatHandler_ScalarRef >() );
   lstHandlers.push_back( ImageAddFloatHandler::Create< ImageAddFloatHandler_Scalar    >() );
-
-#ifndef IGNORE_ARRAY_EXPORT
-  lstHandlers.push_back(ImageAddFloatHandler::Create< ImageAddFloatHandler_Array     >());
-#endif
 
   return std::move( lstHandlers );
 }

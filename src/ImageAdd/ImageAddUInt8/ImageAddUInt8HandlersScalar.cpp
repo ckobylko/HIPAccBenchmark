@@ -5,12 +5,6 @@ namespace Scalar  {
 #include "ccAddUInt8_Scalarfilter.cc"
 }
 
-#ifndef IGNORE_ARRAY_EXPORT
-namespace Array   {
-#include "ccAddUInt8_Arrayfilter.cc"
-}
-#endif
-
 
 class ImageAddUInt8Handler_ScalarRef final : public ImageAddUInt8Handler
 {
@@ -53,21 +47,12 @@ public:
 };
 
 
-#ifndef IGNORE_ARRAY_EXPORT
-MAKE_HANDLER(Array);
-#endif
-
-
 HandlerList ImageAddUInt8_GetScalarHandlers()
 {
   HandlerList lstHandlers;
 
   lstHandlers.push_back( ImageAddUInt8Handler::Create< ImageAddUInt8Handler_ScalarRef >() );
   lstHandlers.push_back( ImageAddUInt8Handler::Create< ImageAddUInt8Handler_Scalar    >() );
-
-#ifndef IGNORE_ARRAY_EXPORT
-  lstHandlers.push_back( ImageAddUInt8Handler::Create< ImageAddUInt8Handler_Array     >() );
-#endif
 
   return std::move( lstHandlers );
 }

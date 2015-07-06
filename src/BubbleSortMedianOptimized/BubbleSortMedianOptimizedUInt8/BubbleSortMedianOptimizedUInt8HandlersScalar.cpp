@@ -6,12 +6,6 @@ namespace Scalar  {
 #include "ccBubbleSortOptUInt8_Scalarfilter.cc"
 }
 
-#ifndef IGNORE_ARRAY_EXPORT
-namespace Array   {
-#include "ccBubbleSortOptUInt8_Arrayfilter.cc"
-}
-#endif
-
 
 class BubbleSortMedianOptimizedUInt8Handler_ScalarRef final : public BubbleSortMedianOptimizedUInt8Handler
 {
@@ -85,22 +79,12 @@ public:
 };
 
 
-#ifndef IGNORE_ARRAY_EXPORT
-MAKE_HANDLER(Array);
-#endif
-
-
-
 HandlerList BubbleSortMedianOptimizedUInt8_GetScalarHandlers()
 {
   HandlerList lstHandlers;
 
   lstHandlers.push_back( BubbleSortMedianOptimizedUInt8Handler::Create< BubbleSortMedianOptimizedUInt8Handler_ScalarRef >() );
   lstHandlers.push_back( BubbleSortMedianOptimizedUInt8Handler::Create< BubbleSortMedianOptimizedUInt8Handler_Scalar    >() );
-
-#ifndef IGNORE_ARRAY_EXPORT
-  lstHandlers.push_back( BubbleSortMedianOptimizedUInt8Handler::Create< BubbleSortMedianOptimizedUInt8Handler_Array     >() );
-#endif
 
   return std::move( lstHandlers );
 }

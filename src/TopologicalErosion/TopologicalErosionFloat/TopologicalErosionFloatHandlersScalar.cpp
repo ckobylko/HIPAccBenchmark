@@ -6,12 +6,6 @@ namespace Scalar  {
 #include "ccTopErosionFloat_Scalarfilter.cc"
 }
 
-#ifndef IGNORE_ARRAY_EXPORT
-namespace Array   {
-#include "ccTopErosionFloat_Arrayfilter.cc"
-}
-#endif
-
 
 class TopologicalErosionFloatHandler_ScalarRef final : public TopologicalErosionFloatHandler
 {
@@ -65,22 +59,12 @@ public:
 };
 
 
-#ifndef IGNORE_ARRAY_EXPORT
-MAKE_HANDLER(Array);
-#endif
-
-
-
 HandlerList TopologicalErosionFloat_GetScalarHandlers()
 {
   HandlerList lstHandlers;
 
   lstHandlers.push_back( TopologicalErosionFloatHandler::Create< TopologicalErosionFloatHandler_ScalarRef >() );
   lstHandlers.push_back( TopologicalErosionFloatHandler::Create< TopologicalErosionFloatHandler_Scalar    >() );
-
-#ifndef IGNORE_ARRAY_EXPORT
-  lstHandlers.push_back( TopologicalErosionFloatHandler::Create< TopologicalErosionFloatHandler_Array     >() );
-#endif
 
   return std::move( lstHandlers );
 }

@@ -6,12 +6,6 @@ namespace Scalar  {
 #include "ccTopErosionUInt8_Scalarfilter.cc"
 }
 
-#ifndef IGNORE_ARRAY_EXPORT
-namespace Array   {
-#include "ccTopErosionUInt8_Arrayfilter.cc"
-}
-#endif
-
 
 class TopologicalErosionUInt8Handler_ScalarRef final : public TopologicalErosionUInt8Handler
 {
@@ -65,22 +59,12 @@ public:
 };
 
 
-#ifndef IGNORE_ARRAY_EXPORT
-MAKE_HANDLER(Array);
-#endif
-
-
-
 HandlerList TopologicalErosionUInt8_GetScalarHandlers()
 {
   HandlerList lstHandlers;
 
   lstHandlers.push_back( TopologicalErosionUInt8Handler::Create< TopologicalErosionUInt8Handler_ScalarRef >() );
   lstHandlers.push_back( TopologicalErosionUInt8Handler::Create< TopologicalErosionUInt8Handler_Scalar    >() );
-
-#ifndef IGNORE_ARRAY_EXPORT
-  lstHandlers.push_back( TopologicalErosionUInt8Handler::Create< TopologicalErosionUInt8Handler_Array     >() );
-#endif
 
   return std::move( lstHandlers );
 }

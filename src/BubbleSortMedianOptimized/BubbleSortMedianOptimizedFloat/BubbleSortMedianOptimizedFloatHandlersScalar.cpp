@@ -6,12 +6,6 @@ namespace Scalar  {
 #include "ccBubbleSortOptFloat_Scalarfilter.cc"
 }
 
-#ifndef IGNORE_ARRAY_EXPORT
-namespace Array   {
-#include "ccBubbleSortOptFloat_Arrayfilter.cc"
-}
-#endif
-
 
 class BubbleSortMedianOptimizedFloatHandler_ScalarRef final : public BubbleSortMedianOptimizedFloatHandler
 {
@@ -85,22 +79,12 @@ public:
 };
 
 
-#ifndef IGNORE_ARRAY_EXPORT
-MAKE_HANDLER(Array);
-#endif
-
-
-
 HandlerList BubbleSortMedianOptimizedFloat_GetScalarHandlers()
 {
   HandlerList lstHandlers;
 
   lstHandlers.push_back( BubbleSortMedianOptimizedFloatHandler::Create< BubbleSortMedianOptimizedFloatHandler_ScalarRef >() );
   lstHandlers.push_back( BubbleSortMedianOptimizedFloatHandler::Create< BubbleSortMedianOptimizedFloatHandler_Scalar    >() );
-
-#ifndef IGNORE_ARRAY_EXPORT
-  lstHandlers.push_back( BubbleSortMedianOptimizedFloatHandler::Create< BubbleSortMedianOptimizedFloatHandler_Array     >() );
-#endif
 
   return std::move( lstHandlers );
 }
