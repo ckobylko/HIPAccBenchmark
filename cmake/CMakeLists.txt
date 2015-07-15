@@ -1,11 +1,16 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 
+LIST(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/_macros")
+INCLUDE(HIPAccMacros)
+
+
 # provide only Debug and Release configurations
 SET(CMAKE_CONFIGURATION_TYPES "Debug;Release" CACHE STRING "build config types" FORCE)
 SET(CMAKE_BUILD_TYPE Release CACHE STRING "build type: Debug or Release" FORCE)
 
 
 PROJECT(HIPAccBenchmark)
+SET(HIPACC_INSTALL_PATH "Z:/Projects/Hipacc_install/")
 
 # Define commonly used names
 SET(NAME_HIPACC_OUTPUTS "HIPAccOutputs")
@@ -27,6 +32,7 @@ SET(SUFFIX_HANDLERS      "Handlers")
 SET(SUFFIX_HIPACC_KERNEL "filter.cc")
 SET(SUFFIX_HIPACC_OUTPUT "_out.cpp")
 SET(SUFFIX_TYPE_FLOAT    "Float")
+SET(SUFFIX_TYPE_INT      "Int")
 SET(SUFFIX_TYPE_UINT8    "UInt8")
 SET(SUFFIX_VEC_AVX       "AVX")
 SET(SUFFIX_VEC_SCALAR    "Scalar")
