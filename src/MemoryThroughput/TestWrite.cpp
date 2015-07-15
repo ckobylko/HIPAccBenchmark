@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "TestWrite.h"
 #include <map>
 #include <omp.h>

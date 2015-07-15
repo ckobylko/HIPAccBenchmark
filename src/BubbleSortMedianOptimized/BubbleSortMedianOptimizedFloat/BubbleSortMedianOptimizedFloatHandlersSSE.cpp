@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "BubbleSortMedianOptimizedFloatHandlers.h"
 
 namespace SSE2    {

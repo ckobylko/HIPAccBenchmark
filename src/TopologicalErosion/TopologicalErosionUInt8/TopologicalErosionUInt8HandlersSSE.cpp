@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "TopologicalErosionUInt8Handlers.h"
 
 namespace SSE2    {

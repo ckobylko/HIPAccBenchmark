@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "BubbleSortMedianUInt8Handlers.h"
 
 namespace SSE2    {

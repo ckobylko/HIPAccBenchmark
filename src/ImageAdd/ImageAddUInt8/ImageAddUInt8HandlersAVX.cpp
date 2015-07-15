@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "ImageAddUInt8Handlers.h"
 
 

@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "TestRead.h"
 #include "TestWrite.h"
 #include <immintrin.h>

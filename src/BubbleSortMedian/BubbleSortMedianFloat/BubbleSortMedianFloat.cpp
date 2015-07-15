@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "../BubbleSortMedianDefines.h"
 #include "BubbleSortMedianFloatHandlers.h"
 

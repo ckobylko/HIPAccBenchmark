@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "ImageAddIntHandlers.h"
 
 #include <emmintrin.h>

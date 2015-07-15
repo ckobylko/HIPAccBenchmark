@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "ImageAddFloatHandlers.h"
 
 #include <immintrin.h>

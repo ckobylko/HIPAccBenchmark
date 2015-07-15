@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "../ConvolutionDefines.h"
 #include "ConvolutionUInt8Handlers.h"
 

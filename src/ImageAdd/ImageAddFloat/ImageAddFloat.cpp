@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "../ImageAddDefines.h"
 #include "ImageAddFloatHandlers.h"
 

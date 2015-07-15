@@ -50,17 +50,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="..\..\include\MinMaxDetector\MinMaxDetector.h">
       <Filter>Public Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\MinMaxDetector\stdafx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\MinMaxDetector\targetver.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\MinMaxDetector\MinMaxDetectorFloat\MinMaxDetectorFloatHandlers.h">
       <Filter>Source Files\MinMaxDetectorFloat</Filter>
@@ -86,9 +77,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\MinMaxDetector\MinMaxDetector.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\MinMaxDetector\stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\MinMaxDetector\MinMaxDetectorFloat\MinMaxDetectorFloat.cpp">

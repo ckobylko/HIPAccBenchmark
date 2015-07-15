@@ -1,6 +1,6 @@
-#include "stdafx.h"
 #include "../../include/MinMaxDetector/MinMaxDetector.h"
 #include <stdexcept>
+#include <stdio.h>
 
 void MinMaxDetector::Run(unsigned int uiKernelSize)
 {

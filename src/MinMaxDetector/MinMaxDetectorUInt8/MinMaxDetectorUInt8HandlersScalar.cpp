@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "MinMaxDetectorUInt8Handlers.h"
 
 namespace Scalar  {

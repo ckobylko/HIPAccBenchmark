@@ -50,12 +50,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\src\NormalizedGradient\stdafx.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\NormalizedGradient\NormalizedGradient.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -175,12 +169,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\src\NormalizedGradient\stdafx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\NormalizedGradient\targetver.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\include\NormalizedGradient\NormalizedGradient.h">
       <Filter>Public Header Files</Filter>
     </ClInclude>

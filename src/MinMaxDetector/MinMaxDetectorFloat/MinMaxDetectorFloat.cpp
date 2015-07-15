@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "../MinMaxDetectorDefines.h"
 #include "MinMaxDetectorFloatHandlers.h"
 

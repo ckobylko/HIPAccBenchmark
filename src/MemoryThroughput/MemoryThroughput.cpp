@@ -1,9 +1,9 @@
-#include "stdafx.h"
 #include "../../include/MemoryThroughput/MemoryThroughput.h"
 #include "TestRead.h"
 #include "TestWrite.h"
 #include <malloc.h>
 #include <stdexcept>
+#include <stdio.h>
 using namespace MemoryThroughputTest;
 
 

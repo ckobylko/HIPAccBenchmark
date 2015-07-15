@@ -50,17 +50,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="..\..\include\BubbleSortMedian\BubbleSortMedian.h">
       <Filter>Public Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\BubbleSortMedian\stdafx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\BubbleSortMedian\targetver.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\BubbleSortMedian\BubbleSortMedianFloat\BubbleSortMedianFloatHandlers.h">
       <Filter>Source Files\BubbleSortMedianFloat</Filter>
@@ -86,9 +77,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\BubbleSortMedian\BubbleSortMedian.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\BubbleSortMedian\stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\BubbleSortMedian\BubbleSortMedianFloat\BubbleSortMedianFloat.cpp">

@@ -1,6 +1,6 @@
-#include "stdafx.h"
 #include "../../include/Convolution/Convolution.h"
 #include <stdexcept>
+#include <stdio.h>
 
 void Convolution::Run(unsigned int uiKernelSize)
 {

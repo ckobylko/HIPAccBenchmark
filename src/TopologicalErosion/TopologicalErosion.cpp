@@ -1,6 +1,6 @@
-#include "stdafx.h"
 #include "../../include/TopologicalErosion/TopologicalErosion.h"
 #include <stdexcept>
+#include <stdio.h>
 
 void TopologicalErosion::Run(unsigned int uiKernelSize)
 {

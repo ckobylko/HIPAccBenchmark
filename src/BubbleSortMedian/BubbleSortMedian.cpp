@@ -1,6 +1,6 @@
-#include "stdafx.h"
 #include "../../include/BubbleSortMedian/BubbleSortMedian.h"
 #include <stdexcept>
+#include <stdio.h>
 
 void BubbleSortMedian::Run(unsigned int uiKernelSize)
 {

@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "BubbleSortMedianOptimizedUInt8Handlers.h"
 #include <algorithm>
 

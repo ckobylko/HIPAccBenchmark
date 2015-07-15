@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "../NormalizedGradientDefines.h"
 #include "NormalizedGradientUInt8Handlers.h"
 

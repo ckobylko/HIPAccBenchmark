@@ -1,6 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
 
-#include "stdafx.h"
 #include "../../include/Benchmark/ImageIO.h"
 #include <io.h>
 #include <fcntl.h>

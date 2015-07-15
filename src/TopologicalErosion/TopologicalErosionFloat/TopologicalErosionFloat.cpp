@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "../TopologicalErosionDefines.h"
 #include "TopologicalErosionFloatHandlers.h"
 

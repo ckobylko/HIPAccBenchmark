@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "NormalizedGradientFloatHandlers.h"
 
 #include <immintrin.h>

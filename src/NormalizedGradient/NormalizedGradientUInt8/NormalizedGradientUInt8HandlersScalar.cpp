@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "NormalizedGradientUInt8Handlers.h"
 #include <cmath>
 

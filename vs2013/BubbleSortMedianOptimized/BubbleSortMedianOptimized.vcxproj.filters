@@ -50,13 +50,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="..\..\src\BubbleSortMedianOptimized\BubbleSortMedianOptimized.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\BubbleSortMedianOptimized\stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\BubbleSortMedianOptimized\BubbleSortMedianOptimizedFloat\BubbleSortMedianOptimizedFloat.cpp">
@@ -169,12 +163,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\src\BubbleSortMedianOptimized\stdafx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\BubbleSortMedianOptimized\targetver.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\include\BubbleSortMedianOptimized\BubbleSortMedianOptimized.h">
       <Filter>Public Header Files</Filter>
     </ClInclude>

@@ -50,17 +50,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="..\..\include\TopologicalErosion\TopologicalErosion.h">
       <Filter>Public Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\TopologicalErosion\stdafx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\TopologicalErosion\targetver.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\TopologicalErosion\HIPAccSources\TopErosionGeneric.hxx">
       <Filter>HIPAcc\HIPAccSources</Filter>
@@ -85,9 +76,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\TopologicalErosion\stdafx.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\TopologicalErosion\TopologicalErosion.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
