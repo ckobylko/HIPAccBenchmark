@@ -1,10 +1,12 @@
 @echo off
 REM Enter the path to your CMake executable here
 SET CMAKE_EXECUTABLE="C:/Program Files (x86)/CMake 2.8/bin/cmake.exe"
-REM Enter the path to your HIPAcc installation here
-SET IPACC_INSTALL_PATH="Z:/Projects/Hipacc_install/"
+REM Enter the path to your HIPAcc executable
+SET HIPACC_EXECUTABLE_PATH="Z:/Projects/Hipacc_install/bin/hipacc.exe"
+REM Enter the path to your ISPC executable
+SET ISPC_EXECUTABLE_PATH="Z:/ispc/ispc-v1.8.2-windows/ispc.exe"
 
-SET CMAKE_ARGUMENTS=-DHIPACC_INSTALL_PATH:PATH="%IPACC_INSTALL_PATH%"
+SET CMAKE_ARGUMENTS=-DHIPACC_EXECUTABLE_PATH:PATH="%HIPACC_EXECUTABLE_PATH%" -DISPC_EXECUTABLE_PATH:PATH="%ISPC_EXECUTABLE_PATH%"
 
 ECHO.
 ECHO Generate the 32-bit solution ...

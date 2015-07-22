@@ -2,6 +2,7 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 
 LIST(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/_macros")
 INCLUDE(HIPAccMacros)
+INCLUDE(ISPCMacros)
 
 
 # provide only Debug and Release configurations
@@ -11,15 +12,21 @@ SET(CMAKE_BUILD_TYPE Release CACHE STRING "build type: Debug or Release" FORCE)
 
 PROJECT(HIPAccBenchmark)
 
-SET(HIPACC_INSTALL_PATH "" CACHE PATH "The absolute path to the HIPAcc installation directory")
-IF(NOT IS_ABSOLUTE ${HIPACC_INSTALL_PATH})
-    MESSAGE(FATAL_ERROR "HIPACC_INSTALL_PATH has to be an absolute path!")
-ENDIF(NOT IS_ABSOLUTE ${HIPACC_INSTALL_PATH})
+SET(HIPACC_EXECUTABLE_PATH "" CACHE PATH "The absolute path to the HIPAcc executable")
+IF(NOT IS_ABSOLUTE ${HIPACC_EXECUTABLE_PATH})
+    MESSAGE(FATAL_ERROR "HIPACC_EXECUTABLE_PATH has to be an absolute path!")
+ENDIF()
+
+SET(ISPC_EXECUTABLE_PATH "" CACHE PATH "The absolute path to the ISPC executable")
+IF(NOT IS_ABSOLUTE ${ISPC_EXECUTABLE_PATH})
+    MESSAGE(FATAL_ERROR "ISPC_EXECUTABLE_PATH has to be an absolute path!")
+ENDIF()
 
 
 # Define commonly used names
 SET(NAME_HIPACC_OUTPUTS "HIPAccOutputs")
 SET(NAME_HIPACC_SOURCES "HIPAccSources")
+SET(NAME_ISPC_SOURCES   "ISPCSources")
 
 # Define the names of the commonly used source groups
 SET(SOURCE_GROUP_HEADER_FILES        "Header Files")
