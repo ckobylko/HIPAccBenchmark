@@ -25,7 +25,7 @@ void Mandelbrot::_RunUInt8()
 
   for (auto itHandler : lstHandlers)
   {
-    printf( "\n      Launch handler \"%10s\"  ->  ", itHandler->GetName().c_str() );
+    printf( "\n      Launch handler \"%14s\"  ->  ", itHandler->GetName().c_str() );
 
     double dTime = omp_get_wtime();
 
