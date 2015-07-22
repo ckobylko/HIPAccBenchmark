@@ -10,7 +10,12 @@ SET(CMAKE_BUILD_TYPE Release CACHE STRING "build type: Debug or Release" FORCE)
 
 
 PROJECT(HIPAccBenchmark)
-SET(HIPACC_INSTALL_PATH "Z:/Projects/Hipacc_install/")
+
+SET(HIPACC_INSTALL_PATH "" CACHE PATH "The absolute path to the HIPAcc installation directory")
+IF(NOT IS_ABSOLUTE ${HIPACC_INSTALL_PATH})
+    MESSAGE(FATAL_ERROR "HIPACC_INSTALL_PATH has to be an absolute path!")
+ENDIF(NOT IS_ABSOLUTE ${HIPACC_INSTALL_PATH})
+
 
 # Define commonly used names
 SET(NAME_HIPACC_OUTPUTS "HIPAccOutputs")
