@@ -44,6 +44,16 @@ SET(SUFFIX_VEC_SSE4_1    "SSE4_1")
 SET(SUFFIX_VEC_SSE4_2    "SSE4_2")
 
 
+# Define the platform-dependent compiler flags
+IF(MSVC)
+    SET(CPP_COMP_FLAG_AVX    "/arch:AVX")
+    SET(CPP_COMP_FLAG_OPENMP "/openmp")
+ELSE(MSVC)
+    SET(CPP_COMP_FLAG_AVX    "-mavx")
+    SET(CPP_COMP_FLAG_OPENMP "-fopenmp")
+ENDIF(MSVC)
+
+
 IF(MSVC)
     SET_PROPERTY(GLOBAL PROPERTY USE_FOLDERS ON)
 ENDIF(MSVC)
