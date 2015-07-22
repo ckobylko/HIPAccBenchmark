@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _MIN_MAX_DETECTOR_H_
+#define _MIN_MAX_DETECTOR_H_
 
 class MinMaxDetector
 {
@@ -13,3 +14,4 @@ public:
   static void Run(unsigned int uiKernelSize);
 };
 
+#endif // _MIN_MAX_DETECTOR_H_

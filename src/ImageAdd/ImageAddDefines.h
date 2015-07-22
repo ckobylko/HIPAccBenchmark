@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _IMAGE_ADD_DEFINES_H_
+#define _IMAGE_ADD_DEFINES_H_
 
 #include "../../include/Benchmark/CommonDefines.h"
 #include "../../include/Benchmark/ImageIO.h"
@@ -27,4 +28,4 @@
 
 #endif
 
-
+#endif // _IMAGE_ADD_DEFINES_H_

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _TOP_EROSION_UINT8_DEFINES_H_
+#define _TOP_EROSION_UINT8_DEFINES_H_
 
 #include "../../../../include/Benchmark/CommonDefines.h"
 
@@ -11,4 +12,4 @@ HIPACC_SET_PIXEL_TYPE  ( unsigned char );
 
 inline InputPixelType_1 min(InputPixelType_1 a, InputPixelType_1 b)   { return (a < b) ? a : b; }
 
-
+#endif // _TOP_EROSION_UINT8_DEFINES_H_

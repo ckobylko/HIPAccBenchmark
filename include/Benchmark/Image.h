@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _BENCHMARK_IMAGE_H_
+#define _BENCHMARK_IMAGE_H_
 
 #include <algorithm>
 #include <cmath>
@@ -75,4 +76,4 @@ public:
   __ImageType##Ptr __VarName = __ImageType::Create();
 
 
-
+#endif //_BENCHMARK_IMAGE_H_

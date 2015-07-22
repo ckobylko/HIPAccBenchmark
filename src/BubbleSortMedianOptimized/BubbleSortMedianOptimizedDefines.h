@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _BUBBLE_SORT_MEDIAN_OPTIMIZED_DEFINES_H_
+#define _BUBBLE_SORT_MEDIAN_OPTIMIZED_DEFINES_H_
 
 #include "../../include/Benchmark/CommonDefines.h"
 #include "../../include/Benchmark/ImageIO.h"
@@ -27,4 +28,4 @@
 
 #endif
 
-
+#endif // _BUBBLE_SORT_MEDIAN_OPTIMIZED_DEFINES_H_

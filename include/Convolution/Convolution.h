@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _CONVOLUTION_H_
+#define _CONVOLUTION_H_
 
 class Convolution
 {
@@ -13,3 +14,4 @@ public:
   static void Run(unsigned int uiKernelSize);
 };
 
+#endif // _CONVOLUTION_H_

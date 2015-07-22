@@ -1,5 +1,5 @@
-#pragma once
-
+#ifndef _MIN_MAX_DETECTOR_UINT8_HANDLERS_H_
+#define _MIN_MAX_DETECTOR_UINT8_HANDLERS_H_
 
 #include "../../../include/Benchmark/Image.h"
 #include "../HIPAccSources/MinMaxUInt8/MinMaxUInt8Defines.h"
@@ -69,6 +69,4 @@ inline void AppendHandlerList(HandlerList &rDestinationList, const HandlerList &
 }
 
 
-
-
-
+#endif // _MIN_MAX_DETECTOR_UINT8_HANDLERS_H_

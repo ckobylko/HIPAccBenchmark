@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _BENCHMARK_COMMON_DEFINES_H_
+#define _BENCHMARK_COMMON_DEFINES_H_
 
 #define HIPACC_SET_INPUT_PIXEL_TYPE_1(__type)   typedef __type InputPixelType_1;
 #define HIPACC_SET_INPUT_PIXEL_TYPE_2(__type)   typedef __type InputPixelType_2;
@@ -30,3 +31,4 @@ HIPACC_SET_IMAGE_HEIGHT( 4096 );
 
 #endif // CONFIG_USE_COMMON_IMAGE_SIZE
 
+#endif // _BENCHMARK_COMMON_DEFINES_H_

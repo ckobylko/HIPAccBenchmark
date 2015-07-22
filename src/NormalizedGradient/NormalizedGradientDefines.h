@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _NORMALIZED_GRADIENT_DEFINES_H_
+#define _NORMALIZED_GRADIENT_DEFINES_H_
 
 #include "../../include/Benchmark/CommonDefines.h"
 #include "../../include/Benchmark/ImageIO.h"
@@ -39,4 +40,4 @@
 
 #endif
 
-
+#endif // _NORMALIZED_GRADIENT_DEFINES_H_

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _TEST_WRITE_H_
+#define _TEST_WRITE_H_
 
 namespace MemoryThroughputTest
 {
@@ -53,3 +54,5 @@ namespace MemoryThroughputTest
     void RunFloat(float *pfData, bool bParallel);
   };
 }
+
+#endif // _TEST_WRITE_H_

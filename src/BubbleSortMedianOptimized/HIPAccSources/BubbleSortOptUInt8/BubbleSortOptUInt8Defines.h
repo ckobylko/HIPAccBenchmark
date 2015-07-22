@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _BUBBLE_SORT_MEDIAN_OPT_UINT8_DEFINES_H_
+#define _BUBBLE_SORT_MEDIAN_OPT_UINT8_DEFINES_H_
 
 #include "../../../../include/Benchmark/CommonDefines.h"
 
@@ -13,4 +14,4 @@ HIPACC_SET_PIXEL_TYPE  ( unsigned char );
 inline InputPixelType_1 min(InputPixelType_1 a, InputPixelType_1 b)   { return (a < b) ? a : b; }
 inline InputPixelType_1 max(InputPixelType_1 a, InputPixelType_1 b)   { return (a > b) ? a : b; }
 
-
+#endif // _BUBBLE_SORT_MEDIAN_OPT_UINT8_DEFINES_H_

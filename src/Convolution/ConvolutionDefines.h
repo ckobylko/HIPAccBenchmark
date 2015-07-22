@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _CONVOLUTION_DEFINES_H_
+#define _CONVOLUTION_DEFINES_H_
 
 #include "../../include/Benchmark/CommonDefines.h"
 #include "../../include/Benchmark/ImageIO.h"
@@ -27,4 +28,4 @@
 
 #endif
 
-
+#endif // _CONVOLUTION_DEFINES_H_

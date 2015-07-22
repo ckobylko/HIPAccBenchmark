@@ -1,5 +1,5 @@
-#pragma once
-
+#ifndef _IMAGE_ADD_FLOAT_HANDLERS_H_
+#define _IMAGE_ADD_FLOAT_HANDLERS_H_
 
 #include "../../../include/Benchmark/Image.h"
 #include "../HIPAccSources/AddFloat/AddFloatDefines.h"
@@ -70,6 +70,4 @@ inline void AppendHandlerList(HandlerList &rDestinationList, const HandlerList &
 }
 
 
-
-
-
+#endif // _IMAGE_ADD_FLOAT_HANDLERS_H_

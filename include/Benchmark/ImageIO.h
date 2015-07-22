@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _BENCHMARK_IMAGE_IO_H_
+#define _BENCHMARK_IMAGE_IO_H_
 
 #include "Image.h"
 
@@ -75,3 +76,5 @@ public:
   }
 
 };
+
+#endif // _BENCHMARK_IMAGE_IO_H_

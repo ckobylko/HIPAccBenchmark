@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _MEMORY_THROUGHPUT_H_
+#define _MEMORY_THROUGHPUT_H_
 
 class MemoryThroughput
 {
@@ -9,3 +10,4 @@ public:
   static void Run();
 };
 
+#endif // _MEMORY_THROUGHPUT_H_

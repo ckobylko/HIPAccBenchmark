@@ -1,5 +1,5 @@
-#pragma once
-
+#ifndef _CONVOLUTION_FLOAT_HANDLERS_H_
+#define _CONVOLUTION_FLOAT_HANDLERS_H_
 
 #include "../../../include/Benchmark/Image.h"
 #include "../HIPAccSources/ConvFloat/ConvFloatDefines.h"
@@ -69,6 +69,4 @@ inline void AppendHandlerList(HandlerList &rDestinationList, const HandlerList &
 }
 
 
-
-
-
+#endif // _CONVOLUTION_FLOAT_HANDLERS_H_

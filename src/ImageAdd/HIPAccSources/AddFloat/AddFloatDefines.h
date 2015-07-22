@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _ADD_FLOAT_DEFINES_H_
+#define _ADD_FLOAT_DEFINES_H_
 
 #include "../../../../include/Benchmark/CommonDefines.h"
 
@@ -9,3 +10,4 @@ HIPACC_SET_IMAGE_HEIGHT( 4096 );
 
 HIPACC_SET_PIXEL_TYPE( float );
 
+#endif // _ADD_FLOAT_DEFINES_H_

@@ -1,5 +1,5 @@
-#pragma once
-
+#ifndef _BUBBLE_SORT_MEDIAN_FLOAT_HANDLERS_H_
+#define _BUBBLE_SORT_MEDIAN_FLOAT_HANDLERS_H_
 
 #include "../../../include/Benchmark/Image.h"
 #include "../HIPAccSources/BubbleSortFloat/BubbleSortFloatDefines.h"
@@ -69,6 +69,4 @@ inline void AppendHandlerList(HandlerList &rDestinationList, const HandlerList &
 }
 
 
-
-
-
+#endif // _BUBBLE_SORT_MEDIAN_FLOAT_HANDLERS_H_

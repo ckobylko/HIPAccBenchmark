@@ -1,5 +1,5 @@
-#pragma once
-
+#ifndef _NORMALIZED_GRADIENT_FLOAT_HANDLERS_H_
+#define _NORMALIZED_GRADIENT_FLOAT_HANDLERS_H_
 
 #include "../../../include/Benchmark/Image.h"
 #include "../HIPAccSources/NormGradFloat/NormGradFloatDefines.h"
@@ -70,6 +70,4 @@ inline void AppendHandlerList(HandlerList &rDestinationList, const HandlerList &
 }
 
 
-
-
-
+#endif // _NORMALIZED_GRADIENT_FLOAT_HANDLERS_H_

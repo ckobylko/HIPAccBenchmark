@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _IMAGE_ADD_H_
+#define _IMAGE_ADD_H_
 
 class ImageAdd
 {
@@ -15,3 +16,4 @@ public:
   static void Run();
 };
 
+#endif // _IMAGE_ADD_H_

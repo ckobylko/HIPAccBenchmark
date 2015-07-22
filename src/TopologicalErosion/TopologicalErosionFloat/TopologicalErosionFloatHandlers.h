@@ -1,5 +1,5 @@
-#pragma once
-
+#ifndef _TOPOLOGICAL_EROSION_FLOAT_HANDLERS_H_
+#define _TOPOLOGICAL_EROSION_FLOAT_HANDLERS_H_
 
 #include "../../../include/Benchmark/Image.h"
 #include "../HIPAccSources/TopErosionFloat/TopErosionFloatDefines.h"
@@ -69,6 +69,4 @@ inline void AppendHandlerList(HandlerList &rDestinationList, const HandlerList &
 }
 
 
-
-
-
+#endif // _TOPOLOGICAL_EROSION_FLOAT_HANDLERS_H_

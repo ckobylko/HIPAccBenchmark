@@ -1,5 +1,5 @@
-#pragma once
-
+#ifndef _MIN_MAX_DETECTOR_FLOAT_HANDLERS_H_
+#define _MIN_MAX_DETECTOR_FLOAT_HANDLERS_H_
 
 #include "../../../include/Benchmark/Image.h"
 #include "../HIPAccSources/MinMaxFloat/MinMaxFloatDefines.h"
@@ -69,6 +69,4 @@ inline void AppendHandlerList(HandlerList &rDestinationList, const HandlerList &
 }
 
 
-
-
-
+#endif // _MIN_MAX_DETECTOR_FLOAT_HANDLERS_H_

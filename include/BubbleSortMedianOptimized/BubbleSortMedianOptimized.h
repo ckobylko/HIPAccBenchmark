@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _BUBBLE_SORT_MEDIAN_OPTIMIZED_H_
+#define _BUBBLE_SORT_MEDIAN_OPTIMIZED_H_
 
 class BubbleSortMedianOptimized
 {
@@ -13,3 +14,4 @@ public:
   static void Run(unsigned int uiKernelSize);
 };
 
+#endif // _BUBBLE_SORT_MEDIAN_OPTIMIZED_H_

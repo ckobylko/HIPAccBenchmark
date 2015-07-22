@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _NORMALIZED_GRADIENT_H_
+#define _NORMALIZED_GRADIENT_H_
 
 class NormalizedGradient
 {
@@ -13,3 +14,4 @@ public:
   static void Run();
 };
 
+#endif // _NORMALIZED_GRADIENT_H_

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _BUBBLE_SORT_MEDIAN_FLOAT_DEFINES_H_
+#define _BUBBLE_SORT_MEDIAN_FLOAT_DEFINES_H_
 
 #include "../../../../include/Benchmark/CommonDefines.h"
 
@@ -9,4 +10,4 @@ HIPACC_SET_IMAGE_HEIGHT( 1024 );
 
 HIPACC_SET_PIXEL_TYPE  ( float );
 
-
+#endif // _BUBBLE_SORT_MEDIAN_FLOAT_DEFINES_H_

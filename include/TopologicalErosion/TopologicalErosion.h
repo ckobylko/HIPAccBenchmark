@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _TOPOLOGICAL_EROSION_H_
+#define _TOPOLOGICAL_EROSION_H_
 
 class TopologicalErosion
 {
@@ -13,3 +14,4 @@ public:
   static void Run(unsigned int uiKernelSize);
 };
 
+#endif // _TOPOLOGICAL_EROSION_H_

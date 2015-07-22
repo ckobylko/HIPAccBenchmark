@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _CONV_UINT8_DEFINES_H_
+#define _CONV_UINT8_DEFINES_H_
 
 #include "../../../../include/Benchmark/CommonDefines.h"
 
@@ -9,4 +10,4 @@ HIPACC_SET_IMAGE_HEIGHT( 1024 );
 
 HIPACC_SET_PIXEL_TYPE  ( unsigned char );
 
-
+#endif // _CONV_UINT8_DEFINES_H_
