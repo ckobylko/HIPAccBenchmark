@@ -9,6 +9,9 @@
 #include "../../include/Convolution/Convolution.h"
 #include "../../include/MinMaxDetector/MinMaxDetector.h"
 #include "../../include/TopologicalErosion/TopologicalErosion.h"
+
+#include "../../include/Mandelbrot/Mandelbrot.h"
+
 #include <stdexcept>
 #include <stdio.h>
 
@@ -49,6 +52,9 @@ int main(int argc, char* argv[])
     {
       TopologicalErosion::Run(uiKernelSize);
     }
+
+    // Running new tests
+    Mandelbrot::Run();
   }
   catch (std::exception &e)
   {
