@@ -26,6 +26,10 @@
   ImageIO::SaveImage( "Out_MinMaxDetector_" #__PixelType ".xsc", *spOutputImage ); \
   printf("\n");
 
+#else
+
+#define TEST_RUN_COUNT  100
+
 #endif
 
 #endif // _MIN_MAX_DETECTOR_DEFINES_H_

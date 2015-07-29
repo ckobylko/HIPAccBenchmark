@@ -38,6 +38,10 @@
   ImageIO::SaveImage( "Out_NormalizedGradient_" #__PixelType "_Sin.xsc", *spOutputImage2 ); \
   printf("\n");
 
+#else
+
+#define TEST_RUN_COUNT  100
+
 #endif
 
 #endif // _NORMALIZED_GRADIENT_DEFINES_H_

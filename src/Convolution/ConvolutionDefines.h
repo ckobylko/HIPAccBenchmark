@@ -26,6 +26,10 @@
   ImageIO::SaveImage( "Out_Convolution_" #__PixelType ".xsc", *spOutputImage ); \
   printf("\n");
 
+#else
+
+#define TEST_RUN_COUNT  100
+
 #endif
 
 #endif // _CONVOLUTION_DEFINES_H_

@@ -4,7 +4,7 @@
 
 void Mandelbrot::_RunUInt8()
 {
-  const size_t        cszIters      = static_cast< size_t >( 100 );
+  const size_t cszIters = static_cast< size_t >( TEST_RUN_COUNT );
 
   printf("\n    Running \"_RunUInt8()\"  -  Image-Size = %4d x %4d\n", ciImageWidth, ciImageHeight);
 

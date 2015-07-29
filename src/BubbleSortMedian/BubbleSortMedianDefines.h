@@ -26,6 +26,10 @@
   ImageIO::SaveImage( "Out_BubbleSortMedian_" #__PixelType ".xsc", *spOutputImage ); \
   printf("\n");
 
+#else
+
+#define TEST_RUN_COUNT  10
+
 #endif
 
 #endif // _BUBBLE_SORT_MEDIAN_DEFINES_H_

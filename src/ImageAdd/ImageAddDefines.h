@@ -26,6 +26,10 @@
   ImageIO::SaveImage( "Out_ImageAdd_" #__PixelType ".xsc", *spOutputImage ); \
   printf("\n");
 
+#else
+
+#define TEST_RUN_COUNT  100
+
 #endif
 
 #endif // _IMAGE_ADD_DEFINES_H_

@@ -4,7 +4,7 @@
 
 void ImageAdd::_RunInt()
 {
-  const size_t cszIters = static_cast< size_t >( 100 );
+  const size_t cszIters = static_cast< size_t >( TEST_RUN_COUNT );
 
   printf("\n    Running \"_RunInt()\"  -  Image-Size = %4d x %4d\n", ciImageWidth, ciImageHeight);
 
