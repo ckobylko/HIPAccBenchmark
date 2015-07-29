@@ -19,7 +19,7 @@ export void MandelbrotUInt8SSE4_2(
       OutputPixelType out = 0;
       for (int i = 0; i < count; ++i) {
         if (z_re * z_re + z_im * z_im > 4.) {
-          out = (unsigned int8)i;
+          out = (OutputPixelType)i;
           break;
         }
         float new_re = z_re*z_re - z_im*z_im;

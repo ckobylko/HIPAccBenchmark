@@ -6,6 +6,8 @@ void Mandelbrot::Run()
 {
   printf( "\n  Running \"Mandelbrot\":\n" );
 
+  _RunFloat();
+
   _RunUInt8();
 
   printf("\n");

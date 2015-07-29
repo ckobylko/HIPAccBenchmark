@@ -5,6 +5,8 @@ class Mandelbrot
 {
 private:
 
+  static void _RunFloat();
+
   static void _RunUInt8();
 
 public:

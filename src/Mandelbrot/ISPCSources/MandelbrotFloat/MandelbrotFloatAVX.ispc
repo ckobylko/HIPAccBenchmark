@@ -1,6 +1,6 @@
-#define OutputPixelType unsigned int8
+#define OutputPixelType float
 
-export void MandelbrotUInt8AVX(
+export void MandelbrotFloatAVX(
   uniform OutputPixelType output[],
   uniform int width,
   uniform int height,
