@@ -10,13 +10,13 @@ export void MandelbrotUInt8SSE4_2(
   uniform float dx,
   uniform float dy,
   uniform int count) {
-  OutputPixelType out = 0;
   for (uniform int y = 0; y < height; ++y) {
     foreach(x = 0 ... width) {
       float c_re = x * dx + x0;
       float c_im = y * dy + y0;
 
       float z_re = c_re, z_im = c_im;
+      OutputPixelType out = 0;
       for (int i = 0; i < count; ++i) {
         if (z_re * z_re + z_im * z_im > 4.) {
           out = (unsigned int8)i;
