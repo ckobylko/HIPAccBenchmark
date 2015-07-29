@@ -20,41 +20,51 @@ int main(int argc, char* argv[])
 {
   try
   {
-    MemoryThroughput::Run();
+    const bool cbRunOldTests = true;
+    const bool cbRunNewTests = true;
 
-    // Pixel-wise operations
-    ImageAdd::Run();
-
-    NormalizedGradient::Run();
-
-    // Kernel operations
-    for (unsigned int uiKernelSize = 3; uiKernelSize <= 9; uiKernelSize += 2)
+    // Running old tests
+    if (cbRunOldTests)
     {
-      Convolution::Run(uiKernelSize);
-    }
+      MemoryThroughput::Run();
 
-    for (unsigned int uiKernelSize = 3; uiKernelSize <= 9; uiKernelSize += 2)
-    {
-      BubbleSortMedian::Run(uiKernelSize);
-    }
+      // Pixel-wise operations
+      ImageAdd::Run();
 
-    for (unsigned int uiKernelSize = 3; uiKernelSize <= 9; uiKernelSize += 2)
-    {
-      BubbleSortMedianOptimized::Run(uiKernelSize);
-    }
+      NormalizedGradient::Run();
 
-    for (unsigned int uiKernelSize = 3; uiKernelSize <= 9; uiKernelSize += 2)
-    {
-      MinMaxDetector::Run( uiKernelSize );
-    }
+      // Kernel operations
+      for (unsigned int uiKernelSize = 3; uiKernelSize <= 9; uiKernelSize += 2)
+      {
+        Convolution::Run(uiKernelSize);
+      }
 
-    for (unsigned int uiKernelSize = 3; uiKernelSize <= 9; uiKernelSize += 2)
-    {
-      TopologicalErosion::Run(uiKernelSize);
+      for (unsigned int uiKernelSize = 3; uiKernelSize <= 9; uiKernelSize += 2)
+      {
+        BubbleSortMedian::Run(uiKernelSize);
+      }
+
+      for (unsigned int uiKernelSize = 3; uiKernelSize <= 9; uiKernelSize += 2)
+      {
+        BubbleSortMedianOptimized::Run(uiKernelSize);
+      }
+
+      for (unsigned int uiKernelSize = 3; uiKernelSize <= 9; uiKernelSize += 2)
+      {
+        MinMaxDetector::Run( uiKernelSize );
+      }
+
+      for (unsigned int uiKernelSize = 3; uiKernelSize <= 9; uiKernelSize += 2)
+      {
+        TopologicalErosion::Run(uiKernelSize);
+      }
     }
 
     // Running new tests
-    Mandelbrot::Run();
+    if (cbRunNewTests)
+    {
+      Mandelbrot::Run();
+    }
   }
   catch (std::exception &e)
   {
