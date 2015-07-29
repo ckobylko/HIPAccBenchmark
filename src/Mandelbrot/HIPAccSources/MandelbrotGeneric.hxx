@@ -30,7 +30,7 @@ public:\
     float z_re = c_re, z_im = c_im; \
     for (int i = 0; i < count; ++i) \
     { \
-        if (z_re * z_re + z_im * z_im > 4.) \
+        if (z_re * z_re + z_im * z_im > 4.f) \
         { \
             out = (OutputPixelType)i; \
             break; \
