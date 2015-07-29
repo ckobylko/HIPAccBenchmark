@@ -20,7 +20,7 @@ int main(int argc, char* argv[])
 {
   try
   {
-    const bool cbRunOldTests = true;
+    const bool cbRunOldTests = false;
     const bool cbRunNewTests = true;
 
     // Running old tests
